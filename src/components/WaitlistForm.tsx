@@ -1,22 +1,37 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 
 export const WaitlistForm = () => {
-  const handleClick = () => {
-    // Using a temporary TypeForm URL - replace this with your actual form URL
-    window.location.href = "https://form.typeform.com/to/example";
-    toast.success("Redirecting you to our waitlist form!");
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    toast.success("Thanks for joining our waitlist! We'll be in touch soon.");
+    setEmail("");
+    setIsLoading(false);
   };
 
   return (
-    <div className="flex justify-center w-full">
-      <Button 
-        size="lg"
-        onClick={handleClick}
-        className="text-lg px-8"
-      >
-        Join Waitlist
+    <form onSubmit={handleSubmit} className="flex w-full max-w-sm gap-2">
+      <Input
+        type="email"
+        placeholder="Enter your work email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+        className="bg-white/5 border-white/10"
+      />
+      <Button type="submit" disabled={isLoading}>
+        {isLoading ? "Joining..." : "Join Waitlist"}
       </Button>
-    </div>
+    </form>
   );
 };
