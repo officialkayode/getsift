@@ -1,5 +1,5 @@
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { Brain, Users, Zap, Shield, Clock, Database, ArrowRight, Check } from "lucide-react";
+import { Brain, Users, Zap, Shield, Clock, Database, ArrowRight, Check, BarChart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
@@ -9,11 +9,11 @@ const Index = () => {
       <div className="container px-4 pt-20 pb-16 md:pt-32 md:pb-24">
         <div className="text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Never Lose Critical Team Knowledge Again
+            Transform Your Workforce Management
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
-            Sift helps technical teams preserve knowledge, optimize workflows, and maintain
-            operational excellence—even during personnel changes.
+            Sift combines AI-powered knowledge management with intelligent workforce optimization
+            to maximize team efficiency and operational excellence.
           </p>
           <WaitlistForm />
         </div>
@@ -23,37 +23,37 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-slate-800/50">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            The Hidden Cost of Knowledge Silos
+            Common Workforce Challenges
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-slate-700/30 p-6 rounded-lg">
               <div className="bg-blue-500/10 p-3 rounded-full w-fit mb-4">
                 <Users className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">High Turnover Impact</h3>
+              <h3 className="text-xl font-semibold mb-3">Resource Allocation</h3>
               <p className="text-slate-300">
-                Critical knowledge walks out the door with departing team members,
-                creating costly operational gaps and extended onboarding periods.
+                Difficulty in matching the right talent with the right projects,
+                leading to inefficient resource utilization and project delays.
               </p>
             </div>
             <div className="bg-slate-700/30 p-6 rounded-lg">
               <div className="bg-blue-500/10 p-3 rounded-full w-fit mb-4">
-                <Zap className="w-6 h-6 text-blue-400" />
+                <BarChart className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Workflow Disruption</h3>
+              <h3 className="text-xl font-semibold mb-3">Performance Tracking</h3>
               <p className="text-slate-300">
-                Team absences and role changes create bottlenecks in critical
-                processes, leading to delayed responses and customer dissatisfaction.
+                Lack of real-time visibility into team performance and productivity
+                metrics, making it hard to identify improvement areas.
               </p>
             </div>
             <div className="bg-slate-700/30 p-6 rounded-lg">
               <div className="bg-blue-500/10 p-3 rounded-full w-fit mb-4">
                 <Brain className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Scattered Information</h3>
+              <h3 className="text-xl font-semibold mb-3">Skills Management</h3>
               <p className="text-slate-300">
-                Valuable insights and solutions are buried across various tools and
-                systems, making quick decision-making nearly impossible.
+                Challenges in tracking and developing employee skills, leading to
+                missed opportunities for growth and innovation.
               </p>
             </div>
           </div>
@@ -64,49 +64,49 @@ const Index = () => {
       <section className="py-16 md:py-24">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-            The Intelligent Knowledge Platform
+            Intelligent Workforce Optimization
           </h2>
           <p className="text-xl text-slate-300 text-center mb-16 max-w-3xl mx-auto">
-            Sift combines AI-powered knowledge management with smart workforce optimization
-            to keep your team operating at peak efficiency.
+            Our AI-powered platform helps you make data-driven decisions about your workforce,
+            ensuring optimal performance and growth.
           </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="bg-slate-700/30 border-slate-600">
               <CardContent className="p-6">
-                <Shield className="w-8 h-8 text-blue-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Knowledge Preservation</h3>
+                <Clock className="w-8 h-8 text-blue-400 mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Smart Resource Planning</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-green-400 mt-1 shrink-0" />
-                    <span>Automated knowledge capture from team interactions</span>
+                    <span>AI-driven resource allocation and scheduling</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-green-400 mt-1 shrink-0" />
-                    <span>Smart categorization and tagging of information</span>
+                    <span>Real-time capacity monitoring and forecasting</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-green-400 mt-1 shrink-0" />
-                    <span>Contextual search and retrieval</span>
+                    <span>Automated workload balancing</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
             <Card className="bg-slate-700/30 border-slate-600">
               <CardContent className="p-6">
-                <Clock className="w-8 h-8 text-blue-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Workflow Optimization</h3>
+                <Database className="w-8 h-8 text-blue-400 mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Performance Analytics</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-green-400 mt-1 shrink-0" />
-                    <span>Real-time team capacity monitoring</span>
+                    <span>Comprehensive performance dashboards</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-green-400 mt-1 shrink-0" />
-                    <span>Intelligent task allocation based on expertise</span>
+                    <span>Predictive analytics for team optimization</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-green-400 mt-1 shrink-0" />
-                    <span>Predictive absence impact analysis</span>
+                    <span>Custom KPI tracking and reporting</span>
                   </li>
                 </ul>
               </CardContent>
@@ -154,11 +154,11 @@ const Index = () => {
       <section className="py-16 md:py-24">
         <div className="container px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Team's Knowledge Management?
+            Ready to Optimize Your Workforce?
           </h2>
           <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto">
-            Join forward-thinking teams already using Sift to preserve knowledge,
-            optimize workflows, and maintain operational excellence.
+            Join forward-thinking teams already using Sift to transform their workforce
+            management and achieve operational excellence.
           </p>
           <div className="max-w-lg mx-auto">
             <WaitlistForm />
