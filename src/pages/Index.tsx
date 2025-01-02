@@ -1,12 +1,8 @@
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { Brain, Users, Zap, Shield, Clock, Database, ArrowRight, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white">
       {/* Hero Section */}
@@ -19,16 +15,7 @@ const Index = () => {
             Sift helps technical teams preserve knowledge, optimize workflows, and maintain
             operational excellence—even during personnel changes.
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <WaitlistForm />
-            <Button 
-              variant="outline" 
-              onClick={() => navigate('/use-cases')}
-              className="w-full md:w-auto"
-            >
-              Explore Use Cases
-            </Button>
-          </div>
+          <WaitlistForm />
         </div>
       </div>
 
