@@ -3,7 +3,8 @@ import { toast } from "sonner";
 
 export const WaitlistForm = () => {
   const handleClick = () => {
-    window.location.href = "https://forms.gle/yourFormLink"; // Replace with actual form link
+    // Using a temporary TypeForm URL - replace this with your actual form URL
+    window.location.href = "https://form.typeform.com/to/example";
     toast.success("Redirecting you to our waitlist form!");
   };
 
