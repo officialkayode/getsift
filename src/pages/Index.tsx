@@ -25,7 +25,7 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-slate-800">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-            Sift's Innovative Solutions
+            Our Solutions
           </h2>
           <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
             <div className="space-y-4">
@@ -63,9 +63,9 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="container px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              {/* <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Value Proposition:
-            </h2>
+            </h2> */}
             <h3 className="text-2xl md:text-3xl font-bold mb-16 text-white">
               Transforming Team Efficiency
             </h3>
@@ -119,7 +119,7 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-slate-800">
         <div className="container px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-            Competitive Landscape: Beyond Traditional Solutions
+            Beyond Traditional Solutions
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="bg-slate-700 border-slate-600">
