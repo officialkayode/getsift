@@ -12,6 +12,7 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
             Knowledge Management & Workforce Optimization
+              </h1>
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
             Sift helps technical teams preserve critical knowledge and optimize workforce efficiency—ensuring operational excellence at all times.
