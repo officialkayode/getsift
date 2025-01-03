@@ -3,10 +3,23 @@ import { Brain, Users, Zap, Shield, Clock, Database, ArrowRight, Check, ChartBar
 import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
-  return (
+    return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white">
     <div className="min-h-screen bg-slate-900 text-slate-100">
       {/* Hero Section - Split Focus */}
-      // ... keep existing code (hero section)
+      <div className="container px-4 pt-20 pb-16 md:pt-32 md:pb-24">
+        <div className="text-center animate-fade-up">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+            Knowledge Management & Workforce Optimization
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
+            Sift helps technical teams preserve critical knowledge and optimize workforce efficiency—ensuring operational excellence at all times.
+            Sift helps teams preserve critical knowledge and optimize workforce efficiency—ensuring operational excellence at all times.
+          </p>
+          <WaitlistForm />
+        </div>
+      </div>
 
       {/* Innovative Solutions Section */}
       <section className="py-16 md:py-24 bg-slate-800">
