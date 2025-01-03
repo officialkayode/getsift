@@ -1,60 +1,75 @@
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { Brain, Users, Zap, Shield, Clock, Database, ArrowRight, Check } from "lucide-react";
+import { Brain, Users, Zap, Shield, Clock, Database, ArrowRight, Check, ChartBar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white">
-      {/* Hero Section */}
+      {/* Hero Section - Split Focus */}
       <div className="container px-4 pt-20 pb-16 md:pt-32 md:pb-24">
         <div className="text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Never Lose Critical Team Knowledge Again
+            Knowledge Management & Workforce Optimization
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
-            Sift helps technical teams preserve knowledge, optimize workflows, and maintain
-            operational excellence—even during personnel changes.
+            Sift helps technical teams preserve critical knowledge and optimize workforce efficiency—ensuring operational excellence at all times.
           </p>
           <WaitlistForm />
         </div>
       </div>
 
-      {/* Problem Section */}
+      {/* Dual Focus Section */}
       <section className="py-16 md:py-24 bg-slate-800/50">
         <div className="container px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            The Hidden Cost of Knowledge Silos
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-slate-700/30 p-6 rounded-lg">
-              <div className="bg-blue-500/10 p-3 rounded-full w-fit mb-4">
-                <Users className="w-6 h-6 text-blue-400" />
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Knowledge Management */}
+            <div className="space-y-6">
+              <div className="bg-blue-500/10 p-3 rounded-full w-fit">
+                <Database className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">High Turnover Impact</h3>
-              <p className="text-slate-300">
-                Critical knowledge walks out the door with departing team members,
-                creating costly operational gaps and extended onboarding periods.
+              <h2 className="text-3xl font-bold">Knowledge Management</h2>
+              <p className="text-slate-300 text-lg">
+                Never lose critical team knowledge again. Our automated capture system ensures valuable insights are preserved and accessible, even during personnel changes.
               </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-green-400 mt-1" />
+                  <span>Automated knowledge capture from team interactions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-green-400 mt-1" />
+                  <span>Smart categorization and contextual retrieval</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-green-400 mt-1" />
+                  <span>Seamless knowledge transfer during transitions</span>
+                </li>
+              </ul>
             </div>
-            <div className="bg-slate-700/30 p-6 rounded-lg">
-              <div className="bg-blue-500/10 p-3 rounded-full w-fit mb-4">
-                <Zap className="w-6 h-6 text-blue-400" />
+
+            {/* Workforce Optimization */}
+            <div className="space-y-6">
+              <div className="bg-blue-500/10 p-3 rounded-full w-fit">
+                <Users className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Workflow Disruption</h3>
-              <p className="text-slate-300">
-                Team absences and role changes create bottlenecks in critical
-                processes, leading to delayed responses and customer dissatisfaction.
+              <h2 className="text-3xl font-bold">Workforce Optimization</h2>
+              <p className="text-slate-300 text-lg">
+                Maximize team efficiency through intelligent capacity monitoring and predictive workforce analytics.
               </p>
-            </div>
-            <div className="bg-slate-700/30 p-6 rounded-lg">
-              <div className="bg-blue-500/10 p-3 rounded-full w-fit mb-4">
-                <Brain className="w-6 h-6 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Scattered Information</h3>
-              <p className="text-slate-300">
-                Valuable insights and solutions are buried across various tools and
-                systems, making quick decision-making nearly impossible.
-              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-green-400 mt-1" />
+                  <span>Real-time capacity monitoring and analytics</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-green-400 mt-1" />
+                  <span>Predictive absence impact analysis</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-green-400 mt-1" />
+                  <span>Intelligent task allocation based on expertise</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
