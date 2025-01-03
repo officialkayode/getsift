@@ -3,17 +3,17 @@ import { toast } from "sonner";
 
 export const WaitlistForm = () => {
   const handleClick = () => {
-    // You can replace this with your actual waitlist URL
-    window.open("https://forms.gle/yourFormLink", "_blank");
+    // tally link to form
+    window.open("https://tally.so/r/3EvdLB", "_blank");
     toast.success("Opening waitlist form in a new tab!");
   };
 
   return (
-    <div className="flex justify-center w-full max-w-sm">
+    <div className="flex justify-center items-center w-full">
       <Button 
         onClick={handleClick}
         size="lg"
-        className="w-full md:w-auto"
+        className="w-full max-w-sm md:w-auto"
       >
         Join Waitlist
       </Button>
