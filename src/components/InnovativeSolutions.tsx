@@ -5,7 +5,7 @@ export const InnovativeSolutions = () => {
     <section className="py-16 md:py-24 bg-[#E5E5E0]">
       <div className="container px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[#312F2B]">
-          Our Solutions
+          Our Solution
         </h2>
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           <div className="space-y-4">
