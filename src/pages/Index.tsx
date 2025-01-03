@@ -1,9 +1,9 @@
-import { HeroSection } from "@/components/sections/HeroSection";
-import { InnovativeSolutions } from "@/components/sections/InnovativeSolutions";
-import { ValueProposition } from "@/components/sections/ValueProposition";
-import { CompetitiveLandscape } from "@/components/sections/CompetitiveLandscape";
-import { CTASection } from "@/components/sections/CTASection";
-import { Footer } from "@/components/Footer";
+import { HeroSection } from "@/components/HeroSection.tsx";
+import { InnovativeSolutions } from "@/components/InnovativeSolutions";
+import { ValueProposition } from "@/components/ValueProposition";
+import { CompetitiveLandscape } from "@/components/CompetitiveLandscape";
+import { CTASection } from "@/components/CTASection";
+import { Footer } from "@/components/Footer.tsx";
 
 const Index = () => {
   return (
