@@ -17,11 +17,6 @@ export const NavigationBar = () => {
                 How It Works
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem className="ml-6">
-              <Link to="/use-cases" className="text-lg font-medium hover:text-accent">
-                Use Cases
-              </Link>
-            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>

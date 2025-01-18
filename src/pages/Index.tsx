@@ -4,11 +4,13 @@ import { ValueProposition } from "@/components/ValueProposition";
 import { CompetitiveLandscape } from "@/components/CompetitiveLandscape";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
+import { NavigationBar } from "@/components/NavigationBar";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-[#f8f8f8] text-[#272525]">
       <div className="min-h-screen">
+        <NavigationBar />
         <HeroSection />
         <InnovativeSolutions />
         <ValueProposition />

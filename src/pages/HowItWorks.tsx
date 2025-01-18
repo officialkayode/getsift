@@ -1,9 +1,11 @@
 import { ArrowRight, MessageSquare, Brain, Zap, Shield } from "lucide-react";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { NavigationBar } from "@/components/NavigationBar";
 
 const HowItWorks = () => {
   return (
     <div className="min-h-screen bg-background pt-20">
+      <NavigationBar />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 font-gelasio">How Sift Works</h1>
