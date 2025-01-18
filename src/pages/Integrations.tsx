@@ -68,14 +68,14 @@ const IntegrationsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       <NavigationBar />
       
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-primary py-16">
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
               Enterprise-Ready Integrations
             </h1>
             <p className="text-xl md:text-2xl text-center text-muted-foreground max-w-3xl mx-auto">
@@ -85,10 +85,10 @@ const IntegrationsPage = () => {
         </section>
 
         {/* Value Proposition */}
-        <section className="py-12 bg-white">
+        <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-lg mb-6">
+              <p className="text-lg mb-6 text-foreground">
                 Sift seamlessly integrates with your existing tools, ensuring no disruption to current workflows while automatically capturing and preserving valuable team knowledge.
               </p>
             </div>
@@ -96,19 +96,19 @@ const IntegrationsPage = () => {
         </section>
 
         {/* Integration Categories */}
-        <section className="py-12 bg-card">
+        <section className="py-12">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Available Integrations</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Available Integrations</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {integrationCategories.map((category, index) => (
-                <Card key={index} className="bg-white">
+                <Card key={index} className="bg-card">
                   <CardHeader>
-                    <CardTitle>{category.title}</CardTitle>
+                    <CardTitle className="text-card-foreground">{category.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
                       {category.tools.map((tool, toolIndex) => (
-                        <li key={toolIndex} className="flex items-center gap-2">
+                        <li key={toolIndex} className="flex items-center gap-2 text-card-foreground">
                           <span className="text-sm text-muted-foreground">{tool.type}:</span>
                           <span>{tool.name}</span>
                         </li>
@@ -122,14 +122,14 @@ const IntegrationsPage = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-12 bg-white">
+        <section className="py-12">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Integration Benefits</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Integration Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <Card key={index} className="bg-card">
                   <CardHeader>
-                    <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                    <CardTitle className="text-xl text-card-foreground">{benefit.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">{benefit.description}</p>
@@ -141,9 +141,9 @@ const IntegrationsPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-primary">
+        <section className="py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-8">Ready to transform your workflow?</h2>
+            <h2 className="text-3xl font-bold mb-8 text-foreground">Ready to transform your workflow?</h2>
             <WaitlistForm />
           </div>
         </section>
