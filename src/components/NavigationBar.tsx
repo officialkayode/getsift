@@ -12,7 +12,7 @@ export const NavigationBar = () => {
             <NavigationMenuItem>
               <Link 
                 to="/" 
-                className={`text-xl font-bold hover:text-accent transition-colors ${
+                className={`text-lg font-medium hover:text-accent transition-colors ${
                   location.pathname === "/" ? "text-accent" : ""
                 }`}
               >
@@ -26,7 +26,7 @@ export const NavigationBar = () => {
                   location.pathname === "/how-it-works" ? "text-accent" : ""
                 }`}
               >
-                How Sift Works
+                How Sift works
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
