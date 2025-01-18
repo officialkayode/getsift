@@ -26,7 +26,7 @@ export const NavigationBar = () => {
                   location.pathname === "/how-it-works" ? "text-accent" : ""
                 }`}
               >
-                How It Works
+                How Sift Works
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
