@@ -8,7 +8,7 @@ import { NavigationBar } from "@/components/NavigationBar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-[#f8f8f8] text-[#272525]">
+    <div className="min-h-screen bg-background text-[#272525]">
       <div className="min-h-screen">
         <NavigationBar />
         <HeroSection />
