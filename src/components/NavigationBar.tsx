@@ -1,4 +1,4 @@
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 
 export const NavigationBar = () => {
@@ -6,13 +6,13 @@ export const NavigationBar = () => {
     <nav className="w-full bg-white/80 backdrop-blur-sm fixed top-0 z-50 border-b">
       <div className="container mx-auto px-4 py-4">
         <NavigationMenu>
-          <NavigationMenuList>
+          <NavigationMenuList className="flex items-center">
             <NavigationMenuItem>
-              <Link to="/" className="text-lg font-medium hover:text-accent">
-                Home
+              <Link to="/" className="text-xl font-bold hover:text-accent mr-8">
+                Sift
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem className="ml-6">
+            <NavigationMenuItem>
               <Link to="/how-it-works" className="text-lg font-medium hover:text-accent">
                 How It Works
               </Link>
