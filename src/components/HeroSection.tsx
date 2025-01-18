@@ -8,7 +8,7 @@ export const HeroSection = () => {
           Knowledge That Moves Your Team Forward
         </h1>
         <p className="text-xl md:text-2xl text-[#272525] mb-12 max-w-3xl mx-auto">
-          Sift helps teams preserve critical knowledge and optimize workforce efficiency—ensuring operational excellence at all times.
+          Sift helps teams capture essential information and balance workloads, keeping your service teams running smoothly even during staff changes
         </p>
         <WaitlistForm />
       </div>
