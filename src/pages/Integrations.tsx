@@ -2,19 +2,9 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 import { NavigationBar } from "@/components/NavigationBar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { MessageSquare, FileText, FolderKanban, HeadphonesIcon, Search } from "lucide-react";
+import { MessageSquare, FileText, FolderKanban, HeadphonesIcon } from "lucide-react";
 
 const IntegrationsPage = () => {
-  const integrationTypes = [
-    "All",
-    "Search Integration",
-    "Featured App",
-    "HRIS Sync",
-    "Build your own",
-    "SSO/SCIM",
-  ];
-
   const integrationCategories = [
     {
       title: "Communication & Collaboration",
@@ -93,64 +83,42 @@ const IntegrationsPage = () => {
       {/* Main Content */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="flex gap-8">
-            {/* Sidebar */}
-            <div className="hidden lg:block w-64 space-y-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                <Input
-                  placeholder="Search integrations"
-                  className="pl-10"
-                />
-              </div>
-              <div className="mt-8">
-                <h3 className="text-lg font-semibold mb-4">Integration types</h3>
-                <ul className="space-y-2">
-                  {integrationTypes.map((type) => (
-                    <li
-                      key={type}
-                      className={`px-4 py-2 rounded-lg cursor-pointer hover:bg-accent/20 ${
-                        type === "All" ? "bg-accent/20" : ""
-                      }`}
-                    >
-                      {type}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Integration Grid */}
-            <div className="flex-1">
-              {integrationCategories.map((category) => (
-                <div key={category.title} className="mb-12">
-                  <div className="flex items-center gap-3 mb-6">
-                    <category.icon className="h-6 w-6 text-accent" />
-                    <h2 className="text-2xl font-bold font-gelasio">{category.title}</h2>
-                  </div>
-                  <p className="text-muted-foreground mb-6">{category.description}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {category.tools.map((tool) => (
-                      <Card key={tool.name} className="border-accent/20">
+          {/* Integration Grid */}
+          <div className="space-y-12">
+            {integrationCategories.map((category) => (
+              <div key={category.title} className="mb-12">
+                <div className="flex items-center gap-3 mb-6">
+                  <category.icon className="h-6 w-6 text-accent" />
+                  <h2 className="text-2xl font-bold font-gelasio">{category.title}</h2>
+                </div>
+                <p className="text-muted-foreground mb-6">{category.description}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {Array.isArray(category.tools) ? (
+                    category.tools.map((tool) => (
+                      <Card key={typeof tool === 'string' ? tool : tool.name} className="border-accent/20">
                         <CardContent className="p-6">
                           <div className="flex items-start justify-between mb-4">
-                            <h3 className="text-lg font-semibold">{tool.name}</h3>
-                            {tool.featured && (
+                            <h3 className="text-lg font-semibold">
+                              {typeof tool === 'string' ? tool : tool.name}
+                            </h3>
+                            {typeof tool !== 'string' && tool.featured && (
                               <span className="px-2 py-1 text-xs bg-yellow-100 text-yellow-800 rounded">
                                 FEATURED
                               </span>
                             )}
                           </div>
-                          <p className="text-sm text-muted-foreground">
-                            {tool.description}
-                          </p>
+                          {typeof tool !== 'string' && (
+                            <p className="text-sm text-muted-foreground">
+                              {tool.description}
+                            </p>
+                          )}
                         </CardContent>
                       </Card>
-                    ))}
-                  </div>
+                    ))
+                  ) : null}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
