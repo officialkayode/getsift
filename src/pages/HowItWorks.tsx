@@ -1,21 +1,18 @@
 import { ArrowRight, MessageSquare, Brain, Zap, Shield } from "lucide-react";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { NavigationBar } from "@/components/NavigationBar";
 
 const HowItWorks = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <NavigationBar />
-      <div className="pt-20">
-        {/* Hero Section */}
-        <section className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 font-gelasio">How Sift Works</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
-            Sift creates a smart operational layer that keeps your team running at peak efficiency while preserving critical knowledge
-          </p>
-        </section>
+    <div className="min-h-screen bg-background pt-20">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-16 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 font-gelasio">How Sift Works</h1>
+        <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
+          Sift creates a smart operational layer that keeps your team running at peak efficiency while preserving critical knowledge
+        </p>
+      </section>
 
-        {/* Features Grid */}
+      {/* Features Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Connects to Your Tools */}
@@ -120,7 +117,7 @@ const HowItWorks = () => {
         </div>
       </div>
 
-        {/* CTA Section */}
+      {/* CTA Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 font-gelasio">Ready to transform your team's operations?</h2>
         <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-muted-foreground">
@@ -128,7 +125,6 @@ const HowItWorks = () => {
         </p>
         <WaitlistForm />
       </section>
-      </div>
     </div>
   );
 };

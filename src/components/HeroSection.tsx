@@ -1,4 +1,6 @@
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
@@ -10,7 +12,14 @@ export const HeroSection = () => {
         <p className="text-xl md:text-2xl text-[#272525] mb-12 max-w-3xl mx-auto">
           Sift helps teams capture essential information and balance workloads, keeping your service teams running smoothly even during staff changes
         </p>
-        <WaitlistForm />
+        <div className="flex flex-col items-center gap-6">
+          <WaitlistForm />
+          <Link to="/how-it-works">
+            <Button variant="outline" size="lg">
+              How Sift Works
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
