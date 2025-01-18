@@ -8,7 +8,7 @@ export const CompetitiveLandscape = () => {
           Beyond Traditional Solutions
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <Card className="bg-[#D3C1B6] border-[#BAB6AA]">
+          <Card className="bg-[#E5E5E0] border-[#BAB6AA]">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4 text-[#312F2B]">Knowledge Management Tools</h3>
               <p className="text-[#272525]">
@@ -16,7 +16,7 @@ export const CompetitiveLandscape = () => {
               </p>
             </CardContent>
           </Card>
-          <Card className="bg-[#D3C1B6] border-[#BAB6AA]">
+          <Card className="bg-[#E5E5E0] border-[#BAB6AA]">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4 text-[#312F2B]">Project Management Platforms</h3>
               <p className="text-[#272525]">
@@ -24,7 +24,7 @@ export const CompetitiveLandscape = () => {
               </p>
             </CardContent>
           </Card>
-          <Card className="bg-[#D3C1B6] border-[#BAB6AA]">
+          <Card className="bg-[#E5E5E0] border-[#BAB6AA]">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4 text-[#312F2B]">Workforce Management Software</h3>
               <p className="text-[#272525]">
