@@ -1,6 +1,4 @@
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
@@ -14,11 +12,6 @@ export const HeroSection = () => {
         </p>
         <div className="flex flex-col items-center gap-6">
           <WaitlistForm />
-          <Link to="/how-it-works">
-            <Button variant="outline" size="lg">
-              How Sift Works
-            </Button>
-          </Link>
         </div>
       </div>
     </div>
