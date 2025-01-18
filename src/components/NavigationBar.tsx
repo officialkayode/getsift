@@ -5,7 +5,7 @@ export const NavigationBar = () => {
   const location = useLocation();
 
   return (
-    <nav className="w-full bg-white/80 backdrop-blur-sm fixed top-0 z-50 border-b">
+    <nav className="w-full bg-white/80 backdrop-blur-sm fixed top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-center">
         <NavigationMenu>
           <NavigationMenuList className="flex items-center gap-8">
