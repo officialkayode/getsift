@@ -1,4 +1,4 @@
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 
 export const NavigationBar = () => {
@@ -9,17 +9,12 @@ export const NavigationBar = () => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link to="/" className="text-lg font-medium hover:text-accent">
-                Home
+                Sift
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem className="ml-6">
               <Link to="/how-it-works" className="text-lg font-medium hover:text-accent">
                 How It Works
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem className="ml-6">
-              <Link to="/use-cases" className="text-lg font-medium hover:text-accent">
-                Use Cases
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
