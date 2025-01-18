@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 
 export const ValueProposition = () => {
   return (
-    <section className="py-16 md:py-24 bg-[#BAB6AA]">
+    <section className="py-16 md:py-24 bg-background">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl md:text-3xl font-bold mb-16 text-[#312F2B]">

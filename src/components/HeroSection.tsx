@@ -2,7 +2,7 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 
 export const HeroSection = () => {
   return (
-    <div className="container px-4 pt-20 pb-16 md:pt-32 md:pb-24">
+    <div className="container px-4 pt-20 pb-16 md:pt-32 md:pb-24 bg-background">
       <div className="text-center animate-fade-up">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#312F2B]">
           Knowledge That Moves Your Team Forward
