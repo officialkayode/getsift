@@ -4,11 +4,11 @@ export const CompetitiveLandscape = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 animate-fade-up">
           Beyond Traditional Solutions
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors">
+          <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4">Knowledge Management Tools</h3>
               <p className="text-white/70">
@@ -16,7 +16,7 @@ export const CompetitiveLandscape = () => {
               </p>
             </CardContent>
           </Card>
-          <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors">
+          <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4">Project Management Platforms</h3>
               <p className="text-white/70">
@@ -24,7 +24,7 @@ export const CompetitiveLandscape = () => {
               </p>
             </CardContent>
           </Card>
-          <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors">
+          <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4">Workforce Management Software</h3>
               <p className="text-white/70">
