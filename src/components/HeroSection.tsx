@@ -8,7 +8,7 @@ export const HeroSection = () => {
           Right Knowledge, Right Time, Right Team 
         </h1>
         <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto">
-          Sift helps teams aggregate essential information and deliver at critical decision points while balancing workloads, keeping your service teams running smoothly even during staff changes
+          Sift helps teams aggregate essential information and proactively deliver at critical decision points while balancing workloads, keeping your service teams running smoothly even during staff changes
         </p>
         <div className="flex flex-col items-center gap-6">
           <WaitlistForm />
