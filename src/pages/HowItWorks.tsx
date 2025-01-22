@@ -19,8 +19,8 @@ const HowItWorks = () => {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Connects to Your Tools */}
           <div className="space-y-6 p-8 rounded-xl bg-card">
-            <div className="bg-[#D3C1B6] p-3 rounded-full w-fit">
-              <MessageSquare className="w-6 h-6 text-[#312F2B]" />
+            <div className="bg-accent/20 p-3 rounded-full w-fit">
+              <MessageSquare className="w-6 h-6 text-accent" />
             </div>
             <h2 className="text-2xl font-bold font-gelasio">Connects to Your Tools</h2>
             <p className="text-muted-foreground">
@@ -44,8 +44,8 @@ const HowItWorks = () => {
 
           {/* Learns Your Workflows */}
           <div className="space-y-6 p-8 rounded-xl bg-card">
-            <div className="bg-[#D3C1B6] p-3 rounded-full w-fit">
-              <Brain className="w-6 h-6 text-[#312F2B]" />
+            <div className="bg-accent/20 p-3 rounded-full w-fit">
+              <Brain className="w-6 h-6 text-accent" />
             </div>
             <h2 className="text-2xl font-bold font-gelasio">Learns Your Workflows</h2>
             <p className="text-muted-foreground">
@@ -69,8 +69,8 @@ const HowItWorks = () => {
 
           {/* Optimizes Team Operations */}
           <div className="space-y-6 p-8 rounded-xl bg-card">
-            <div className="bg-[#D3C1B6] p-3 rounded-full w-fit">
-              <Zap className="w-6 h-6 text-[#312F2B]" />
+            <div className="bg-accent/20 p-3 rounded-full w-fit">
+              <Zap className="w-6 h-6 text-accent" />
             </div>
             <h2 className="text-2xl font-bold font-gelasio">Optimizes Team Operations</h2>
             <p className="text-muted-foreground">
@@ -94,8 +94,8 @@ const HowItWorks = () => {
 
           {/* Ensures Continuous Success */}
           <div className="space-y-6 p-8 rounded-xl bg-card">
-            <div className="bg-[#D3C1B6] p-3 rounded-full w-fit">
-              <Shield className="w-6 h-6 text-[#312F2B]" />
+            <div className="bg-accent/20 p-3 rounded-full w-fit">
+              <Shield className="w-6 h-6 text-accent" />
             </div>
             <h2 className="text-2xl font-bold font-gelasio">Ensures Continuous Success</h2>
             <p className="text-muted-foreground">
