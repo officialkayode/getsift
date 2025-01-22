@@ -3,7 +3,6 @@ import { toast } from "sonner";
 
 export const WaitlistForm = () => {
   const handleClick = () => {
-    // tally link to form
     window.open("https://tally.so/r/3EvdLB", "_blank");
     toast.success("Opening waitlist form in a new tab!");
   };
@@ -13,7 +12,7 @@ export const WaitlistForm = () => {
       <Button 
         onClick={handleClick}
         size="lg"
-        className="w-full max-w-sm md:w-auto"
+        className="w-full max-w-sm md:w-auto bg-accent hover:bg-accent/90 text-white"
       >
         Join Waitlist
       </Button>

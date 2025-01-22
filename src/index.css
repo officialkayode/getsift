@@ -6,37 +6,43 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 24 3% 15%;
-    --card: 60 6% 90%;
-    --card-foreground: 24 3% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 24 3% 15%;
-    --primary: 60 8% 89%;
-    --primary-foreground: 24 3% 15%;
-    --secondary: 17 23% 77%;
-    --secondary-foreground: 24 3% 15%;
-    --muted: 19 10% 69%;
-    --muted-foreground: 24 3% 15%;
-    --accent: 19 10% 69%;
-    --accent-foreground: 24 3% 15%;
+    --background: 220 6% 10%;
+    --foreground: 0 0% 100%;
+    --card: 220 6% 17%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 6% 10%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 220 6% 17%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 174 66% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 6% 17%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 174 66% 40%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-    --border: 19 10% 69%;
-    --input: 19 10% 69%;
-    --ring: 19 10% 69%;
-    --radius: 0.75rem;
+    --border: 220 6% 17%;
+    --input: 220 6% 17%;
+    --ring: 174 66% 40%;
+    --radius: 0.5rem;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border selection:bg-accent/20 selection:text-white;
   }
   body {
-    @apply bg-background text-foreground font-lato;
+    @apply bg-background text-foreground font-lato antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-gelasio text-[#312F2B];
+    @apply font-gelasio text-white;
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10;
   }
 }
