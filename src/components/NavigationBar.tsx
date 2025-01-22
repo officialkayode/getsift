@@ -9,18 +9,12 @@ export const NavigationBar = () => {
         <div className="flex items-center justify-between">
           {/* Left section with logo */}
           <div className="flex items-center gap-2">
-            <img 
-              src="/favicon.ico" 
-              alt="Sift Logo" 
-              className="w-6 h-6"
-            />
-            <Link 
-              to="/" 
-              className={`text-xl font-medium hover:text-accent transition-colors ${
-                location.pathname === "/" ? "text-accent" : "text-white"
-              }`}
-            >
-              Sift
+            <Link to="/">
+              <img 
+                src="/favicon.ico" 
+                alt="Sift Logo" 
+                className="w-6 h-6 hover:opacity-80 transition-opacity"
+              />
             </Link>
           </div>
 
