@@ -10,25 +10,25 @@ export const CompetitiveLandscape = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Documentation Tools</h3>
+              <h3 className="text-xl font-semibold mb-4">Knowledge Management Tools</h3>
               <p className="text-white/70">
-                Unlike static documentation, Sift captures knowledge during the RCA process and surfaces it automatically at relevant decision points.
+                Sift goes beyond static documentation with AI-driven, context-aware information retrieval.
               </p>
             </CardContent>
           </Card>
           <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Incident Management Platforms</h3>
+              <h3 className="text-xl font-semibold mb-4">Project Management Platforms</h3>
               <p className="text-white/70">
-                Sift enhances existing platforms by capturing and surfacing tribal knowledge during active incident response.
+                Sift uniquely combines task allocation with intelligent knowledge preservation and utilization.
               </p>
             </CardContent>
           </Card>
           <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Knowledge Base Systems</h3>
+              <h3 className="text-xl font-semibold mb-4">Workforce Management Software</h3>
               <p className="text-white/70">
-                Instead of manual documentation, Sift automatically captures troubleshooting workflows and surfaces them when needed.
+                Sift integrates capacity monitoring with knowledge-based task optimization for superior efficiency.
               </p>
             </CardContent>
           </Card>

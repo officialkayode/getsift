@@ -6,7 +6,7 @@ export const ValueProposition = () => {
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl md:text-3xl font-bold mb-16 animate-fade-up">
-            Accelerate Incident Resolution
+            Transforming Team Efficiency
           </h3>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
@@ -14,8 +14,8 @@ export const ValueProposition = () => {
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-accent mt-1" />
                   <div>
-                    <h4 className="text-xl font-semibold">Capture Tribal Knowledge</h4>
-                    <p className="text-white/70">Automatically document troubleshooting steps and decisions during RCA workflows.</p>
+                    <h4 className="text-xl font-semibold">Preserve Critical Knowledge</h4>
+                    <p className="text-white/70">Automated capture ensures valuable insights are never lost, even during high turnover.</p>
                   </div>
                 </div>
               </div>
@@ -23,8 +23,8 @@ export const ValueProposition = () => {
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-accent mt-1" />
                   <div>
-                    <h4 className="text-xl font-semibold">Reduce Context Switching</h4>
-                    <p className="text-white/70">Access relevant information without leaving your incident response workflow.</p>
+                    <h4 className="text-xl font-semibold">Accelerate Decision-Making</h4>
+                    <p className="text-white/70">Contextual information retrieval empowers teams to respond quickly and accurately.</p>
                   </div>
                 </div>
               </div>
@@ -34,8 +34,8 @@ export const ValueProposition = () => {
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-accent mt-1" />
                   <div>
-                    <h4 className="text-xl font-semibold">Faster Resolution Times</h4>
-                    <p className="text-white/70">Proactively surface similar incidents and successful resolution paths.</p>
+                    <h4 className="text-xl font-semibold">Optimize Workflows</h4>
+                    <p className="text-white/70">Intelligent task allocation and capacity monitoring eliminate operational bottlenecks.</p>
                   </div>
                 </div>
               </div>
@@ -43,8 +43,8 @@ export const ValueProposition = () => {
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-accent mt-1" />
                   <div>
-                    <h4 className="text-xl font-semibold">Improve Team Efficiency</h4>
-                    <p className="text-white/70">Enable junior engineers to leverage senior engineers' experience through captured workflows.</p>
+                    <h4 className="text-xl font-semibold">Capture Employee ROI</h4>
+                    <p className="text-white/70">Help companies maximize employee ROI through visibility employee impact and effort.</p>
                   </div>
                 </div>
               </div>
