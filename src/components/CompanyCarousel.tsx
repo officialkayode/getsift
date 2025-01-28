@@ -43,13 +43,11 @@ export const CompanyCarousel = () => {
           {companies.map((company, index) => (
             <CarouselItem key={index} className="md:basis-1/3">
               <div className="p-4">
-                <div className="rounded-lg h-[8rem] w-[12rem] mx-auto flex items-center justify-center bg-white/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/30">
-                  <img
-                    src={company.logo}
-                    alt={`${company.name} logo`}
-                    className="h-12 w-auto object-contain transition-transform duration-300 hover:scale-110"
-                  />
-                </div>
+                <img
+                  src={company.logo}
+                  alt={`${company.name} logo`}
+                  className="h-12 w-auto mx-auto object-contain transition-transform duration-300 hover:scale-110"
+                />
               </div>
             </CarouselItem>
           ))}
