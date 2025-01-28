@@ -4,7 +4,7 @@ export const HeroSection = () => {
   return (
     <div className="container px-4 pt-20 pb-16 md:pt-32 md:pb-24 bg-background">
       <div className="text-center animate-fade-up">
-        <h1 className="text-2xl md:text-4xl font-bold mb-6">
+        <h1 className="text-xl md:text-3xl font-bold mb-6">
           Right Knowledge, Right Time, Right Team 
         </h1>
         <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto">
