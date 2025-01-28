@@ -2,12 +2,12 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 
 export const HeroSection = () => {
   return (
-    <div className="container px-4 pt-20 pb-16 md:pt-32 md:pb-24 bg-background">
+    <div className="container px-4 pt-16 pb-12 md:pt-24 md:pb-16 bg-background">
       <div className="text-center animate-fade-up">
-        <h1 className="text-xl md:text-3xl font-bold mb-6">
+        <h1 className="text-xl md:text-3xl font-bold mb-4">
           Right Knowledge, Right Time, Right Team 
         </h1>
-        <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl text-white/70 mb-8 max-w-3xl mx-auto">
           Sift captures team's implicit knowledge, aggregates essential information, and proactively delivers at critical decision points, keeping your service teams running smoothly even during staff changes
         </p>
         <div className="flex flex-col items-center gap-6">

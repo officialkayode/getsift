@@ -2,9 +2,9 @@ import { Database, Users, ChartBar } from "lucide-react";
 
 export const InnovativeSolutions = () => {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-12 md:py-16 bg-background">
       <div className="container px-4">
-        <h2 className="text-xl md:text-3xl font-bold text-center mb-16 animate-fade-up">
+        <h2 className="text-xl md:text-3xl font-bold text-center mb-12 animate-fade-up">
           Our Solution
         </h2>
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
