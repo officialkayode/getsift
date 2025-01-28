@@ -20,11 +20,11 @@ export const CompanyCarousel = () => {
     },
     {
       name: "Pure Storage",
-      logo: "/pure-storage-logo.png"
+      logo: "/Pure-storage-vector-logo.svg"
     },
     {
       name: "Mercedes",
-      logo: "/mercedes-logo.png"
+      logo: "/Mercedes-Logo.svg"
     }
   ];
 
