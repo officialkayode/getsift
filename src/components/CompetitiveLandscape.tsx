@@ -4,7 +4,7 @@ export const CompetitiveLandscape = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 animate-fade-up">
+        <h2 className="text-xl md:text-3xl font-bold text-center mb-16 animate-fade-up">
           Beyond Traditional Solutions
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
