@@ -43,7 +43,7 @@ export const CompanyCarousel = () => {
           {companies.map((company, index) => (
             <CarouselItem key={index} className="md:basis-1/3">
               <div className="p-4">
-                <div className="rounded-lg h-24 flex items-center justify-center bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20">
+                <div className="rounded-lg h-24 flex items-center justify-center bg-white/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/30">
                   <img
                     src={company.logo}
                     alt={`${company.name} logo`}
