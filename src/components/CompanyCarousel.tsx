@@ -30,7 +30,7 @@ export const CompanyCarousel = () => {
 
   return (
     <div className="container mx-auto py-12">
-      <p className="text-center text-lg text-white/70 mb-8">Built by experts from:</p>
+      <p className="text-center text-lg text-white/70 mb-8">Built by experts from</p>
       <Carousel
         opts={{
           align: "start",
