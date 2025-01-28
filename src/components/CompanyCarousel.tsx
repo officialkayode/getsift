@@ -32,7 +32,7 @@ export const CompanyCarousel = () => {
   );
 
   return (
-    <section className="py-16 md:py-24 bg-[#F1F1F1]">
+    <section className="py-16 md:py-24 bg-[#3c423a]">
       <div className="container px-4">
         <Carousel
           plugins={[plugin.current]}
