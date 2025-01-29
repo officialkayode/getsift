@@ -17,6 +17,18 @@ export const NavigationBar = () => {
               />
             </Link>
           </div>
+
+          {/* Right section with navigation */}
+          <div className="flex items-center gap-6">
+            <Link 
+              to="/how-it-works" 
+              className={`text-sm font-medium hover:text-accent transition-colors ${
+                location.pathname === "/how-it-works" ? "text-accent" : "text-white/70"
+              }`}
+            >
+              How Sift works
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

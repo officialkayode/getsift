@@ -1,30 +1,51 @@
-import { MessageSquare, Brain, Zap, Shield, ArrowRight } from "lucide-react";
+import { Link2, Brain, Zap, Shield, ArrowRight, GitBranch, MessageSquare, BarChart } from "lucide-react";
 
 export const FeatureGrid = () => {
   const features = [
     {
-      icon: <MessageSquare className="w-6 h-6 text-accent" />,
-      title: "Connects to Your Tools",
-      description: "Sift integrates with your existing technical stack to capture context without workflow disruption.",
-      items: ["Monitoring systems", "Incident management platforms", "System logs and metrics", "Documentation systems"]
+      icon: <Link2 className="w-6 h-6 text-accent" />,
+      title: "Technical Integration",
+      description: "Unified Data Layer with native integration to your tech stack:",
+      items: [
+        "Incident Management: ServiceNow, Jira, PagerDuty",
+        "Communication: Slack, Teams",
+        "Documentation: Confluence, internal wikis",
+        "Monitoring: Datadog, Splunk, ELK",
+        "Version Control: GitHub, GitLab"
+      ]
     },
     {
       icon: <Brain className="w-6 h-6 text-accent" />,
-      title: "Captures Critical Context",
-      description: "Our AI automatically captures and indexes important technical context during incident response and troubleshooting.",
-      items: ["System state changes", "Investigation steps", "Resolution patterns", "Technical decisions"]
+      title: "Automated Context Collection",
+      description: "Our intelligent system automatically captures and indexes critical technical context:",
+      items: [
+        "Captures workflow patterns and technical decisions",
+        "Indexes technical discussions and resolution paths",
+        "Maps relationships between incidents and solutions",
+        "Preserves documentation automatically"
+      ]
     },
     {
       icon: <Zap className="w-6 h-6 text-accent" />,
-      title: "Surfaces Information Automatically",
-      description: "Relevant information is proactively surfaced at critical decision points during technical workflows.",
-      items: ["Similar past incidents", "Related system changes", "Previous solutions", "Expert insights"]
+      title: "Intelligent Knowledge Delivery",
+      description: "Smart delivery of relevant technical context exactly when needed:",
+      items: [
+        "Surfaces relevant context based on current workflow",
+        "Correlates historical incidents with current issues",
+        "Provides actionable insights from past resolutions",
+        "Real-time knowledge evolution"
+      ]
     },
     {
-      icon: <Shield className="w-6 h-6 text-accent" />,
-      title: "Preserves Technical Knowledge",
-      description: "Critical technical knowledge is preserved without requiring manual documentation efforts.",
-      items: ["Implicit knowledge capture", "Automated context preservation", "Decision trail recording", "Technical pattern recognition"]
+      icon: <BarChart className="w-6 h-6 text-accent" />,
+      title: "Impact Metrics",
+      description: "Measurable improvements in engineering efficiency:",
+      items: [
+        "60% reduction in context-switching",
+        "40% decrease in MTTR for common issues",
+        "80% faster onboarding for new team members",
+        "Continuous system evolution"
+      ]
     }
   ];
 
@@ -36,7 +57,7 @@ export const FeatureGrid = () => {
             <div className="bg-accent/20 p-3 rounded-full w-fit">
               {feature.icon}
             </div>
-            <h2 className="text-2xl font-bold font-gelasio">{feature.title}</h2>
+            <h2 className="text-xl md:text-2xl font-bold font-gelasio">{feature.title}</h2>
             <p className="text-muted-foreground">{feature.description}</p>
             <ul className="space-y-2 text-muted-foreground">
               {feature.items.map((item, itemIndex) => (
