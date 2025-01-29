@@ -5,10 +5,10 @@ export const HeroSection = () => {
     <div className="container px-4 pt-16 pb-12 md:pt-24 md:pb-16 bg-background">
       <div className="text-center animate-fade-up">
         <h1 className="text-xl md:text-3xl font-bold mb-4">
-          Right Knowledge, Right Time, Right Team 
+          Resolve Issues Faster. Work Smarter.
         </h1>
         <p className="text-xl md:text-2xl text-white/70 mb-8 max-w-3xl mx-auto">
-          Sift captures team's implicit knowledge, aggregates essential information, and proactively delivers at critical decision points, keeping your service teams running smoothly even during staff changes
+          Sift captures your team's implicit knowledge, aggregates essential information, and delivers it at critical decision points—so you never waste time searching.
         </p>
         <div className="flex flex-col items-center gap-6">
           <WaitlistForm />
