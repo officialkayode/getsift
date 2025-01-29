@@ -21,14 +21,6 @@ export const NavigationBar = () => {
           {/* Right section with navigation */}
           <div className="flex items-center gap-6">
             <Link 
-              to="/use-cases" 
-              className={`text-sm font-medium hover:text-accent transition-colors ${
-                location.pathname === "/use-cases" ? "text-accent" : "text-white/70"
-              }`}
-            >
-              Use Cases
-            </Link>
-            <Link 
               to="/how-it-works" 
               className={`text-sm font-medium hover:text-accent transition-colors ${
                 location.pathname === "/how-it-works" ? "text-accent" : "text-white/70"
