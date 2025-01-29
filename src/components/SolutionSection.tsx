@@ -23,11 +23,11 @@ export const SolutionSection = () => {
             <CardContent className="p-6">
               <h3 className="text-lg font-bold mb-4">How It Works:</h3>
               <div className="space-y-4 text-white/70">
-                <p>1️⃣ <strong>Automate Data Collection & Analysis</strong><br/>
+                <p>✓ <strong>Automate Data Collection & Analysis</strong><br/>
                 Integrates with your tools for a single view of critical data.</p>
-                <p>2️⃣ <strong>Proactively Deliver Root Cause Insights</strong><br/>
+                <p>✓ <strong>Proactively Deliver Root Cause Insights</strong><br/>
                 Suggests resolutions based on historical patterns.</p>
-                <p>3️⃣ <strong>Streamline Documentation Updates</strong><br/>
+                <p>✓ <strong>Streamline Documentation Updates</strong><br/>
                 Auto-generates reports and enriches knowledge bases.</p>
               </div>
             </CardContent>
