@@ -12,23 +12,23 @@ export const CompetitiveLandscape = () => {
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4">Knowledge Management Tools</h3>
               <p className="text-white/70">
-                Sift goes beyond static documentation with AI-driven, context-aware information retrieval.
+                Unlike static documentation, Sift actively captures and delivers knowledge in real-time during workflows.
               </p>
             </CardContent>
           </Card>
           <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Project Management Platforms</h3>
+              <h3 className="text-xl font-semibold mb-4">Information Repositories</h3>
               <p className="text-white/70">
-                Sift uniquely combines task allocation with intelligent knowledge preservation and utilization.
+                Sift goes beyond storage by intelligently aggregating and contextually delivering information when needed.
               </p>
             </CardContent>
           </Card>
           <Card className="bg-primary border-white/10 hover:border-accent/50 transition-colors hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Workforce Management Software</h3>
+              <h3 className="text-xl font-semibold mb-4">Traditional Documentation</h3>
               <p className="text-white/70">
-                Sift integrates capacity monitoring with knowledge-based task optimization for superior efficiency.
+                Instead of manual documentation, Sift automatically preserves knowledge during natural work processes.
               </p>
             </CardContent>
           </Card>
