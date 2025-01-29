@@ -37,14 +37,14 @@ export const FeatureGrid = () => {
       ]
     },
     {
-      icon: <BarChart className="w-6 h-6 text-accent" />,
-      title: "Impact Metrics",
-      description: "Measurable improvements in engineering efficiency:",
+      icon: <MessageSquare className="w-6 h-6 text-accent" />,
+      title: "Auto Documentation",
+      description: "Automated documentation generation and maintenance:",
       items: [
-        "60% reduction in context-switching",
-        "40% decrease in MTTR for common issues",
-        "80% faster onboarding for new team members",
-        "Continuous system evolution"
+        "Updates documentation based on actual resolutions",
+        "Learns from successful troubleshooting patterns",
+        "Maintains technical context as systems evolve",
+        "Continuous system improvement"
       ]
     }
   ];
