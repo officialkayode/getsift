@@ -1,4 +1,4 @@
-import { Database, Users, ChartBar } from "lucide-react";
+import { Brain, Database, Zap } from "lucide-react";
 
 export const InnovativeSolutions = () => {
   return (
@@ -10,29 +10,29 @@ export const InnovativeSolutions = () => {
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           <div className="space-y-4 hover:scale-105 transition-transform duration-300">
             <div className="bg-accent/20 p-3 rounded-full w-fit">
+              <Brain className="w-8 h-8 text-accent" />
+            </div>
+            <h3 className="text-xl font-semibold">Implicit Knowledge Capture</h3>
+            <p className="text-white/70">
+              Automatically captures valuable team knowledge during daily workflows, preserving critical insights without manual documentation.
+            </p>
+          </div>
+          <div className="space-y-4 hover:scale-105 transition-transform duration-300">
+            <div className="bg-accent/20 p-3 rounded-full w-fit">
               <Database className="w-8 h-8 text-accent" />
             </div>
-            <h3 className="text-xl font-semibold">Proactive Information Delivery</h3>
+            <h3 className="text-xl font-semibold">Smart Information Aggregation</h3>
             <p className="text-white/70">
-              Through deep integration with existing tools, relevant knowledge and context automatically surfaces at critical decision points.
+              Intelligently combines and organizes information from various sources to create a comprehensive knowledge base.
             </p>
           </div>
           <div className="space-y-4 hover:scale-105 transition-transform duration-300">
             <div className="bg-accent/20 p-3 rounded-full w-fit">
-              <Users className="w-8 h-8 text-accent" />
+              <Zap className="w-8 h-8 text-accent" />
             </div>
-            <h3 className="text-xl font-semibold">Intelligent Workforce Optimization</h3>
+            <h3 className="text-xl font-semibold">Proactive Delivery</h3>
             <p className="text-white/70">
-              Real-time capacity monitoring, predictive absence analysis, and smart task allocation maximize team efficiency.
-            </p>
-          </div>
-          <div className="space-y-4 hover:scale-105 transition-transform duration-300">
-            <div className="bg-accent/20 p-3 rounded-full w-fit">
-              <ChartBar className="w-8 h-8 text-accent" />
-            </div>
-            <h3 className="text-xl font-semibold">Measurable Impact</h3>
-            <p className="text-white/70">
-              Provides clear metrics on time saved, knowledge retention, and team efficiency improvements.
+              Delivers relevant information at critical decision points, ensuring teams have the context they need when they need it.
             </p>
           </div>
         </div>
