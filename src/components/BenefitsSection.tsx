@@ -11,28 +11,28 @@ export const BenefitsSection = () => {
             <ChartLine className="w-6 h-6 text-accent" />
             <div>
               <h3 className="font-bold mb-2 font-chakra">Faster RCA</h3>
-              <p className="text-white/70 font-cormorant">Reduce time spent searching across tools.</p>
+              <p className="text-white/70 font-cormorant text-lg">Reduce time spent searching across tools.</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
             <Brain className="w-6 h-6 text-accent" />
             <div>
               <h3 className="font-bold mb-2 font-chakra">AI-Powered Insights</h3>
-              <p className="text-white/70 font-cormorant">Context-aware recommendations for quicker resolution.</p>
+              <p className="text-white/70 font-cormorant text-lg">Context-aware recommendations for quicker resolution.</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
             <Clock className="w-6 h-6 text-accent" />
             <div>
               <h3 className="font-bold mb-2 font-chakra">Knowledge That Evolves</h3>
-              <p className="text-white/70 font-cormorant">Documentation updates itself as your team works.</p>
+              <p className="text-white/70 font-cormorant text-lg">Documentation updates itself as your team works.</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
             <Link className="w-6 h-6 text-accent" />
             <div>
               <h3 className="font-bold mb-2 font-chakra">Seamless Integrations</h3>
-              <p className="text-white/70 font-cormorant">Works where you work (ServiceNow, Slack, Splunk, Confluence).</p>
+              <p className="text-white/70 font-cormorant text-lg">Works where you work (ServiceNow, Slack, Splunk, Confluence).</p>
             </div>
           </div>
         </div>
