@@ -7,8 +7,8 @@ export const ProblemStatement = () => {
         <h2 className="text-xl md:text-2xl font-bold mb-8 font-orbitron text-center">The Challenge: Delayed Resolution & Lost Knowledge</h2>
         
         <div className="space-y-6 mb-12">
-          <p className="text-white/70 font-cormorant">Reliability and Support Engineers struggle with:</p>
-          <ul className="list-disc pl-6 space-y-3 text-white/70 font-cormorant">
+          <p className="text-white/70 font-cormorant text-lg">Reliability and Support Engineers struggle with:</p>
+          <ul className="list-disc pl-6 space-y-3 text-white/70 font-cormorant text-lg">
             <li>Siloed knowledge – critical information is scattered across tools.</li>
             <li>Slow root cause analysis (RCA) – finding relevant historical insights takes too long.</li>
             <li>Time wasted searching – jumping between ServiceNow, Confluence, Slack, and logs.</li>
