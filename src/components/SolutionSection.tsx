@@ -4,7 +4,7 @@ export const SolutionSection = () => {
   return (
     <section className="container px-4 py-16 bg-primary/30">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-xl md:text-2xl font-bold mb-8 font-chakra text-center">Sift's Solution: Contextual Knowledge, Delivered Proactively</h2>
+        <h2 className="text-xl md:text-2xl font-bold mb-8 font-orbitron text-center">Sift's Solution: Contextual Knowledge, Delivered Proactively</h2>
         
         <div className="grid gap-8 md:grid-cols-2 mb-12">
           <Card className="bg-primary border-accent/20">
