@@ -59,6 +59,7 @@ export default {
         chakra: ['Chakra Petch', 'sans-serif'],
         caveat: ['Caveat', 'cursive'],
         orbitron: ['Orbitron', 'sans-serif'],
+        cormorant: ['Cormorant', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
