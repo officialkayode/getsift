@@ -33,6 +33,15 @@ export const SolutionSection = () => {
             </CardContent>
           </Card>
         </div>
+
+        <Card className="bg-primary border-accent/20 mt-8">
+          <CardContent className="p-6">
+            <h3 className="text-lg font-bold mb-4 font-chakra text-center">Our Commitment to Data Privacy & Security</h3>
+            <p className="text-white/70 font-cormorant text-xl leading-relaxed">
+              At Sift, your data security and privacy are our top priorities. We operate under strict data isolation principles, ensuring your data is never shared, sold, or used for any purpose other than improving your own workflows. All data is encrypted in transit and at rest, and we comply with industry-leading certifications, including SOC 2 and ISO 27001. You maintain full control and visibility over your data, and our AI models are client-specific, ensuring no cross-company data usage. With Sift, you can focus on optimizing your operations while we safeguard your information with the highest standards.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
