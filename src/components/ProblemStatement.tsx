@@ -4,7 +4,7 @@ export const ProblemStatement = () => {
   return (
     <section className="container px-4 py-16">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-xl md:text-2xl font-bold mb-8 font-gelasio text-center">The Challenge: Delayed Resolution & Lost Knowledge</h2>
+        <h2 className="text-xl md:text-2xl font-bold mb-8 font-chakra text-center">The Challenge: Delayed Resolution & Lost Knowledge</h2>
         
         <div className="space-y-6 mb-12">
           <p className="text-white/70">Reliability and Support Engineers struggle with:</p>
