@@ -56,6 +56,7 @@ export default {
       fontFamily: {
         gelasio: ['Gelasio', 'serif'],
         lato: ['Lato', 'sans-serif'],
+        chakra: ['Chakra Petch', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
