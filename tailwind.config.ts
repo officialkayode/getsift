@@ -58,6 +58,7 @@ export default {
         lato: ['Lato', 'sans-serif'],
         chakra: ['Chakra Petch', 'sans-serif'],
         caveat: ['Caveat', 'cursive'],
+        orbitron: ['Orbitron', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
