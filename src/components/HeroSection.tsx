@@ -7,7 +7,7 @@ export const HeroSection = () => {
         <h1 className="text-xl md:text-3xl font-bold mb-4">
           Resolve Issues Faster. Work Smarter.
         </h1>
-        <p className="text-xl md:text-2xl text-white/70 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl text-white/70 mb-8 max-w-3xl mx-auto font-caveat">
           Sift captures your team's implicit knowledge, aggregates essential information, and delivers it at critical decision points—so you never waste time searching.
         </p>
         <div className="flex flex-col items-center gap-6">

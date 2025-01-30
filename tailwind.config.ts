@@ -57,6 +57,7 @@ export default {
         gelasio: ['Gelasio', 'serif'],
         lato: ['Lato', 'sans-serif'],
         chakra: ['Chakra Petch', 'sans-serif'],
+        caveat: ['Caveat', 'cursive'],
       },
       borderRadius: {
         lg: "var(--radius)",
