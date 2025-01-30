@@ -10,7 +10,7 @@ export const SolutionSection = () => {
           <Card className="bg-primary border-accent/20">
             <CardContent className="p-6">
               <h3 className="text-lg font-bold mb-4 font-chakra">What Sift Does:</h3>
-              <ul className="space-y-3 text-white/70">
+              <ul className="space-y-3 text-white/70 font-cormorant">
                 <li>✓ Integrates with your existing tools (ServiceNow, Splunk, Slack, Confluence)</li>
                 <li>✓ Automatically captures and organizes insights from RCA workflows</li>
                 <li>✓ Surfaces relevant knowledge at the right moment</li>
@@ -22,7 +22,7 @@ export const SolutionSection = () => {
           <Card className="bg-primary border-accent/20">
             <CardContent className="p-6">
               <h3 className="text-lg font-bold mb-4 font-chakra">How It Works:</h3>
-              <div className="space-y-4 text-white/70">
+              <div className="space-y-4 text-white/70 font-cormorant">
                 <p>✓ <strong>Automate Data Collection & Analysis</strong><br/>
                 Integrates with your tools for a single view of critical data.</p>
                 <p>✓ <strong>Proactively Deliver Root Cause Insights</strong><br/>
