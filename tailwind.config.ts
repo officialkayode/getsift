@@ -23,18 +23,18 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#1A1D1F",
+        background: "#0A1628", // Deep Blue background
         foreground: "#FFFFFF",
         primary: {
-          DEFAULT: "#2A2D2F",
+          DEFAULT: "#1E3A5F", // Darker blue for primary elements
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#22A699",
+          DEFAULT: "#0EA5E9", // Bright Cyan/Teal
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#22A699",
+          DEFAULT: "#0EA5E9", // Bright Cyan/Teal
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -42,25 +42,21 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#2A2D2F",
+          DEFAULT: "#64748B", // Cool Gray
           foreground: "#FFFFFF",
         },
         popover: {
-          DEFAULT: "#1A1D1F",
+          DEFAULT: "#0A1628",
           foreground: "#FFFFFF",
         },
         card: {
-          DEFAULT: "#2A2D2F",
+          DEFAULT: "#1E3A5F",
           foreground: "#FFFFFF",
         },
       },
       fontFamily: {
-        gelasio: ['Gelasio', 'serif'],
-        lato: ['Lato', 'sans-serif'],
-        chakra: ['Chakra Petch', 'sans-serif'],
-        caveat: ['Caveat', 'cursive'],
-        orbitron: ['Orbitron', 'sans-serif'],
-        cormorant: ['Cormorant', 'serif'],
+        sans: ['Inter', 'sans-serif'], // Primary typeface
+        display: ['Space Grotesk', 'sans-serif'], // Secondary typeface for headlines
       },
       borderRadius: {
         lg: "var(--radius)",
