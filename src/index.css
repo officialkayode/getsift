@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500;600;700&family=Lato:wght@400;700&family=Chakra+Petch:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Cormorant:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,25 +5,25 @@
 
 @layer base {
   :root {
-    --background: 220 6% 10%;
+    --background: 210 14% 23%;
     --foreground: 0 0% 100%;
-    --card: 220 6% 17%;
+    --card: 0 0% 14%;
     --card-foreground: 0 0% 100%;
-    --popover: 220 6% 10%;
+    --popover: 210 14% 23%;
     --popover-foreground: 0 0% 100%;
-    --primary: 220 6% 17%;
+    --primary: 0 0% 14%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 174 66% 40%;
+    --secondary: 168 74% 42%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 220 6% 17%;
+    --muted: 0 0% 14%;
     --muted-foreground: 0 0% 100%;
-    --accent: 174 66% 40%;
+    --accent: 168 74% 42%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 6% 17%;
-    --input: 220 6% 17%;
-    --ring: 174 66% 40%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 168 74% 42%;
     --radius: 0.5rem;
   }
 }
@@ -34,10 +33,10 @@
     @apply border-border selection:bg-accent/20 selection:text-white;
   }
   body {
-    @apply bg-background text-foreground font-lato antialiased;
+    @apply bg-background text-foreground font-sans antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-chakra text-white;
+    @apply font-display text-white;
   }
 }
 
