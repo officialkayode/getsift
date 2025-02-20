@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { CarouselContext } from "./carousel-context";
 import type { CarouselApi, CarouselProps } from "./types";
 
-const Carousel = React.forwardRef<
+export const Carousel = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CarouselProps
 >(
