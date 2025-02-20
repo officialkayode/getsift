@@ -9,20 +9,21 @@ export const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full backdrop-blur-lg fixed top-0 z-50 border-b border-accent/10">
-      <div className="container mx-auto px-4 py-4">
+    <nav className="w-full bg-background/80 backdrop-blur-lg fixed top-0 z-50 border-b border-white/10">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
+          {/* Left section with logo */}
           <div className="flex items-center gap-2">
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/">
               <img 
                 src="/favicon.ico" 
                 alt="Sift Logo" 
                 className="w-8 h-8 hover:opacity-80 transition-opacity"
               />
-              <span className="font-display font-bold text-xl">Sift</span>
             </Link>
           </div>
 
+          {/* Mobile menu button */}
           <button 
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -34,19 +35,21 @@ export const NavigationBar = () => {
             )}
           </button>
 
-          <div className="hidden md:flex items-center gap-8">
+          {/* Desktop navigation */}
+          <div className="hidden md:flex items-center gap-6">
             <Link 
               to="/how-it-works" 
               className={`text-sm font-medium ${linkHoverClass} ${
                 location.pathname === "/how-it-works" ? "text-accent" : "text-white/70"
               }`}
             >
-              How It Works
+              How Sift works
             </Link>
           </div>
 
+          {/* Mobile menu */}
           {isMenuOpen && (
-            <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg md:hidden border-b border-accent/10">
+            <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg md:hidden border-b border-white/10">
               <div className="container mx-auto px-4 py-4">
                 <Link 
                   to="/how-it-works" 
@@ -55,7 +58,7 @@ export const NavigationBar = () => {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  How It Works
+                  How Sift works
                 </Link>
               </div>
             </div>

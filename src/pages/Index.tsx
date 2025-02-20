@@ -1,4 +1,3 @@
-
 import { HeroSection } from "@/components/HeroSection";
 import { ProblemStatement } from "@/components/ProblemStatement";
 import { SolutionSection } from "@/components/SolutionSection";
@@ -15,10 +14,10 @@ const Index = () => {
         <NavigationBar />
         <HeroSection />
         <ProblemStatement />
+        <SolutionSection />
         <BenefitsSection />
         <CTASection />
         <CompanyCarousel />
-        <SolutionSection />
         <Footer />
       </div>
     </div>
