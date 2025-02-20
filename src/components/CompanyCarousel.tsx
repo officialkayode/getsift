@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import { fadeInUpClass, cardHoverClass } from "./shared/animations";
 
 export const CompanyCarousel = () => {
   const plugin = useRef(
@@ -29,8 +31,10 @@ export const CompanyCarousel = () => {
   ];
 
   return (
-    <div className="container mx-auto py-12">
-      <p className="text-center text-lg text-white/70 mb-8">Built by experts from</p>
+    <div className="container mx-auto py-12 md:py-16">
+      <p className={`text-center text-lg md:text-xl text-white/70 mb-8 font-cormorant ${fadeInUpClass}`}>
+        Built by experts from
+      </p>
       <Carousel
         opts={{
           align: "start",
@@ -43,19 +47,19 @@ export const CompanyCarousel = () => {
           {companies.map((company, index) => (
             <CarouselItem key={index} className="md:basis-1/3">
               <div className="p-4">
-                <div className="rounded-lg h-[6.3rem] flex items-center justify-center bg-white/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/30">
+                <div className={`rounded-lg h-24 flex items-center justify-center bg-white/10 backdrop-blur-sm ${cardHoverClass}`}>
                   <img
                     src={company.logo}
                     alt={`${company.name} logo`}
-                    className="h-12 w-auto object-contain transition-transform duration-300 hover:scale-110"
+                    className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="hidden md:flex" />
+        <CarouselNext className="hidden md:flex" />
       </Carousel>
     </div>
   );
