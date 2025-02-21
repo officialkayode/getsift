@@ -32,7 +32,7 @@ export const CompanyCarousel = () => {
 
   return (
     <div className="container mx-auto py-12 md:py-16">
-      <p className={`text-center text-lg md:text-xl text-white/70 mb-8 font-cormorant ${fadeInUpClass}`}>
+      <p className={`text-center text-lg md:text-xl text-white/70 mb-8 ${fadeInUpClass}`}>
         Built by experts from
       </p>
       <Carousel
