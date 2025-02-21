@@ -4,9 +4,9 @@ import { fadeInUpClass } from "./shared/animations";
 
 export const HeroSection = () => {
   return (
-    <div className="container px-4 pt-24 pb-12 md:pt-32 md:pb-16 bg-background">
+    <section className="container px-4 pt-24 pb-12 md:pt-32 md:pb-16">
       <div className={`text-center ${fadeInUpClass}`}>
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 font-display">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6">
           Resolve Issues Faster. Work Smarter.
         </h1>
         <p className="text-lg md:text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -16,6 +16,6 @@ export const HeroSection = () => {
           <WaitlistForm />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
