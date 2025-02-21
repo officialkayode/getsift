@@ -7,7 +7,6 @@ import { CTASection } from "@/components/CTASection";
 import { CompanyCarousel } from "@/components/CompanyCarousel";
 import { Footer } from "@/components/Footer";
 import { NavigationBar } from "@/components/NavigationBar";
-import { HowItWorksHero } from "@/components/how-it-works/HowItWorksHero";
 import { FeatureGrid } from "@/components/how-it-works/FeatureGrid";
 
 const Index = () => {
@@ -18,7 +17,6 @@ const Index = () => {
       <CompanyCarousel />
       <ProblemStatement />
       <SolutionSection />
-      <HowItWorksHero />
       <FeatureGrid />
       <BenefitsSection />
       <CTASection />
