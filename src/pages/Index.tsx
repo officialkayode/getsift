@@ -11,14 +11,23 @@ import { FeatureGrid } from "@/components/how-it-works/FeatureGrid";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
       <NavigationBar />
       <HeroSection />
-      <CompanyCarousel />
-      <ProblemStatement />
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent pointer-events-none" />
+        <CompanyCarousel />
+      </div>
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 pointer-events-none" />
+        <ProblemStatement />
+      </div>
       <SolutionSection />
       <FeatureGrid />
-      <BenefitsSection />
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-muted to-background pointer-events-none" />
+        <BenefitsSection />
+      </div>
       <CTASection />
       <Footer />
     </div>
