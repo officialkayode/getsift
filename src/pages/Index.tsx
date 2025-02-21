@@ -18,16 +18,10 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent pointer-events-none" />
         <CompanyCarousel />
       </div>
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 pointer-events-none" />
-        <ProblemStatement />
-      </div>
+      <ProblemStatement />
       <SolutionSection />
       <FeatureGrid />
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted to-background pointer-events-none" />
-        <BenefitsSection />
-      </div>
+      <BenefitsSection />
       <CTASection />
       <Footer />
     </div>
