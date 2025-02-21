@@ -10,7 +10,7 @@ export const HeroSection = () => {
           Resolve Issues Faster. Work Smarter.
         </h1>
         <p className="text-lg md:text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Sift captures your team's implicit knowledge, aggregates essential information, and delivers it at critical decision points—so you never waste time searching.
+          Sift brings together disparate data, transforms it into insights, and empowers rapid incident resolution for support and reliability engineers.
         </p>
         <div className="flex flex-col items-center gap-6">
           <WaitlistForm />
