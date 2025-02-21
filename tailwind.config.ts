@@ -57,6 +57,9 @@ export default {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        orbitron: ["Orbitron", "sans-serif"],
+        chakra: ["Chakra Petch", "sans-serif"],
+        cormorant: ["Cormorant", "serif"]
       },
       borderRadius: {
         lg: "var(--radius)",
