@@ -39,18 +39,6 @@ export const NavigationBar = () => {
             >
               How It Works
             </button>
-            <button 
-              onClick={() => scrollToSection("benefits")}
-              className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors"
-            >
-              Benefits
-            </button>
-            <button 
-              onClick={() => scrollToSection("cta")}
-              className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors"
-            >
-              Get Started
-            </button>
           </div>
 
           {isMenuOpen && (
@@ -61,18 +49,6 @@ export const NavigationBar = () => {
                   className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors text-left"
                 >
                   How It Works
-                </button>
-                <button 
-                  onClick={() => scrollToSection("benefits")}
-                  className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors text-left"
-                >
-                  Benefits
-                </button>
-                <button 
-                  onClick={() => scrollToSection("cta")}
-                  className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors text-left"
-                >
-                  Get Started
                 </button>
               </div>
             </div>
