@@ -6,7 +6,7 @@ export const HeroSection = () => {
         <h1 className="text-xl md:text-2xl lg:text-2xl font-bold mb-6">
           AI-powered root cause analysis platform for SREs and TSEs.
         </h1>
-        <p className="text-lg md:text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed text-center">Sift is a context-aware assistant designed for high-performing reliability and support engineering teams. It aggregates logs, detects patterns, captures implicit knowledge, and auto-documents root causes, enabling faster and more efficient incident resolution.</p>
+        <p className="text-lg md:text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed text-center">Sift is a context-aware assistant designed for high-performing reliability and support engineering teams. It aggregates logs, detects patterns, captures implicit knowledge, proactively delivers knowledge, and auto-documents root causes, enabling faster and more efficient incident resolution.</p>
         <div className="flex flex-col items-center gap-6">
           <WaitlistForm />
         </div>
