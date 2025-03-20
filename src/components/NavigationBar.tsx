@@ -1,5 +1,5 @@
 
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import { useState } from "react";
 
 export const NavigationBar = () => {
@@ -39,6 +39,14 @@ export const NavigationBar = () => {
             >
               How It Works
             </button>
+            <div className="border-l border-accent/10 h-6"></div>
+            <button
+              onClick={() => window.open("https://tally.so/r/3EvdLB", "_blank")}
+              className="flex items-center space-x-1 text-sm font-medium bg-accent/10 text-accent px-4 py-2 rounded-full hover:bg-accent/20 transition-colors"
+            >
+              <Sparkles className="h-4 w-4" />
+              <span>Join Waitlist</span>
+            </button>
           </div>
 
           {isMenuOpen && (
@@ -49,6 +57,13 @@ export const NavigationBar = () => {
                   className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors text-left"
                 >
                   How It Works
+                </button>
+                <button
+                  onClick={() => window.open("https://tally.so/r/3EvdLB", "_blank")}
+                  className="flex items-center space-x-1 text-sm font-medium bg-accent/10 text-accent px-4 py-2 rounded-full hover:bg-accent/20 transition-colors w-full justify-center"
+                >
+                  <Sparkles className="h-4 w-4" />
+                  <span>Join Waitlist</span>
                 </button>
               </div>
             </div>

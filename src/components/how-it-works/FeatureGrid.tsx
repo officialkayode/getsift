@@ -1,51 +1,51 @@
 
-import { Link2, Brain, Zap, MessageSquare, ArrowRight } from "lucide-react";
+import { Link2, Brain, Zap, MessageSquare, ArrowRight, LineChart, Filter, AlarmClock } from "lucide-react";
 import { fadeInUpClass } from "../shared/animations";
 
 export const FeatureGrid = () => {
   const features = [
     {
-      icon: <Link2 className="w-6 h-6 text-accent" />,
-      title: "Seamless Integration",
-      description: "Connect your entire tech stack with one click:",
+      icon: <LineChart className="w-6 h-6 text-accent" />,
+      title: "Smart Data Aggregation",
+      description: "Unify your support toolkit in one place:",
       items: [
-        "ServiceNow & Jira for incident tracking",
-        "Slack & Teams for communication",
-        "Confluence & wikis for documentation",
-        "Datadog & Splunk for monitoring"
+        "Automatically pulls from ServiceNow & Jira tickets",
+        "Indexes Slack & Teams discussions in real-time",
+        "Connects to Datadog & Splunk for logs analysis",
+        "Syncs with Confluence & wikis for documentation"
       ]
     },
     {
       icon: <Brain className="w-6 h-6 text-accent" />,
-      title: "AI-Powered Context",
-      description: "Intelligent capture of critical technical context:",
+      title: "LLM-Powered Analysis",
+      description: "Leverage advanced AI to extract meaning:",
       items: [
-        "Smart workflow pattern detection",
-        "Automated technical discussion indexing",
-        "Incident-solution relationship mapping",
-        "Real-time knowledge preservation"
+        "Explains complex log outputs in plain English",
+        "Identifies patterns across similar incidents",
+        "Connects related incidents that humans miss",
+        "Suggests root causes based on historical data"
       ]
     },
     {
-      icon: <Zap className="w-6 h-6 text-accent" />,
-      title: "Real-Time Insights",
-      description: "Get relevant information exactly when needed:",
+      icon: <Filter className="w-6 h-6 text-accent" />,
+      title: "Contextual Knowledge",
+      description: "Get exactly what you need, when you need it:",
       items: [
-        "Context-aware recommendations",
-        "Historical incident correlation",
-        "Actionable resolution insights",
-        "Continuous learning system"
+        "Surfaces relevant past solutions automatically",
+        "Filters noise to highlight critical signals",
+        "Delivers insights based on your current context",
+        "Adapts to your team's unique knowledge needs"
       ]
     },
     {
-      icon: <MessageSquare className="w-6 h-6 text-accent" />,
-      title: "Auto Documentation",
-      description: "Documentation that writes itself:",
+      icon: <AlarmClock className="w-6 h-6 text-accent" />,
+      title: "Dynamic Documentation",
+      description: "Knowledge that evolves with your team:",
       items: [
-        "Self-updating resolution guides",
-        "Pattern-based learning system",
-        "Evolution with your systems",
-        "Zero manual maintenance"
+        "Auto-captures resolution steps and decisions",
+        "Creates living documentation that updates itself",
+        "Builds searchable knowledge base as you work",
+        "Preserves institutional knowledge permanently"
       ]
     }
   ];
@@ -58,7 +58,7 @@ export const FeatureGrid = () => {
             How Sift Works
           </h2>
           <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-            An intelligent layer that captures and surfaces critical information during technical workflows—no manual work required.
+            An intelligent layer that captures context from your support workflows and delivers knowledge exactly when you need it—no manual work required.
           </p>
         </div>
 

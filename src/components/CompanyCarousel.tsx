@@ -32,8 +32,8 @@ export const CompanyCarousel = () => {
 
   return (
     <div className="container mx-auto py-12 md:py-16">
-      <p className={`text-center text-lg md:text-xl text-white/70 mb-8 ${fadeInUpClass}`}>
-        Built by experts from
+      <p className={`text-center text-lg md:text-xl text-foreground/70 mb-8 ${fadeInUpClass}`}>
+        Built by experts from leading tech companies
       </p>
       <Carousel
         opts={{
@@ -47,11 +47,11 @@ export const CompanyCarousel = () => {
           {companies.map((company, index) => (
             <CarouselItem key={index} className="md:basis-1/3">
               <div className="p-4">
-                <div className={`rounded-lg h-24 flex items-center justify-center bg-white/10 backdrop-blur-sm ${cardHoverClass}`}>
+                <div className={`rounded-lg h-24 flex items-center justify-center bg-white/10 backdrop-blur-sm border border-accent/5 ${cardHoverClass}`}>
                   <img
                     src={company.logo}
                     alt={`${company.name} logo`}
-                    className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="h-12 w-auto object-contain transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
