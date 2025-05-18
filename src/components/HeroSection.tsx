@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { fadeInUpClass } from "./shared/animations";
 
 export const HeroSection = () => {
-  const [mediaUrl, setMediaUrl] = useState<string>("https://sora.chatgpt.com/g/gen_01jvjt2eefecvswfy3wc2mc3sm");
+  const [mediaUrl, setMediaUrl] = useState<string>("https://youtu.be/IGEoDeX0jnw");
   const [isLoading, setIsLoading] = useState(true);
   const [isVideo, setIsVideo] = useState(true);
   const loopDuration = 9.99; // video loop duration in seconds
