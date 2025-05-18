@@ -6,16 +6,34 @@ import { fadeInUpClass } from "./shared/animations";
 export const HeroSection = () => {
   const [mediaUrl, setMediaUrl] = useState<string>("https://sora.chatgpt.com/g/gen_01jvjt2eefecvswfy3wc2mc3sm");
   const [isLoading, setIsLoading] = useState(true);
+  const [isVideo, setIsVideo] = useState(true);
 
   useEffect(() => {
-    // Simulate image loading
-    const img = new Image();
-    img.src = mediaUrl;
-    img.onload = () => setIsLoading(false);
-    img.onerror = () => {
-      console.error("Error loading image");
-      setIsLoading(false);
-    };
+    // Check if the URL is a video
+    const isVideoURL = mediaUrl.includes("sora.chatgpt.com") || 
+                      mediaUrl.endsWith(".mp4") || 
+                      mediaUrl.endsWith(".webm") || 
+                      mediaUrl.endsWith(".ogg");
+    
+    setIsVideo(isVideoURL);
+
+    if (isVideoURL) {
+      // For videos, we'll set loading to false after a short timeout
+      // since we can't easily preload videos like images
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+      return () => clearTimeout(timer);
+    } else {
+      // For images, we'll use the image preloading approach
+      const img = new Image();
+      img.src = mediaUrl;
+      img.onload = () => setIsLoading(false);
+      img.onerror = () => {
+        console.error("Error loading image");
+        setIsLoading(false);
+      };
+    }
   }, [mediaUrl]);
 
   return (
@@ -26,6 +44,17 @@ export const HeroSection = () => {
           <div className="w-full h-full border-2 border-dashed border-accent/30 bg-accent/5 flex items-center justify-center">
             <p className="text-accent/50 text-lg font-medium">Loading media content...</p>
           </div>
+        ) : isVideo ? (
+          <video 
+            src={mediaUrl} 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            Your browser does not support the video tag.
+          </video>
         ) : (
           <img 
             src={mediaUrl} 
