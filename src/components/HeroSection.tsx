@@ -1,12 +1,14 @@
 
 import { useState, useEffect } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { cn } from "@/lib/utils";
 import { fadeInUpClass } from "./shared/animations";
 
 export const HeroSection = () => {
   const [mediaUrl, setMediaUrl] = useState<string>("https://sora.chatgpt.com/g/gen_01jvjt2eefecvswfy3wc2mc3sm");
   const [isLoading, setIsLoading] = useState(true);
   const [isVideo, setIsVideo] = useState(true);
+  const loopDuration = 9.99; // video loop duration in seconds
 
   useEffect(() => {
     // Check if the URL is a video
@@ -52,6 +54,7 @@ export const HeroSection = () => {
             muted 
             playsInline
             className="w-full h-full object-cover"
+            style={{ animationDuration: `${loopDuration}s` }}
           >
             Your browser does not support the video tag.
           </video>
@@ -62,18 +65,21 @@ export const HeroSection = () => {
             className="w-full h-full object-cover"
           />
         )}
+        
+        {/* Dark overlay for better text visibility */}
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
-      {/* Text overlay */}
-      <div className="relative z-10 max-w-xl">
-        <div className={`bg-background/80 backdrop-blur-sm p-6 rounded-lg shadow-lg ${fadeInUpClass}`}>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
-            Your Headline Here
-          </h1>
-          <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-            Add your description text here. This area is for your main messaging.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4">
+      {/* Text overlay with animation */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center h-full">
+        <div className="bg-background/30 backdrop-blur-sm p-8 rounded-lg shadow-lg max-w-3xl">
+          <h2 className="animate-bounce-slow text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
+            Context where you need it, where you need it
+          </h2>
+          <h2 className="animate-bounce-slower text-2xl md:text-3xl lg:text-4xl font-semibold text-white/90 mb-12">
+            Tribal knowledge makes the context complete
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <WaitlistForm />
           </div>
         </div>
