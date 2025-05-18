@@ -5,38 +5,20 @@ import { cn } from "@/lib/utils";
 import { fadeInUpClass } from "./shared/animations";
 
 export const HeroSection = () => {
-  const [mediaUrl, setMediaUrl] = useState<string>("https://youtu.be/IGEoDeX0jnw");
   const [isLoading, setIsLoading] = useState(true);
-  const [isVideo, setIsVideo] = useState(true);
   const loopDuration = 9.99; // video loop duration in seconds
+  
+  // Use a local video file path instead of a URL
+  const videoSrc = "/background-loop.mp4";
 
   useEffect(() => {
-    // Check if the URL is a video
-    const isVideoURL = mediaUrl.includes("sora.chatgpt.com") || 
-                      mediaUrl.endsWith(".mp4") || 
-                      mediaUrl.endsWith(".webm") || 
-                      mediaUrl.endsWith(".ogg");
-    
-    setIsVideo(isVideoURL);
-
-    if (isVideoURL) {
-      // For videos, we'll set loading to false after a short timeout
-      // since we can't easily preload videos like images
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-      }, 1000);
-      return () => clearTimeout(timer);
-    } else {
-      // For images, we'll use the image preloading approach
-      const img = new Image();
-      img.src = mediaUrl;
-      img.onload = () => setIsLoading(false);
-      img.onerror = () => {
-        console.error("Error loading image");
-        setIsLoading(false);
-      };
-    }
-  }, [mediaUrl]);
+    // For videos, we'll set loading to false after a short timeout
+    // since we can't easily preload videos like images
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="relative container px-4 pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden min-h-[600px] md:min-h-[800px]">
@@ -46,9 +28,9 @@ export const HeroSection = () => {
           <div className="w-full h-full border-2 border-dashed border-accent/30 bg-accent/5 flex items-center justify-center">
             <p className="text-accent/50 text-lg font-medium">Loading media content...</p>
           </div>
-        ) : isVideo ? (
+        ) : (
           <video 
-            src={mediaUrl} 
+            src={videoSrc} 
             autoPlay 
             loop 
             muted 
@@ -58,12 +40,6 @@ export const HeroSection = () => {
           >
             Your browser does not support the video tag.
           </video>
-        ) : (
-          <img 
-            src={mediaUrl} 
-            alt="Hero background" 
-            className="w-full h-full object-cover"
-          />
         )}
         
         {/* Dark overlay for better text visibility */}
