@@ -1,13 +1,38 @@
 
+import { useState, useEffect } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { fadeInUpClass } from "./shared/animations";
 
 export const HeroSection = () => {
+  const [mediaUrl, setMediaUrl] = useState<string>("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate image loading
+    const img = new Image();
+    img.src = mediaUrl;
+    img.onload = () => setIsLoading(false);
+    img.onerror = () => {
+      console.error("Error loading image");
+      setIsLoading(false);
+    };
+  }, [mediaUrl]);
+
   return (
     <section className="relative container px-4 pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden min-h-[600px] md:min-h-[800px]">
       {/* Full-width media container */}
-      <div className="absolute inset-0 w-full h-full border-2 border-dashed border-accent/30 bg-accent/5 flex items-center justify-center">
-        <p className="text-accent/50 text-lg font-medium">Add your media content here</p>
+      <div className="absolute inset-0 w-full h-full">
+        {isLoading ? (
+          <div className="w-full h-full border-2 border-dashed border-accent/30 bg-accent/5 flex items-center justify-center">
+            <p className="text-accent/50 text-lg font-medium">Loading media content...</p>
+          </div>
+        ) : (
+          <img 
+            src={mediaUrl} 
+            alt="Hero background" 
+            className="w-full h-full object-cover"
+          />
+        )}
       </div>
       
       {/* Text overlay */}
