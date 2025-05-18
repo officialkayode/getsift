@@ -1,28 +1,27 @@
 
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { fadeInUpClass } from "./shared/animations";
-import { Highlighter } from "lucide-react";
 
 export const HeroSection = () => {
   return (
     <section className="container px-4 pt-24 pb-12 md:pt-32 md:pb-16">
-      <div className={`text-center ${fadeInUpClass}`}>
-        <div className="flex items-center justify-center mb-3">
-          <span className="inline-flex items-center rounded-full bg-accent/10 px-3 py-1 text-sm font-medium text-accent">
-            <Highlighter className="mr-1 h-4 w-4" />
-            The Grammarly for Support Engineering
-          </span>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        {/* Text content */}
+        <div className={`${fadeInUpClass}`}>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+            Your Headline Here
+          </h1>
+          <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
+            Add your description text here. This area is for your main messaging.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <WaitlistForm />
+          </div>
         </div>
-        <h1 className="text-xl md:text-2xl lg:text-2xl font-bold mb-6">
-          Never solve the same problem twice
-        </h1>
-        <p className="text-lg md:text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed text-center">
-          Sift is an AI-powered context-aware assistant that helps support engineers resolve incidents faster.
-          It aggregates data from your tools, learns from past incidents, and delivers contextual insights
-          right when you need them.
-        </p>
-        <div className="flex flex-col items-center gap-6">
-          <WaitlistForm />
+
+        {/* Media content area */}
+        <div className="border-2 border-dashed border-accent/30 rounded-lg h-[300px] md:h-[400px] flex items-center justify-center bg-accent/5">
+          <p className="text-accent/50 text-lg font-medium">Add your media content here</p>
         </div>
       </div>
     </section>
