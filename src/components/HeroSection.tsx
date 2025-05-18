@@ -4,7 +4,7 @@ import { fadeInUpClass } from "./shared/animations";
 
 export const HeroSection = () => {
   return (
-    <section className="relative container px-4 pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden">
+    <section className="relative container px-4 pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden min-h-[600px] md:min-h-[800px]">
       {/* Full-width media container */}
       <div className="absolute inset-0 w-full h-full border-2 border-dashed border-accent/30 bg-accent/5 flex items-center justify-center">
         <p className="text-accent/50 text-lg font-medium">Add your media content here</p>
