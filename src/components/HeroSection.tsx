@@ -4,7 +4,7 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 import { fadeInUpClass } from "./shared/animations";
 
 export const HeroSection = () => {
-  const [mediaUrl, setMediaUrl] = useState<string>("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7");
+  const [mediaUrl, setMediaUrl] = useState<string>("https://sora.chatgpt.com/g/gen_01jvjt2eefecvswfy3wc2mc3sm");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
