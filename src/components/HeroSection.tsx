@@ -4,10 +4,15 @@ import { fadeInUpClass } from "./shared/animations";
 
 export const HeroSection = () => {
   return (
-    <section className="container px-4 pt-24 pb-12 md:pt-32 md:pb-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Text content */}
-        <div className={`${fadeInUpClass}`}>
+    <section className="relative container px-4 pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden">
+      {/* Full-width media container */}
+      <div className="absolute inset-0 w-full h-full border-2 border-dashed border-accent/30 bg-accent/5 flex items-center justify-center">
+        <p className="text-accent/50 text-lg font-medium">Add your media content here</p>
+      </div>
+      
+      {/* Text overlay */}
+      <div className="relative z-10 max-w-xl">
+        <div className={`bg-background/80 backdrop-blur-sm p-6 rounded-lg shadow-lg ${fadeInUpClass}`}>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
             Your Headline Here
           </h1>
@@ -17,11 +22,6 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <WaitlistForm />
           </div>
-        </div>
-
-        {/* Media content area */}
-        <div className="border-2 border-dashed border-accent/30 rounded-lg h-[300px] md:h-[400px] flex items-center justify-center bg-accent/5">
-          <p className="text-accent/50 text-lg font-medium">Add your media content here</p>
         </div>
       </div>
     </section>
