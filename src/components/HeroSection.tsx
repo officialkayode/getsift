@@ -10,7 +10,7 @@ export const HeroSection = () => {
   const isMobile = useIsMobile();
   
   // Use a local video file path from the public directory
-  const videoSrc = "/background-loop.mov";
+  const videoSrc = "/backgroud-loop.mov";
 
   useEffect(() => {
     // Add event listeners to handle video loading state
