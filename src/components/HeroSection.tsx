@@ -67,7 +67,7 @@ export const HeroSection = () => {
               </TooltipContent>
             </Tooltip>
             
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra lg:text-xl">70% of your time is wasted looking for the context you already have somewhere</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra lg:text-lg">70% of your time is used to piece together the context you already have somewhere</h2>
             <div className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
               <WaitlistForm />
             </div>
