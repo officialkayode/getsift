@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -46,7 +45,7 @@ const About = () => {
                   <TableBody>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
                       <TableCell className="font-medium text-gray-200">Tribal Knowledge Capture</TableCell>
-                      <TableCell className="text-gray-300">Automatically document solutions as your team solves problems, creating a knowledge base that grows with your team.</TableCell>
+                      <TableCell className="text-gray-300">Automatically capture and document implicit knowledge as your team solves problems, creating a knowledge base that grows with your team.</TableCell>
                     </TableRow>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
                       <TableCell className="font-medium text-gray-200">Team Communication</TableCell>
@@ -76,10 +75,7 @@ const About = () => {
         
         
         {/* CTA Section - Updated to match footer background color */}
-        <section className="py-16 bg-gray-700 text-white">
-          <div className="container mx-auto px-4 text-center">
-          </div>
-        </section>
+        
       </div>
 
       <Footer />
