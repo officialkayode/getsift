@@ -1,15 +1,17 @@
-
+import { useState } from "react";
 import { NavigationBar } from "@/components/NavigationBar";
 import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Info, Book, ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-import { useState } from "react";
+import { VideoBackground } from "@/components/VideoBackground";
+import { FeatureCard } from "@/components/FeatureCard";
+import { BookOpen, Info, Book, ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
 
 const About = () => {
+  const [activeTab, setActiveTab] = useState("features");
+
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -17,45 +19,38 @@ const About = () => {
     }
   };
 
-  const [activeTab, setActiveTab] = useState("features");
-
   return (
     <div className="min-h-screen bg-background">
       <NavigationBar />
       
-      {/* Main content with improved spacing */}
       <div className="pt-16">
-        {/* Hero section with gradient overlay for better text readability */}
-        <section className="bg-gradient-to-b from-gray-900 to-background py-20 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-800/20 to-blue-700/20 mix-blend-multiply"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white">About Sift</h1>
-              <p className="text-xl text-gray-200 mb-6 leading-relaxed">
-                We are starting with one vertical, support engineering during incident management.
-                We believe information should not just be workflow aware but also role aware.
-              </p>
-              <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                We know you've seen and solved this incident before, we can help you find what is relevant 
-                that only you need to know. We also leverage both your explicit and tribal knowledge to build 
-                not just your knowledge base, but your context base too.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Button onClick={() => handleScroll("tabbed-section")} className="bg-purple-600 hover:bg-purple-700 font-orbitron">
+        {/* Hero section with video background */}
+        <section className="relative h-[60vh]">
+          <VideoBackground 
+            videoSrc="/background-loop.mp4.mp4" 
+            loopDuration={4.79}
+            overlayOpacity="bg-gradient-to-r from-purple-900/80 to-blue-900/80"
+          >
+            <div className="container mx-auto px-4 h-full flex items-center">
+              <div className="max-w-3xl mx-auto text-center">
+                <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white">About Sift</h1>
+                <p className="text-xl text-gray-200 mb-6 leading-relaxed">
+                  We are starting with one vertical, support engineering during incident management.
+                  We believe information should not just be workflow aware but also role aware.
+                </p>
+                <Button 
+                  onClick={() => handleScroll("feature-cards")} 
+                  className="bg-purple-600 hover:bg-purple-700 font-orbitron"
+                >
                   Explore Features <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Link to="/">
-                  <Button variant="outline" className="border-gray-400 text-white hover:bg-gray-800">
-                    Back to Home
-                  </Button>
-                </Link>
               </div>
             </div>
-          </div>
+          </VideoBackground>
         </section>
 
-        {/* Tabbed interface section */}
-        <section id="tabbed-section" className="py-16 bg-white">
+        {/* Feature card section with animations */}
+        <section id="feature-cards" className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-orbitron mb-4">What Sift Offers</h2>
@@ -65,6 +60,45 @@ const About = () => {
               </p>
             </div>
             
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <FeatureCard
+                title="Tribal Knowledge Capture"
+                icon={<BookOpen className="h-12 w-12 text-purple-500" />}
+                description="Automatically document solutions as your team solves problems, creating a knowledge base that grows with your team."
+                delay={100}
+                accentColor="border-t-purple-500"
+              />
+              
+              <FeatureCard
+                title="Team Communication"
+                icon={<Info className="h-12 w-12 text-blue-500" />}
+                description="Integrate with your existing communication tools to provide and extract answers where your team already works."
+                delay={200}
+                accentColor="border-t-blue-500"
+              />
+              
+              <FeatureCard
+                title="Knowledge Retention"
+                icon={<Book className="h-12 w-12 text-indigo-500" />}
+                description="Preserve institutional knowledge even as team members come and go, maintaining continuity in your operations."
+                delay={300}
+                accentColor="border-t-indigo-500"
+              />
+              
+              <FeatureCard
+                title="Easy Reassignment"
+                icon={<ExternalLink className="h-12 w-12 text-cyan-500" />}
+                description="Smoothly transfer tasks between team members with full context and history for seamless handoffs."
+                delay={400}
+                accentColor="border-t-cyan-500"
+              />
+            </div>
+          </div>
+        </section>
+        
+        {/* Tabbed interface section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Tabs defaultValue="features" value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 mb-8">
@@ -75,50 +109,32 @@ const About = () => {
                 
                 {/* Features Tab */}
                 <TabsContent value="features" className="focus:outline-none">
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <Card className="shadow-md border-t-4 border-t-purple-500 hover:shadow-lg transition-shadow">
-                      <CardHeader className="flex flex-col items-center">
-                        <BookOpen className="h-12 w-12 text-purple-500 mb-4" />
-                        <CardTitle className="text-center">Tribal Knowledge Capture</CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-center">
-                        <p>Automatically document solutions as your team solves problems, creating a knowledge base that grows with your team.</p>
-                      </CardContent>
-                    </Card>
-                    
-                    <Card className="shadow-md border-t-4 border-t-blue-500 hover:shadow-lg transition-shadow">
-                      <CardHeader className="flex flex-col items-center">
-                        <Info className="h-12 w-12 text-blue-500 mb-4" />
-                        <CardTitle className="text-center">Team Communication</CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-center">
-                        <p>Integrate with your existing communication tools to provide and extract answers where your team already works.</p>
-                      </CardContent>
-                    </Card>
-                    
-                    <Card className="shadow-md border-t-4 border-t-indigo-500 hover:shadow-lg transition-shadow">
-                      <CardHeader className="flex flex-col items-center">
-                        <Book className="h-12 w-12 text-indigo-500 mb-4" />
-                        <CardTitle className="text-center">Knowledge Retention</CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-center">
-                        <p>Preserve institutional knowledge even as team members come and go, maintaining continuity in your operations.</p>
-                      </CardContent>
-                    </Card>
-                    
-                    <Card className="shadow-md border-t-4 border-t-cyan-500 hover:shadow-lg transition-shadow">
-                      <CardHeader className="flex flex-col items-center">
-                        <ExternalLink className="h-12 w-12 text-cyan-500 mb-4" />
-                        <CardTitle className="text-center">Easy Reassignment</CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-center">
-                        <p>Smoothly transfer tasks between team members with full context and history for seamless handoffs.</p>
-                      </CardContent>
-                    </Card>
-                  </div>
+                  <VideoBackground 
+                    videoSrc="/backgroud-loop.mov"
+                    loopDuration={4.79}
+                    overlayOpacity="bg-black/70"
+                  >
+                    <div className="p-8 text-white">
+                      <h3 className="text-2xl font-orbitron text-center mb-8">Core Capabilities</h3>
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                          <h4 className="font-bold text-xl mb-2">Contextual Intelligence</h4>
+                          <p>Sift automatically identifies and delivers the right information to the right person at the right time, based on their role and the current workflow.</p>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                          <h4 className="font-bold text-xl mb-2">Knowledge Extraction</h4>
+                          <p>Our system automatically extracts valuable information from your team's communications and organizes it for future reference.</p>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                          <h4 className="font-bold text-xl mb-2">Seamless Integration</h4>
+                          <p>Sift integrates with your existing tools and workflows, making adoption easy and value delivery immediate.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </VideoBackground>
                 </TabsContent>
                 
-                {/* Timeline Tab */}
+                {/* Timeline Tab - Keeping existing content */}
                 <TabsContent value="timeline" className="focus:outline-none">
                   <div className="bg-gray-50 rounded-lg p-8">
                     <h3 className="text-2xl font-orbitron text-center mb-8">Get up and running quickly</h3>
@@ -182,35 +198,41 @@ const About = () => {
                 
                 {/* Testimonials Tab */}
                 <TabsContent value="testimonials" className="focus:outline-none">
-                  <div className="bg-gradient-to-br from-gray-900 to-blue-900 text-white rounded-lg p-8">
-                    <h3 className="text-2xl font-orbitron text-center mb-8">Feedback from Beta Users</h3>
-                    
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-                        <p className="italic mb-4 text-gray-200">"Sift is the only knowledge management system out there today that goes an extra mile by taking account of people's role in knowledge transfer during incident management"</p>
-                        <div className="flex items-center">
-                          <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-800 text-sm font-bold mr-3">A</div>
-                          <p className="font-bold">Dir of Support at Agilent</p>
-                        </div>
-                      </div>
+                  <VideoBackground 
+                    videoSrc="/background-loop.mp4.mp4"
+                    loopDuration={4.79}
+                    overlayOpacity="bg-gradient-to-br from-gray-900 to-blue-900"
+                  >
+                    <div className="p-8 text-white">
+                      <h3 className="text-2xl font-orbitron text-center mb-8">Feedback from Beta Users</h3>
                       
-                      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-                        <p className="italic mb-4 text-gray-200">"Sift has been able to make engineering conversations relevant to Customer Success and Sales team. They can see the impact of the conversation to their ticket backlog or sales funnel"</p>
-                        <div className="flex items-center">
-                          <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-800 text-sm font-bold mr-3">L</div>
-                          <p className="font-bold">Founder and CTO, Langtrace.AI</p>
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                          <p className="italic mb-4 text-gray-200">"Sift is the only knowledge management system out there today that goes an extra mile by taking account of people's role in knowledge transfer during incident management"</p>
+                          <div className="flex items-center">
+                            <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-800 text-sm font-bold mr-3">A</div>
+                            <p className="font-bold">Dir of Support at Agilent</p>
+                          </div>
                         </div>
-                      </div>
-                      
-                      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-                        <p className="italic mb-4 text-gray-200">"The process of getting leadership updates from my directs has changed for good! I can now get contextual update from just looking at a ticket"</p>
-                        <div className="flex items-center">
-                          <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-800 text-sm font-bold mr-3">R</div>
-                          <p className="font-bold">Dir of Support Eng, Rauken</p>
+                        
+                        <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                          <p className="italic mb-4 text-gray-200">"Sift has been able to make engineering conversations relevant to Customer Success and Sales team. They can see the impact of the conversation to their ticket backlog or sales funnel"</p>
+                          <div className="flex items-center">
+                            <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-800 text-sm font-bold mr-3">L</div>
+                            <p className="font-bold">Founder and CTO, Langtrace.AI</p>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                          <p className="italic mb-4 text-gray-200">"The process of getting leadership updates from my directs has changed for good! I can now get contextual update from just looking at a ticket"</p>
+                          <div className="flex items-center">
+                            <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-800 text-sm font-bold mr-3">R</div>
+                            <p className="font-bold">Dir of Support Eng, Rauken</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </VideoBackground>
                 </TabsContent>
               </Tabs>
             </div>
