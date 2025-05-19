@@ -18,7 +18,7 @@ const App = () => (
           <Sonner />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/learn-more" element={<About />} />
           </Routes>
         </div>
       </Router>

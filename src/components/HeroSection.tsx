@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -77,7 +78,7 @@ export const HeroSection = () => {
               <div className="w-full sm:w-auto">
                 <WaitlistForm />
               </div>
-              <Link to="/about" className="w-full sm:w-auto">
+              <Link to="/learn-more" className="w-full sm:w-auto">
                 <Button variant="outline" className="w-full bg-transparent border-gray-500 text-white hover:bg-gray-800 font-orbitron">
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
