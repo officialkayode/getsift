@@ -63,6 +63,11 @@ const About = () => {
                   </TableBody>
                 </Table>
               </div>
+              
+              {/* WaitlistForm positioned at the bottom of the hero section */}
+              <div className="absolute bottom-10 left-0 right-0 mx-auto">
+                <WaitlistForm />
+              </div>
             </div>
           </VideoBackground>
         </section>
@@ -73,11 +78,6 @@ const About = () => {
         {/* CTA Section - Updated to match footer background color */}
         <section className="py-16 bg-gray-700 text-white">
           <div className="container mx-auto px-4 text-center">
-            
-            
-            <div className="max-w-md mx-auto">
-              <WaitlistForm />
-            </div>
           </div>
         </section>
       </div>
