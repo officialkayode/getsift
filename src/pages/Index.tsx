@@ -10,18 +10,22 @@ import { FeatureGrid } from "@/components/how-it-works/FeatureGrid";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
-      <HeroSection />
+    <div className="min-h-screen bg-background">
+      {/* Video backdrop covers the entire page */}
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent pointer-events-none" />
-        <CompanyCarousel />
+        <HeroSection />
+        
+        {/* Content sections stacked on top of the video background */}
+        <div className="relative bg-background">
+          <CompanyCarousel />
+          <ProblemStatement />
+          <SolutionSection />
+          <FeatureGrid />
+          <BenefitsSection />
+          <CTASection />
+          <Footer />
+        </div>
       </div>
-      <ProblemStatement />
-      <SolutionSection />
-      <FeatureGrid />
-      <BenefitsSection />
-      <CTASection />
-      <Footer />
     </div>
   );
 };
