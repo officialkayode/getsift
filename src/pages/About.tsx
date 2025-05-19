@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,27 +7,21 @@ import { Separator } from "@/components/ui/separator";
 import { VideoBackground } from "@/components/VideoBackground";
 import { FeatureCard } from "@/components/FeatureCard";
 import { BookOpen, Info, Book, ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
-
 const About = () => {
   const [activeTab, setActiveTab] = useState("features");
-
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <div>
         {/* Hero section with video background */}
         <section className="relative h-[60vh]">
-          <VideoBackground 
-            videoSrc="/learnmore.mov" 
-            loopDuration={4.79}
-            overlayOpacity="bg-black/50"
-          >
+          <VideoBackground videoSrc="/learnmore.mov" loopDuration={4.79} overlayOpacity="bg-black/50">
             <div className="container mx-auto px-4 h-full flex items-center">
               <div className="max-w-3xl mx-auto text-center">
                 <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white">About Sift</h1>
@@ -36,12 +29,7 @@ const About = () => {
                   We are starting with one vertical, support engineering during incident management.
                   We believe information should not just be workflow aware but also role aware.
                 </p>
-                <Button 
-                  onClick={() => handleScroll("feature-cards")} 
-                  className="bg-purple-600 hover:bg-purple-700 font-orbitron"
-                >
-                  Explore Features <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                
               </div>
             </div>
           </VideoBackground>
@@ -59,37 +47,13 @@ const About = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              <FeatureCard
-                title="Tribal Knowledge Capture"
-                icon={<BookOpen className="h-12 w-12 text-purple-500" />}
-                description="Automatically document solutions as your team solves problems, creating a knowledge base that grows with your team."
-                delay={100}
-                accentColor="border-t-purple-500"
-              />
+              <FeatureCard title="Tribal Knowledge Capture" icon={<BookOpen className="h-12 w-12 text-purple-500" />} description="Automatically document solutions as your team solves problems, creating a knowledge base that grows with your team." delay={100} accentColor="border-t-purple-500" />
               
-              <FeatureCard
-                title="Team Communication"
-                icon={<Info className="h-12 w-12 text-blue-500" />}
-                description="Integrate with your existing communication tools to provide and extract answers where your team already works."
-                delay={200}
-                accentColor="border-t-blue-500"
-              />
+              <FeatureCard title="Team Communication" icon={<Info className="h-12 w-12 text-blue-500" />} description="Integrate with your existing communication tools to provide and extract answers where your team already works." delay={200} accentColor="border-t-blue-500" />
               
-              <FeatureCard
-                title="Knowledge Retention"
-                icon={<Book className="h-12 w-12 text-indigo-500" />}
-                description="Preserve institutional knowledge even as team members come and go, maintaining continuity in your operations."
-                delay={300}
-                accentColor="border-t-indigo-500"
-              />
+              <FeatureCard title="Knowledge Retention" icon={<Book className="h-12 w-12 text-indigo-500" />} description="Preserve institutional knowledge even as team members come and go, maintaining continuity in your operations." delay={300} accentColor="border-t-indigo-500" />
               
-              <FeatureCard
-                title="Easy Reassignment"
-                icon={<ExternalLink className="h-12 w-12 text-cyan-500" />}
-                description="Smoothly transfer tasks between team members with full context and history for seamless handoffs."
-                delay={400}
-                accentColor="border-t-cyan-500"
-              />
+              <FeatureCard title="Easy Reassignment" icon={<ExternalLink className="h-12 w-12 text-cyan-500" />} description="Smoothly transfer tasks between team members with full context and history for seamless handoffs." delay={400} accentColor="border-t-cyan-500" />
             </div>
           </div>
         </section>
@@ -107,11 +71,7 @@ const About = () => {
                 
                 {/* Features Tab */}
                 <TabsContent value="features" className="focus:outline-none">
-                  <VideoBackground 
-                    videoSrc="/backgroud-loop.mov"
-                    loopDuration={4.79}
-                    overlayOpacity="bg-black/70"
-                  >
+                  <VideoBackground videoSrc="/backgroud-loop.mov" loopDuration={4.79} overlayOpacity="bg-black/70">
                     <div className="p-8 text-white">
                       <h3 className="text-2xl font-orbitron text-center mb-8">Core Capabilities</h3>
                       <div className="grid md:grid-cols-3 gap-6">
@@ -196,11 +156,7 @@ const About = () => {
                 
                 {/* Testimonials Tab */}
                 <TabsContent value="testimonials" className="focus:outline-none">
-                  <VideoBackground 
-                    videoSrc="/background-loop.mp4.mp4"
-                    loopDuration={4.79}
-                    overlayOpacity="bg-gradient-to-br from-gray-900 to-blue-900"
-                  >
+                  <VideoBackground videoSrc="/background-loop.mp4.mp4" loopDuration={4.79} overlayOpacity="bg-gradient-to-br from-gray-900 to-blue-900">
                     <div className="p-8 text-white">
                       <h3 className="text-2xl font-orbitron text-center mb-8">Feedback from Beta Users</h3>
                       
@@ -244,10 +200,7 @@ const About = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Join the teams that are already using Sift to capture knowledge, improve communication, and save time.
             </p>
-            <Button 
-              onClick={() => window.open("https://tally.so/r/3EvdLB", "_blank")}
-              className="bg-white text-indigo-900 hover:bg-gray-100 font-orbitron text-lg px-8 py-6"
-            >
+            <Button onClick={() => window.open("https://tally.so/r/3EvdLB", "_blank")} className="bg-white text-indigo-900 hover:bg-gray-100 font-orbitron text-lg px-8 py-6">
               Join the Waitlist <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -255,8 +208,6 @@ const About = () => {
       </div>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
