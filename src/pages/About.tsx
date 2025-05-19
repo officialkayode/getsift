@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,8 @@ import { VideoBackground } from "@/components/VideoBackground";
 import { FeatureCard } from "@/components/FeatureCard";
 import { Table, TableBody, TableCell, TableHeader, TableRow } from "@/components/ui/table";
 import { BookOpen, Info, Book, ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
+import { WaitlistForm } from "@/components/WaitlistForm";
+
 const About = () => {
   const [activeTab, setActiveTab] = useState("features");
   const handleScroll = (id: string) => {
@@ -27,6 +30,11 @@ const About = () => {
               <div className="max-w-3xl mx-auto text-center mb-16">
                 <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white">Sift</h1>
                 <p className="text-xl text-gray-200 mb-6 leading-relaxed">We are starting with one vertical, support engineering during incident management. We believe information should not just be workflow-aware but also role-aware.</p>
+                
+                {/* Add CTA button */}
+                <div className="mt-8">
+                  <WaitlistForm />
+                </div>
               </div>
               
               {/* Feature cards overlaid on video background */}
