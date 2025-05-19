@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -69,8 +70,8 @@ const About = () => {
         {/* Tabbed interface section */}
         
         
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-purple-800 to-indigo-900 text-white">
+        {/* CTA Section - Updated to match footer background color */}
+        <section className="py-16 bg-gray-700 text-white">
           <div className="container mx-auto px-4 text-center">
             
             
