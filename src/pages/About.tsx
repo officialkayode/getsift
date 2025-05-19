@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -26,7 +27,7 @@ const About = () => {
           <VideoBackground 
             videoSrc="/learnmore.mov" 
             loopDuration={4.79}
-            overlayOpacity="bg-gradient-to-r from-purple-900/80 to-blue-900/80"
+            overlayOpacity="bg-black/50"
           >
             <div className="container mx-auto px-4 h-full flex items-center">
               <div className="max-w-3xl mx-auto text-center">
