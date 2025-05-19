@@ -2,6 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 export const HeroSection = () => {
   const [isLoading, setIsLoading] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -68,8 +72,16 @@ export const HeroSection = () => {
             </Tooltip>
             
             <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra lg:text-lg">70% of your time is used to piece together the context you already have somewhere</h2>
-            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-              <WaitlistForm />
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
+              <div className="w-full sm:w-auto">
+                <WaitlistForm />
+              </div>
+              <Link to="/about" className="w-full sm:w-auto">
+                <Button variant="outline" className="w-full bg-transparent border-gray-500 text-white hover:bg-gray-800 font-orbitron">
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </TooltipProvider>
