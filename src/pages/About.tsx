@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { NavigationBar } from "@/components/NavigationBar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -21,9 +20,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <NavigationBar />
-      
-      <div className="pt-16">
+      <div>
         {/* Hero section with video background */}
         <section className="relative h-[60vh]">
           <VideoBackground 
