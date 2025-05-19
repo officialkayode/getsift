@@ -30,11 +30,6 @@ const About = () => {
               <div className="max-w-3xl mx-auto text-center mb-16">
                 <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white">Sift</h1>
                 <p className="text-xl text-gray-200 mb-6 leading-relaxed">We are starting with one vertical, support engineering during incident management. We believe information should not just be workflow-aware but also role-aware.</p>
-                
-                {/* Add CTA button */}
-                <div className="mt-8">
-                  <WaitlistForm />
-                </div>
               </div>
               
               {/* Feature cards overlaid on video background */}
@@ -83,9 +78,9 @@ const About = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Join the teams that are already using Sift to capture knowledge, improve communication, and save time.
             </p>
-            <Button onClick={() => window.open("https://tally.so/r/3EvdLB", "_blank")} className="bg-white text-indigo-900 hover:bg-gray-100 font-orbitron text-lg px-8 py-6">
-              Join the Waitlist <ChevronRight className="ml-2 h-5 w-5" />
-            </Button>
+            <div className="max-w-md mx-auto">
+              <WaitlistForm />
+            </div>
           </div>
         </section>
       </div>
