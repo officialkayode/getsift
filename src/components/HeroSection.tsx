@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export const HeroSection = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -72,17 +73,27 @@ export const HeroSection = () => {
       
       {/* Hero content positioned above the video */}
       <div className="relative z-10 flex flex-col items-center justify-center h-screen w-full px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white">
-            Context where you need it, when you need it
-          </h1>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white/90 mb-8 sm:mb-10">
-            Tribal knowledge makes the context complete
-          </h2>
-          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-            <WaitlistForm />
+        <TooltipProvider>
+          <div className="text-center max-w-3xl mx-auto">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-wide mb-4 sm:mb-6 text-white font-orbitron">
+                  Context where you need it, when you need it
+                </h1>
+              </TooltipTrigger>
+              <TooltipContent side="bottom">
+                <p className="text-sm">Sift delivers context proactively</p>
+              </TooltipContent>
+            </Tooltip>
+            
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra">
+              Tribal knowledge makes the context complete
+            </h2>
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+              <WaitlistForm />
+            </div>
           </div>
-        </div>
+        </TooltipProvider>
       </div>
     </section>
   );
