@@ -27,7 +27,7 @@ const About = () => {
         {/* Hero section with video background */}
         <section className="relative h-[60vh]">
           <VideoBackground 
-            videoSrc="/background-loop.mp4.mp4" 
+            videoSrc="/learnmore.mov" 
             loopDuration={4.79}
             overlayOpacity="bg-gradient-to-r from-purple-900/80 to-blue-900/80"
           >
