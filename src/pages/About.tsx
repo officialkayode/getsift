@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -9,10 +8,8 @@ import { VideoBackground } from "@/components/VideoBackground";
 import { FeatureCard } from "@/components/FeatureCard";
 import { Table, TableBody, TableCell, TableHeader, TableRow } from "@/components/ui/table";
 import { BookOpen, Info, Book, ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
-
 const About = () => {
   const [activeTab, setActiveTab] = useState("features");
-  
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -21,7 +18,6 @@ const About = () => {
       });
     }
   };
-  
   return <div className="min-h-screen bg-background">
       <div>
         {/* Hero section with video background - now with increased height and responsive */}
@@ -29,11 +25,8 @@ const About = () => {
           <VideoBackground videoSrc="/learnmore.mov" loopDuration={4.79} overlayOpacity="bg-black/50">
             <div className="container mx-auto px-4 h-full flex flex-col justify-center">
               <div className="max-w-3xl mx-auto text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white">About Sift</h1>
-                <p className="text-xl text-gray-200 mb-6 leading-relaxed">
-                  We are starting with one vertical, support engineering during incident management.
-                  We believe information should not just be workflow aware but also role aware.
-                </p>
+                <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white">Sift</h1>
+                <p className="text-xl text-gray-200 mb-6 leading-relaxed">We are starting with one vertical, support engineering during incident management. We believe information should not just be workflow-aware but also role-aware.</p>
               </div>
               
               {/* Feature cards overlaid on video background */}
@@ -55,7 +48,7 @@ const About = () => {
                     </TableRow>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
                       <TableCell className="font-medium text-gray-200">Team Communication</TableCell>
-                      <TableCell className="text-gray-300">Integrate with your existing communication tools to provide and extract answers where your team already works.</TableCell>
+                      <TableCell className="text-gray-300">Integrate with your existing communication and collaboration tools to provide and extract answers where your team already works.</TableCell>
                     </TableRow>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
                       <TableCell className="font-medium text-gray-200">Knowledge Retention</TableCell>
@@ -224,5 +217,4 @@ const About = () => {
       <Footer />
     </div>;
 };
-
 export default About;
