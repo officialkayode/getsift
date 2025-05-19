@@ -7,8 +7,10 @@ import { Separator } from "@/components/ui/separator";
 import { VideoBackground } from "@/components/VideoBackground";
 import { FeatureCard } from "@/components/FeatureCard";
 import { BookOpen, Info, Book, ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
+
 const About = () => {
   const [activeTab, setActiveTab] = useState("features");
+  
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -17,10 +19,11 @@ const About = () => {
       });
     }
   };
+  
   return <div className="min-h-screen bg-background">
       <div>
-        {/* Hero section with video background */}
-        <section className="relative h-[60vh]">
+        {/* Hero section with video background - now with increased height and responsive */}
+        <section className="relative h-[120vh] md:h-[100vh] lg:h-[120vh]">
           <VideoBackground videoSrc="/learnmore.mov" loopDuration={4.79} overlayOpacity="bg-black/50">
             <div className="container mx-auto px-4 h-full flex items-center">
               <div className="max-w-3xl mx-auto text-center">
@@ -29,7 +32,6 @@ const About = () => {
                   We are starting with one vertical, support engineering during incident management.
                   We believe information should not just be workflow aware but also role aware.
                 </p>
-                
               </div>
             </div>
           </VideoBackground>
@@ -210,4 +212,5 @@ const About = () => {
       <Footer />
     </div>;
 };
+
 export default About;

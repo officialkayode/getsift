@@ -1,5 +1,6 @@
 
 import { useRef, useState, useEffect } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface VideoBackgroundProps {
   videoSrc: string;
@@ -16,6 +17,7 @@ export const VideoBackground = ({
 }: VideoBackgroundProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -66,8 +68,8 @@ export const VideoBackground = ({
           Your browser does not support the video tag.
         </video>
         
-        {/* Overlay */}
-        <div className={`absolute inset-0 ${overlayOpacity}`}></div>
+        {/* Overlay with responsive opacity */}
+        <div className={`absolute inset-0 ${isMobile ? overlayOpacity.replace('/50', '/60') : overlayOpacity}`}></div>
       </div>
       
       {/* Content */}
