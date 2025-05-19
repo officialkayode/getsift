@@ -42,12 +42,12 @@ export const HeroSection = () => {
           </video>
         )}
         
-        {/* Dark overlay for better text visibility */}
+        {/* {/* Dark overlay for better text visibility */}
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
       {/* Text overlay with animation */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center h-full">
+       {/*<div className="relative z-10 flex flex-col items-center justify-center text-center h-full">
         <div className="bg-background/30 backdrop-blur-sm p-8 rounded-lg shadow-lg max-w-3xl">
           <h2 className="animate-bounce-slow text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
             Context where you need it, where you need it
@@ -59,7 +59,7 @@ export const HeroSection = () => {
             <WaitlistForm />
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
