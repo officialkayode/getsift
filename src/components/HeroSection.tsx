@@ -1,69 +1,52 @@
-
 import { useState, useEffect, useRef } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-
 export const HeroSection = () => {
   const [isLoading, setIsLoading] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   const loopDuration = 9.99; // video loop duration in seconds
   const isMobile = useIsMobile();
-  
+
   // Use a local video file path from the public directory
   const videoSrc = "/backgroud-loop.mov";
-
   useEffect(() => {
     // Add event listeners to handle video loading state
     const videoElement = videoRef.current;
-    
     if (videoElement) {
       // Set loading to false when video can play
       const handleCanPlay = () => {
         setIsLoading(false);
       };
-      
+
       // Handle possible errors
       const handleError = (e: Event) => {
         console.error("Video error:", e);
         setIsLoading(false); // Still hide loading state even if there's an error
       };
-      
       videoElement.addEventListener("canplay", handleCanPlay);
       videoElement.addEventListener("error", handleError);
-      
+
       // Ensure video plays automatically
       videoElement.play().catch(err => {
         console.error("Autoplay failed:", err);
       });
-      
       return () => {
         videoElement.removeEventListener("canplay", handleCanPlay);
         videoElement.removeEventListener("error", handleError);
       };
     }
   }, []);
-
-  return (
-    <section className="relative h-screen w-full overflow-hidden">
+  return <section className="relative h-screen w-full overflow-hidden">
       {/* Full-width video container positioning it as backdrop */}
       <div className="absolute inset-0 w-full h-full">
-        {isLoading && (
-          <div className="w-full h-full border-2 border-dashed border-accent/30 bg-accent/5 flex items-center justify-center">
+        {isLoading && <div className="w-full h-full border-2 border-dashed border-accent/30 bg-accent/5 flex items-center justify-center">
             <p className="text-accent/50 text-lg font-medium">Loading media content...</p>
-          </div>
-        )}
+          </div>}
         
-        <video 
-          ref={videoRef}
-          src={videoSrc} 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          className={`w-full h-full object-cover ${isLoading ? 'hidden' : 'block'}`}
-          style={{ animationDuration: `${loopDuration}s` }}
-        >
+        <video ref={videoRef} src={videoSrc} autoPlay loop muted playsInline className={`w-full h-full object-cover ${isLoading ? 'hidden' : 'block'}`} style={{
+        animationDuration: `${loopDuration}s`
+      }}>
           Your browser does not support the video tag.
         </video>
         
@@ -77,24 +60,19 @@ export const HeroSection = () => {
           <div className="text-center max-w-3xl mx-auto">
             <Tooltip>
               <TooltipTrigger asChild>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-wide mb-4 sm:mb-6 text-white font-orbitron">
-                  Context where you need it, when you need it
-                </h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide mb-4 sm:mb-6 text-white font-orbitron font-extralight lg:text-6xl">Let relevant context find you</h1>
               </TooltipTrigger>
               <TooltipContent side="bottom">
                 <p className="text-sm">Sift delivers context proactively</p>
               </TooltipContent>
             </Tooltip>
             
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra">
-              Tribal knowledge makes the context complete
-            </h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra lg:text-xl">70% of your time is wasted looking for the context you already have somewhere</h2>
             <div className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
               <WaitlistForm />
             </div>
           </div>
         </TooltipProvider>
       </div>
-    </section>
-  );
+    </section>;
 };
