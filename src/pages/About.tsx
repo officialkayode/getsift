@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -26,7 +27,9 @@ const About = () => {
           <VideoBackground videoSrc="/learnmore.mov" loopDuration={4.79} overlayOpacity="bg-black/50">
             <div className="container mx-auto px-4 h-full flex flex-col justify-center">
               <div className="max-w-3xl mx-auto text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white">Sift</h1>
+                <Link to="/">
+                  <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white hover:text-gray-300 transition-colors cursor-pointer">Sift</h1>
+                </Link>
                 <p className="text-xl text-gray-200 mb-6 leading-relaxed">We are starting with one vertical, support engineering during incident management. We believe information should not just be workflow-aware but also role-aware.</p>
               </div>
               
