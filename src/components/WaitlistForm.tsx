@@ -14,7 +14,7 @@ export const WaitlistForm = () => {
     <div className="flex w-full max-w-md mx-auto justify-center">
       <Button 
         onClick={handleClick} 
-        className="bg-accent hover:bg-accent/90 text-white font-medium py-3 px-6 h-14 rounded-full shadow-lg"
+        className="bg-accent hover:bg-accent/90 text-white font-medium py-3 px-6 h-14 rounded-full shadow-lg font-orbitron"
       >
         Request Beta Invitation
       </Button>
