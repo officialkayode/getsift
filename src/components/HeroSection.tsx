@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
