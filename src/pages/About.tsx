@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { VideoBackground } from "@/components/VideoBackground";
 import { FeatureCard } from "@/components/FeatureCard";
+import { Table, TableBody, TableCell, TableHeader, TableRow } from "@/components/ui/table";
 import { BookOpen, Info, Book, ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
 
 const About = () => {
@@ -25,39 +27,49 @@ const About = () => {
         {/* Hero section with video background - now with increased height and responsive */}
         <section className="relative h-[120vh] md:h-[100vh] lg:h-[120vh]">
           <VideoBackground videoSrc="/learnmore.mov" loopDuration={4.79} overlayOpacity="bg-black/50">
-            <div className="container mx-auto px-4 h-full flex items-center">
-              <div className="max-w-3xl mx-auto text-center">
+            <div className="container mx-auto px-4 h-full flex flex-col justify-center">
+              <div className="max-w-3xl mx-auto text-center mb-16">
                 <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white">About Sift</h1>
                 <p className="text-xl text-gray-200 mb-6 leading-relaxed">
                   We are starting with one vertical, support engineering during incident management.
                   We believe information should not just be workflow aware but also role aware.
                 </p>
               </div>
+              
+              {/* Feature cards overlaid on video background */}
+              <div className="bg-gray-800/60 backdrop-blur-sm rounded-lg p-6 max-w-5xl mx-auto w-full">
+                <h2 className="text-2xl font-orbitron mb-6 text-white text-center">What Sift Offers</h2>
+                <Separator className="w-24 h-1 bg-gray-400 mx-auto mb-6" />
+                
+                <Table className="w-full">
+                  <TableHeader>
+                    <TableRow className="border-b border-gray-600">
+                      <TableCell className="text-lg font-medium text-gray-300">Feature</TableCell>
+                      <TableCell className="text-lg font-medium text-gray-300">Description</TableCell>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
+                      <TableCell className="font-medium text-gray-200">Tribal Knowledge Capture</TableCell>
+                      <TableCell className="text-gray-300">Automatically document solutions as your team solves problems, creating a knowledge base that grows with your team.</TableCell>
+                    </TableRow>
+                    <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
+                      <TableCell className="font-medium text-gray-200">Team Communication</TableCell>
+                      <TableCell className="text-gray-300">Integrate with your existing communication tools to provide and extract answers where your team already works.</TableCell>
+                    </TableRow>
+                    <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
+                      <TableCell className="font-medium text-gray-200">Knowledge Retention</TableCell>
+                      <TableCell className="text-gray-300">Preserve institutional knowledge even as team members come and go, maintaining continuity in your operations.</TableCell>
+                    </TableRow>
+                    <TableRow className="hover:bg-gray-700/40">
+                      <TableCell className="font-medium text-gray-200">Easy Reassignment</TableCell>
+                      <TableCell className="text-gray-300">Smoothly transfer tasks between team members with full context and history for seamless handoffs.</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
             </div>
           </VideoBackground>
-        </section>
-
-        {/* Feature card section with animations */}
-        <section id="feature-cards" className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-orbitron mb-4">What Sift Offers</h2>
-              <Separator className="w-24 h-1 bg-purple-500 mx-auto mb-6" />
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Learn more about how Sift can transform your engineering workflow
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              <FeatureCard title="Tribal Knowledge Capture" icon={<BookOpen className="h-12 w-12 text-purple-500" />} description="Automatically document solutions as your team solves problems, creating a knowledge base that grows with your team." delay={100} accentColor="border-t-purple-500" />
-              
-              <FeatureCard title="Team Communication" icon={<Info className="h-12 w-12 text-blue-500" />} description="Integrate with your existing communication tools to provide and extract answers where your team already works." delay={200} accentColor="border-t-blue-500" />
-              
-              <FeatureCard title="Knowledge Retention" icon={<Book className="h-12 w-12 text-indigo-500" />} description="Preserve institutional knowledge even as team members come and go, maintaining continuity in your operations." delay={300} accentColor="border-t-indigo-500" />
-              
-              <FeatureCard title="Easy Reassignment" icon={<ExternalLink className="h-12 w-12 text-cyan-500" />} description="Smoothly transfer tasks between team members with full context and history for seamless handoffs." delay={400} accentColor="border-t-cyan-500" />
-            </div>
-          </div>
         </section>
         
         {/* Tabbed interface section */}
