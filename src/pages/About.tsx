@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,6 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { Table, TableBody, TableCell, TableHeader, TableRow } from "@/components/ui/table";
 import { BookOpen, Info, Book, ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
 import { WaitlistForm } from "@/components/WaitlistForm";
-
 const About = () => {
   const [activeTab, setActiveTab] = useState("features");
   const handleScroll = (id: string) => {
@@ -74,10 +72,8 @@ const About = () => {
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-purple-800 to-indigo-900 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-orbitron mb-6">Ready to transform your engineering workflow?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join the teams that are already using Sift to capture knowledge, improve communication, and save time.
-            </p>
+            
+            
             <div className="max-w-md mx-auto">
               <WaitlistForm />
             </div>
