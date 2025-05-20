@@ -50,8 +50,8 @@ const About = () => {
                       <TableCell className="text-gray-300">Automatically capture and document implicit knowledge as your team solves problems, creating a knowledge base that grows with your team.</TableCell>
                     </TableRow>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
-                      <TableCell className="font-medium text-gray-200">Team Communication</TableCell>
-                      <TableCell className="text-gray-300">Integrate with your existing communication and collaboration tools to provide and extract answers where your team already works.</TableCell>
+                      <TableCell className="font-medium text-gray-200">Communication and Collaboration</TableCell>
+                      <TableCell className="text-gray-300">Integrate with your communication and collaboration tools to provide and extract answers where your team already works.</TableCell>
                     </TableRow>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
                       <TableCell className="font-medium text-gray-200">Knowledge Retention</TableCell>
