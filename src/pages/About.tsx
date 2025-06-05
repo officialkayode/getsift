@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -28,7 +27,7 @@ const About = () => {
       <div>
         {/* Hero section with video background - responsive height and content spacing */}
         <section className="relative min-h-screen">
-          <VideoBackground videoSrc="/learnmore.mov" loopDuration={4.79} overlayOpacity="bg-black/50">
+          <VideoBackground videoSrc="/backgroud-loop.mov" loopDuration={9.99} overlayOpacity="bg-black/50">
             <div className="container mx-auto px-4 min-h-screen flex flex-col justify-center py-20">
               <div className="max-w-3xl mx-auto text-center mb-8 md:mb-16">
                 <Link to="/">
