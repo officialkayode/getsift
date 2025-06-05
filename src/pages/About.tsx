@@ -47,7 +47,7 @@ const About = () => {
                   <TableBody>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
                       <TableCell className="font-medium text-gray-200">Tribal Knowledge Capture</TableCell>
-                      <TableCell className="text-gray-300">Automatically capture and document implicit knowledge as your team solves problems, creating a knowledge base that grows with your team.</TableCell>
+                      <TableCell className="text-gray-300">Automatically capture and document implicit knowledge as your team solves problems, creating a dynamic knowledge base that grows with your team.</TableCell>
                     </TableRow>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
                       <TableCell className="font-medium text-gray-200">Communication and Collaboration</TableCell>
@@ -59,7 +59,7 @@ const About = () => {
                     </TableRow>
                     <TableRow className="hover:bg-gray-700/40">
                       <TableCell className="font-medium text-gray-200">Easy Reassignment</TableCell>
-                      <TableCell className="text-gray-300">Smoothly transfer tasks between team members with full context and history for seamless handoffs.</TableCell>
+                      <TableCell className="text-gray-300">Smoothly transfer tasks or responsibilities between team members or cross-functional partners with full context and history for seamless handoffs.</TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
