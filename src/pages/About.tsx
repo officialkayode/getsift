@@ -25,7 +25,7 @@ const About = () => {
         <section className="relative h-[120vh] md:h-[100vh] lg:h-[120vh]">
           <VideoBackground videoSrc="/learnmore.mov" loopDuration={4.79} overlayOpacity="bg-black/50">
             <div className="container mx-auto px-4 h-full flex flex-col justify-center">
-              <div className="max-w-3xl mx-auto text-center mb-16 bg-gray-800">
+              <div className="max-w-3xl mx-auto text-center mb-16">
                 <Link to="/">
                   <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white hover:text-gray-300 transition-colors cursor-pointer">Sift</h1>
                 </Link>
