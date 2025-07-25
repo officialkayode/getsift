@@ -77,7 +77,7 @@ export const HeroSection = () => {
                 <WaitlistForm />
               </div>
               <Link to="/learn-more" className={`${isMobile ? 'w-1/2' : 'w-full sm:w-auto'}`}>
-                <Button variant="outline" className="w-full bg-transparent border-gray-500 text-white hover:bg-gray-800 font-orbitron text-xs sm:text-sm py-1 px-3 sm:py-2 sm:px-4 h-auto sm:h-10">
+                <Button variant="outline" className="w-full bg-transparent border-gray-500 text-white hover:bg-gray-800 font-garamond text-xs sm:text-sm py-1 px-3 sm:py-2 sm:px-4 h-auto sm:h-10">
                   Learn More <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
               </Link>
