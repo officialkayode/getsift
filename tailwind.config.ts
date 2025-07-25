@@ -59,7 +59,8 @@ export default {
         display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
         orbitron: ["Orbitron", "sans-serif"],
         chakra: ["Chakra Petch", "sans-serif"],
-        cormorant: ["Cormorant", "serif"]
+        cormorant: ["Cormorant", "serif"],
+        garamond: ["EB Garamond", "serif"]
       },
       borderRadius: {
         lg: "var(--radius)",

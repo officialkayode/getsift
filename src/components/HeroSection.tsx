@@ -60,7 +60,7 @@ export const HeroSection = () => {
       {/* Hero content positioned above the video */}
       <div className="relative z-10 flex flex-col items-center justify-center h-screen w-full px-4 sm:px-6 lg:px-8">
         <TooltipProvider>
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto font-garamond">
             <Tooltip>
               <TooltipTrigger asChild>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide mb-4 sm:mb-6 text-white font-orbitron font-extralight lg:text-6xl">The Answer, Before the Question.</h1>
