@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -6,7 +5,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export const HeroSection = () => {
   const [isLoading, setIsLoading] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -65,14 +63,14 @@ export const HeroSection = () => {
           <div className="text-center max-w-3xl mx-auto">
             <Tooltip>
               <TooltipTrigger asChild>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide mb-4 sm:mb-6 text-white font-orbitron font-extralight lg:text-6xl">Let relevant context find you</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide mb-4 sm:mb-6 text-white font-orbitron font-extralight lg:text-6xl">The Answer, Before the Question.</h1>
               </TooltipTrigger>
               <TooltipContent side="bottom">
                 <p className="text-sm">Sift delivers context proactively</p>
               </TooltipContent>
             </Tooltip>
             
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra lg:text-lg">70% of your time is used to piece together the context you already have somewhere</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra lg:text-lg">Sift proactively delivers the precise information your teams need, right at the moment of decision. No more searching, just clarity.</h2>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
               <div className="w-full sm:w-auto">
