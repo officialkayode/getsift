@@ -72,7 +72,7 @@ const About = () => {
                         <TableCell className="text-gray-300">Sift automatically links every task to its origin; the initial Slack brainstorm, the relevant planning document, and the key decisions made along the way. It delivers a complete decision history, empowering your team to act with confidence and full autonomy</TableCell>
                       </TableRow>
                       <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
-                        <TableCell className="font-medium text-gray-200">Intelligent Filtering</TableCell>
+                        <TableCell className="font-medium text-gray-200">Filtering</TableCell>
                         <TableCell className="text-gray-300">Our intelligent filter analyzes conversations to differentiate urgent signals from low-priority noise. Sift summarizes long threads, flags unanswered questions, and prioritizes what truly needs your attention, allowing your team to focus on deep, meaningful work.</TableCell>
                       </TableRow>
                       <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
