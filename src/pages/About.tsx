@@ -46,20 +46,20 @@ const About = () => {
                   </TableHeader>
                   <TableBody>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
-                      <TableCell className="font-medium text-gray-200">Tribal Knowledge Capture</TableCell>
-                      <TableCell className="text-gray-300">Automatically capture and document implicit knowledge as your team solves problems, creating a dynamic knowledge base that grows with your team.</TableCell>
+                      <TableCell className="font-medium text-gray-200">Instant Context Engine</TableCell>
+                      <TableCell className="text-gray-300">Sift automatically links every task to its origin; the initial Slack brainstorm, the relevant planning document, and the key decisions made along the way. It delivers a complete decision history, empowering your team to act with confidence and full autonomy</TableCell>
                     </TableRow>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
-                      <TableCell className="font-medium text-gray-200">Communication and Collaboration</TableCell>
-                      <TableCell className="text-gray-300">Integrate with your communication and collaboration tools to provide and extract answers where your team already works.</TableCell>
+                      <TableCell className="font-medium text-gray-200">Constant notifications and endless message threads</TableCell>
+                      <TableCell className="text-gray-300">Our intelligent filter analyzes conversations to differentiate urgent signals from low-priority noise. Sift summarizes long threads, flags unanswered questions, and prioritizes what truly needs your attention, allowing your team to focus on deep, meaningful work.</TableCell>
                     </TableRow>
                     <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
-                      <TableCell className="font-medium text-gray-200">Knowledge Retention</TableCell>
-                      <TableCell className="text-gray-300">Preserve institutional knowledge even as team members come and go, maintaining continuity in your operations.</TableCell>
+                      <TableCell className="font-medium text-gray-200">Proactive Information Retrieval</TableCell>
+                      <TableCell className="text-gray-300">Sift anticipates your needs. By understanding the context of your current work, it surfaces relevant information and conversations before you even think to search for them. It transforms search from a reactive chore into a proactive advantage</TableCell>
                     </TableRow>
                     <TableRow className="hover:bg-gray-700/40">
-                      <TableCell className="font-medium text-gray-200">Easy Reassignment</TableCell>
-                      <TableCell className="text-gray-300">Smoothly transfer tasks or responsibilities between team members or cross-functional partners with full context and history for seamless handoffs.</TableCell>
+                      <TableCell className="font-medium text-gray-200">Team Alignment</TableCell>
+                      <TableCell className="text-gray-300">Smoothly transfer tasks or responsibilities between team members or cross-functional partners with full context and history for seamless handoffs. Sift creates a "shared reality" by providing a brief of any project's status, key assets, and history. It ensures everyone (from a new hire to a stakeholder) is operating from the same up-to-date source of truth.</TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
