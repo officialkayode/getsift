@@ -29,7 +29,7 @@ const About = () => {
                 <Link to="/">
                   <h1 className="text-4xl md:text-5xl font-orbitron mb-8 text-white hover:text-gray-300 transition-colors cursor-pointer">Sift</h1>
                 </Link>
-                <p className="text-xl text-gray-200 mb-6 leading-relaxed">We believe information should not just be workflow-aware but also role-aware.</p>
+                <p className="text-xl text-gray-200 mb-6 leading-relaxed">We believe information should not just be workflow-aware but also user-aware.</p>
               </div>
               
               {/* Feature cards overlaid on video background */}
