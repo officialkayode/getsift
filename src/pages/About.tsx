@@ -68,7 +68,7 @@ const About = () => {
                     </TableHeader>
                     <TableBody>
                       <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
-                        <TableCell className="font-medium text-gray-200">Instant Context Engine</TableCell>
+                        <TableCell className="font-medium text-gray-200">Context Engine</TableCell>
                         <TableCell className="text-gray-300">Sift automatically links every task to its origin; the initial Slack brainstorm, the relevant planning document, and the key decisions made along the way. It delivers a complete decision history, empowering your team to act with confidence and full autonomy</TableCell>
                       </TableRow>
                       <TableRow className="border-b border-gray-700 hover:bg-gray-700/40">
@@ -81,7 +81,7 @@ const About = () => {
                       </TableRow>
                       <TableRow className="hover:bg-gray-700/40">
                         <TableCell className="font-medium text-gray-200">Team Alignment</TableCell>
-                        <TableCell className="text-gray-300">Smoothly transfer tasks or responsibilities between team members or cross-functional partners with full context and history for seamless handoffs. Sift creates a "shared reality" by providing a brief of any project's status, key assets, and history. It ensures everyone (from a new hire to a stakeholder) is operating from the same up-to-date source of truth.</TableCell>
+                        <TableCell className="text-gray-300">Smoothly transfer tasks or responsibilities between AI Agents, team members, or cross-functional partners with full context and history for seamless handoffs. Sift creates a "shared reality" by providing a brief of any project's status, key assets, and history. It ensures everyone (from a new hire to a stakeholder) is operating from the same up-to-date source of truth.</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
