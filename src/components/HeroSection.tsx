@@ -70,7 +70,7 @@ export const HeroSection = () => {
               </TooltipContent>
             </Tooltip>
             
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra lg:text-base">Sift proactively delivers precise context to your teammates and AI agents while securing memory with confidential computing.</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-mono lg:text-base">Sift proactively delivers precise context to your teammates and AI agents while securing memory with confidential computing.</h2>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
               <div className="w-full sm:w-auto">
