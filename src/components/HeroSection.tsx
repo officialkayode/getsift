@@ -63,14 +63,14 @@ export const HeroSection = () => {
           <div className="text-center max-w-3xl mx-auto font-garamond">
             <Tooltip>
               <TooltipTrigger asChild>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide mb-4 sm:mb-6 text-white font-orbitron font-extralight lg:text-4xl">The Answer, Before the Question.</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide mb-4 sm:mb-6 text-white font-orbitron font-extralight lg:text-4xl">The secure context layer for humans and agents at work</h1>
               </TooltipTrigger>
               <TooltipContent side="bottom">
                 <p className="text-sm">Sift delivers context proactively</p>
               </TooltipContent>
             </Tooltip>
             
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra lg:text-base">Sift proactively delivers the precise information your teams need, right at the moment of decision. No more searching, just clarity.</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-white/90 mb-8 sm:mb-10 font-chakra lg:text-base">Sift proactively delivers precise context to your teammates and AI agents while securing memory with confidential computing.</h2>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
               <div className="w-full sm:w-auto">
