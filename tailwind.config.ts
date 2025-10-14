@@ -60,7 +60,8 @@ export default {
         orbitron: ["Orbitron", "sans-serif"],
         chakra: ["Chakra Petch", "sans-serif"],
         cormorant: ["Cormorant", "serif"],
-        garamond: ["EB Garamond", "serif"]
+        garamond: ["EB Garamond", "serif"],
+        mono: ["IBM Plex Mono", "monospace"]
       },
       borderRadius: {
         lg: "var(--radius)",
