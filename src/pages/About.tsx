@@ -44,7 +44,7 @@ const About = () => {
                     <p className="text-sm text-gray-300">Sift automatically links every task to its origin; the initial Slack brainstorm, the relevant planning document, and the key decisions made along the way. It delivers a complete decision history, empowering your team to act with confidence and full autonomy</p>
                   </div>
                   <div className="border-b border-gray-700 pb-4">
-                    <h3 className="font-medium text-gray-200 mb-2">Intelligent Filtering</h3>
+                    <h3 className="font-medium text-gray-200 mb-2">Filtering</h3>
                     <p className="text-sm text-gray-300">Our intelligent filter analyzes conversations to differentiate urgent signals from low-priority noise. Sift summarizes long threads, flags unanswered questions, and prioritizes what truly needs your attention, allowing your team to focus on deep, meaningful work.</p>
                   </div>
                   <div className="border-b border-gray-700 pb-4">
@@ -52,8 +52,8 @@ const About = () => {
                     <p className="text-sm text-gray-300">Sift anticipates your needs. By understanding the context of your current work, it surfaces relevant information and conversations before you even think to search for them. It transforms search from a reactive chore into a proactive advantage</p>
                   </div>
                   <div className="pb-4">
-                    <h3 className="font-medium text-gray-200 mb-2">Team Alignment</h3>
-                    <p className="text-sm text-gray-300">Smoothly transfer tasks or responsibilities between team members or cross-functional partners with full context and history for seamless handoffs. Sift creates a "shared reality" by providing a brief of any project's status, key assets, and history. It ensures everyone (from a new hire to a stakeholder) is operating from the same up-to-date source of truth.</p>
+                    <h3 className="font-medium text-gray-200 mb-2">Alignment</h3>
+                    <p className="text-sm text-gray-300">Smoothly transfer tasks or responsibilities between AI Agent, team members or cross-functional partners with full context and history for seamless handoffs. Sift creates a "shared reality" by providing a brief of any project's status, key assets, and history. It ensures everyone (from a new hire to a stakeholder) is operating from the same up-to-date source of truth.</p>
                   </div>
                 </div>
 
