@@ -80,7 +80,7 @@ const About = () => {
                         <TableCell className="text-gray-300">Sift anticipates your needs. By understanding the context of your current work, it surfaces relevant information and conversations before you even think to search for them. It transforms search from a reactive chore into a proactive advantage</TableCell>
                       </TableRow>
                       <TableRow className="hover:bg-gray-700/40">
-                        <TableCell className="font-medium text-gray-200">Team Alignment</TableCell>
+                        <TableCell className="font-medium text-gray-200">Alignment</TableCell>
                         <TableCell className="text-gray-300">Smoothly transfer tasks or responsibilities between AI Agents, team members, or cross-functional partners with full context and history for seamless handoffs. Sift creates a "shared reality" by providing a brief of any project's status, key assets, and history. It ensures everyone (from a new hire to a stakeholder) is operating from the same up-to-date source of truth.</TableCell>
                       </TableRow>
                     </TableBody>
