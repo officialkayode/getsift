@@ -1,6 +1,7 @@
 
 import { Menu, X, Sparkles } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,6 +40,12 @@ export const NavigationBar = () => {
             >
               How It Works
             </button>
+            <Link 
+              to="/blog"
+              className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors"
+            >
+              Blog
+            </Link>
             <div className="border-l border-accent/10 h-6"></div>
             <button
               onClick={() => window.open("https://tally.so/r/3EvdLB", "_blank")}
@@ -58,6 +65,13 @@ export const NavigationBar = () => {
                 >
                   How It Works
                 </button>
+                <Link 
+                  to="/blog"
+                  className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors text-left"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Blog
+                </Link>
                 <button
                   onClick={() => window.open("https://tally.so/r/3EvdLB", "_blank")}
                   className="flex items-center space-x-1 text-sm font-medium bg-accent/10 text-accent px-4 py-2 rounded-full hover:bg-accent/20 transition-colors w-full justify-center"
