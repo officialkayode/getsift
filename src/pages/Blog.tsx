@@ -48,9 +48,9 @@ const Blog = () => {
                 to={`/blog/${post.slug}`}
                 className="group"
               >
-                <div className="h-full rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:-translate-y-1">
+                <div className="h-full rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-gray-400 hover:shadow-lg hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-4">
-                    <Badge variant="secondary" className="font-mono font-medium">
+                    <Badge variant="secondary" className="font-mono font-medium bg-gray-200 text-gray-800 hover:bg-gray-300">
                       {post.category}
                     </Badge>
                     <span className="text-xs text-muted-foreground font-mono font-light">
@@ -62,11 +62,11 @@ const Blog = () => {
                     </span>
                   </div>
                   
-                  <h2 className="text-xl md:text-2xl font-mono font-medium mb-3 group-hover:text-accent transition-colors">
+                  <h2 className="text-xl md:text-2xl font-mono font-medium mb-3 group-hover:text-foreground transition-colors">
                     {post.title}
                   </h2>
                   
-                  <p className="text-sm text-muted-foreground font-mono font-light mb-4 line-clamp-3">
+                  <p className="text-sm text-muted-foreground font-mono font-normal mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   
@@ -80,7 +80,7 @@ const Blog = () => {
                     <span className="text-xs text-muted-foreground font-mono font-light">
                       {post.readTime}
                     </span>
-                    <span className="text-sm font-mono font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <span className="text-sm font-mono font-medium text-gray-700 flex items-center gap-1 group-hover:gap-2 transition-all">
                       Read more
                       <ArrowRight className="h-4 w-4" />
                     </span>

@@ -100,7 +100,7 @@ const BlogPost = () => {
           <div className="text-center">
             <h1 className="text-4xl font-mono font-medium mb-4">Post Not Found</h1>
             <Link to="/blog">
-              <Button variant="outline" className="font-mono font-medium">
+              <Button variant="outline" className="font-mono font-medium hover:bg-gray-100">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Blog
               </Button>
@@ -119,7 +119,7 @@ const BlogPost = () => {
       <main className="flex-1">
         <div className="container px-4 py-16 max-w-4xl mx-auto">
           <Link to="/blog" className="inline-block mb-8">
-            <Button variant="ghost" className="font-mono font-medium">
+            <Button variant="ghost" className="font-mono font-medium hover:bg-gray-100">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Blog
             </Button>
@@ -128,7 +128,7 @@ const BlogPost = () => {
           <article>
             <header className="mb-12">
               <div className="flex items-center gap-3 mb-4">
-                <Badge variant="secondary" className="font-mono font-medium">
+                <Badge variant="secondary" className="font-mono font-medium bg-gray-200 text-gray-800 hover:bg-gray-300">
                   {post.category}
                 </Badge>
                 <span className="text-sm text-muted-foreground font-mono font-light">
@@ -142,7 +142,7 @@ const BlogPost = () => {
                   • {post.readTime}
                 </span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-mono font-medium mb-4">
+              <h1 className="text-4xl md:text-5xl font-mono font-semibold mb-4">
                 {post.title}
               </h1>
               <p className="text-base text-muted-foreground font-mono font-light mb-2">
@@ -153,7 +153,7 @@ const BlogPost = () => {
               </p>
             </header>
 
-            <div className="prose prose-lg max-w-none font-mono font-light">
+            <div className="prose prose-lg max-w-none font-mono font-normal">
               {post.content.split('\n\n').map((paragraph, idx) => {
                 if (paragraph.startsWith('## ')) {
                   return (
@@ -171,7 +171,7 @@ const BlogPost = () => {
                   if (title.length < 80 && description.trim().length > 0) {
                     return (
                       <p key={idx} className="mb-4">
-                        <strong className="font-mono font-medium">{title}:</strong>
+                        <strong className="font-mono font-semibold">{title}:</strong>
                         {description}
                       </p>
                     );
