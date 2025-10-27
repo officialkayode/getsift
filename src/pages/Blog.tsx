@@ -6,11 +6,22 @@ import { ArrowRight } from "lucide-react";
 
 const blogPosts = [
   {
+    id: 2,
+    slug: "sift-launches-major-update-context-aware-ai",
+    title: "Press Release — Sift Launches Major Update to Power More Context-Aware AI for Teams",
+    date: "2025-10-23",
+    category: "Press Release",
+    authors: ["Kayode Adegbite"],
+    readTime: "4 min read",
+    excerpt: "San Francisco, CA – October 23, 2025 — Sift, the context layer for humans and AI agents at work, today announced a major update to its platform, introducing advanced temporal reasoning, improved rhetorical question detection, and continuous user-based summaries.",
+  },
+  {
     id: 1,
     slug: "how-sift-powers-proactive-knowledge-delivery",
     title: "How Sift Powers Proactive Knowledge Delivery with Qdrant",
     date: "2025-01-15",
     category: "Engineering",
+    authors: ["Kayode Adegbite", "Samuel Umoren"],
     readTime: "8 min read",
     excerpt: "At Sift, our mission is to eliminate the need for employees to search for information for all their information need. We believe that knowledge should find you when you need it.",
   }
@@ -58,6 +69,12 @@ const Blog = () => {
                   <p className="text-sm text-muted-foreground font-mono font-light mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
+                  
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs text-muted-foreground font-mono font-light">
+                      By {post.authors.join(" and ")}
+                    </span>
+                  </div>
                   
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-muted-foreground font-mono font-light">

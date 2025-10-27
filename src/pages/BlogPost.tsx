@@ -7,11 +7,43 @@ import { ArrowLeft } from "lucide-react";
 
 const blogPosts = [
   {
+    id: 2,
+    slug: "sift-launches-major-update-context-aware-ai",
+    title: "Press Release — Sift Launches Major Update to Power More Context-Aware AI for Teams",
+    date: "2025-10-23",
+    category: "Press Release",
+    authors: ["Kayode Adegbite"],
+    readTime: "4 min read",
+    excerpt: "San Francisco, CA – October 23, 2025 — Sift, the context layer for humans and AI agents at work, today announced a major update to its platform, introducing advanced temporal reasoning, improved rhetorical question detection, and continuous user-based summaries.",
+    content: `San Francisco, CA – October 23, 2025 — Sift, the context layer for humans and AI agents at work, today announced a major update to its platform, introducing advanced temporal reasoning, improved rhetorical question detection, and continuous user-based summaries — setting a new standard for contextual intelligence inside enterprise communication tools.
+
+With this release, Sift takes a significant step toward its vision of becoming the "operating system for organizational intelligence."
+
+## Key Updates
+
+**Smarter Understanding of Human Intent:**
+Sift's models now detect rhetorical questions and nuanced phrasing more accurately, enabling more natural, contextually aware responses across conversations.
+
+**Temporal Awareness:**
+The system now interprets and answers time-dependent questions — such as progress over weeks or changes across quarters — with higher accuracy, giving teams a more dynamic, data-driven view of their own operations.
+
+**Persistent, Personalized Summaries:**
+Each user now benefits from ongoing summaries maintained per channel and per thread, allowing Sift to deliver faster, more precise answers grounded in real, evolving context.
+
+**Future-Proof Architecture:**
+This new foundation enables support for long-term memory and organizational summaries — addressing the long-standing challenges of knowledge drift and loss that Sift's early customers, including Paystack and Mainstack, identified in their workflows.
+
+"Our goal has always been to eliminate the friction of recontextualization inside organizations," said Kayode Adegbite, Co-Founder and CEO of Sift. "With this update, Sift doesn't just recall context — it understands it over time, enabling humans and agents to work in true sync."
+
+Sift continues to expand its enterprise partnerships and integrations, building toward a secure, continuously learning context graph that powers smarter reasoning for both people and AI systems across the enterprise.`
+  },
+  {
     id: 1,
     slug: "how-sift-powers-proactive-knowledge-delivery",
     title: "How Sift Powers Proactive Knowledge Delivery with Qdrant",
     date: "2025-01-15",
     category: "Engineering",
+    authors: ["Kayode Adegbite", "Samuel Umoren"],
     readTime: "8 min read",
     excerpt: "At Sift, our mission is to eliminate the need for employees to search for information for all their information need. We believe that knowledge should find you when you need it.",
     content: `At Sift, our mission is to eliminate the need for employees to search for information for all their information need. We believe that knowledge should find you when you need it. To achieve this, we built Sift, a proactive contextual information delivery engine that surfaces relevant knowledge from across an enterprise's digital ecosystem directly within their workflow. At the heart of our retrieval system is Qdrant, providing the speed, scalability, and powerful filtering capabilities we need to deliver a seamless experience.
@@ -105,6 +137,9 @@ const BlogPost = () => {
               <h1 className="text-4xl md:text-5xl font-mono font-medium mb-4">
                 {post.title}
               </h1>
+              <p className="text-base text-muted-foreground font-mono font-light mb-2">
+                By {post.authors.join(" and ")}
+              </p>
               <p className="text-lg text-muted-foreground font-mono font-light">
                 {post.excerpt}
               </p>
