@@ -10,6 +10,9 @@ export const Footer = () => {
             © 2025 Sift. All rights reserved.
           </p>
           <div className="flex space-x-6">
+            <Link to="/blog" className="text-gray-400 hover:text-gray-300 transition-colors text-sm">
+              Blog
+            </Link>
             <Link to="/privacy" className="text-gray-400 hover:text-gray-300 transition-colors text-sm">
               Privacy Policy
             </Link>
