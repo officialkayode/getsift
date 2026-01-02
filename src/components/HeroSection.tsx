@@ -63,7 +63,7 @@ export const HeroSection = () => {
           <div className="text-center max-w-3xl mx-auto font-garamond">
             <Tooltip>
               <TooltipTrigger asChild>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide mb-4 sm:mb-6 text-white font-mono font-normal lg:text-4xl">The secure context layer for humans and agents</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide mb-4 sm:mb-6 text-white font-mono font-normal lg:text-4xl">The secure context graph for humans and agents</h1>
               </TooltipTrigger>
               <TooltipContent side="bottom">
                 <p className="text-sm">Sift delivers context proactively</p>
