@@ -1,19 +1,30 @@
-import { HeroSection } from "@/components/HeroSection";
-import { Footer } from "@/components/Footer";
+import {
+  SiftHero,
+  TrustStrip,
+  ProblemSection,
+  HowItWorks,
+  InitiativeSection,
+  ProductSurfaces,
+  ReliabilityFramework,
+  IntegrationsSection,
+  FinalCTA,
+  SiftFooter,
+} from "@/components/landing";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Video backdrop covers the entire page */}
-      <div className="relative">
-        <HeroSection />
-        
-        {/* Only keep the footer */}
-        <div className="relative bg-background">
-          <Footer />
-        </div>
-      </div>
-    </div>
+    <main className="min-h-screen bg-white">
+      <SiftHero />
+      <TrustStrip />
+      <ProblemSection />
+      <HowItWorks />
+      <InitiativeSection />
+      <ProductSurfaces />
+      <ReliabilityFramework />
+      <IntegrationsSection />
+      <FinalCTA />
+      <SiftFooter />
+    </main>
   );
 };
 
