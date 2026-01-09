@@ -2,7 +2,6 @@ import {
   SinglePageNavbar,
   HeroWithBackground,
   ProductSection,
-  WaitlistSection,
   SinglePageFooter,
 } from "@/components/landing";
 
@@ -12,7 +11,6 @@ const Index = () => {
       <SinglePageNavbar />
       <HeroWithBackground />
       <ProductSection />
-      <WaitlistSection />
       <SinglePageFooter />
     </main>
   );

@@ -2,7 +2,6 @@
 export { SinglePageNavbar } from "./SinglePageNavbar";
 export { HeroWithBackground } from "./HeroWithBackground";
 export { ProductSection } from "./ProductSection";
-export { WaitlistSection } from "./WaitlistSection";
 export { SinglePageFooter } from "./SinglePageFooter";
 
 // Shared components
