@@ -1,23 +1,5 @@
-import {
-  SiftNavbar,
-  CompactHero,
-  CompactProduct,
-  CompactTrust,
-  CompactCTA,
-  CompactFooter,
-} from "@/components/landing";
-
+import { SiftHero, TrustStrip, ProblemSection, HowItWorks, InitiativeSection, ProductSurfaces, ReliabilityFramework, IntegrationsSection, FinalCTA, SiftFooter } from "@/components/landing";
 const Index = () => {
-  return (
-    <main className="min-h-screen bg-white">
-      <SiftNavbar />
-      <CompactHero />
-      <CompactProduct />
-      <CompactTrust />
-      <CompactCTA />
-      <CompactFooter />
-    </main>
-  );
+  return;
 };
-
 export default Index;
