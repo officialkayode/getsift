@@ -11,11 +11,11 @@ export const FinalCTA = () => {
 
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden">
-      {/* IMAGE SLOT: CTA_BACKGROUND_IMAGE - /images/sift-cta-road.jpg */}
+      {/* IMAGE SLOT: CTA_BACKGROUND_IMAGE - /images/sift-cta-road.jpg.png */}
       <div
         className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200"
         style={{
-          backgroundImage: "url('/images/sift-cta-road.jpg')",
+          backgroundImage: "url('/images/sift-cta-road.jpg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

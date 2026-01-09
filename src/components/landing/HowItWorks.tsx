@@ -57,7 +57,7 @@ export const HowItWorks = () => {
           <div>
             {/* IMAGE SLOT: GRAPH_IMAGE */}
             <ImageSlot
-              src="/images/sift-graph-flatlay.jpg"
+              src="/images/sift-graph-flatlay.jpg.png"
               alt="Sift context graph visualization showing connected data sources"
               aspectRatio="16/9"
               slotName="GRAPH_IMAGE"

@@ -4,7 +4,7 @@ export const ProductSurfaces = () => {
   const surfaces = [
     {
       title: 'Platform "Temperature"',
-      image: "/images/sift-initiative-room.jpg",
+      image: "/images/sift-initiative-room.jpg.png",
       slotName: "CARD_PLATFORM_IMAGE",
       bullets: [
         "Real-time health of every initiative",
@@ -14,7 +14,7 @@ export const ProductSurfaces = () => {
     },
     {
       title: 'Gmail "Context-before-send"',
-      image: "/images/sift-gmail-cafe.jpg",
+      image: "/images/sift-gmail-cafe.jpg.png",
       slotName: "CARD_GMAIL_IMAGE",
       bullets: [
         "See relevant context before you reply",
@@ -24,7 +24,7 @@ export const ProductSurfaces = () => {
     },
     {
       title: 'Slack "@mention context"',
-      image: "/images/sift-slack-mention.jpg",
+      image: "/images/sift-slack-mention.jpg.png",
       slotName: "CARD_SLACK_IMAGE",
       bullets: [
         "Instant context when mentioned",
