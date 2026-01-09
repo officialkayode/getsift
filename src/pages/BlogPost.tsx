@@ -6,63 +6,6 @@ import { ArrowLeft } from "lucide-react";
 
 const blogPosts = [
   {
-    id: 1,
-    slug: "nucleus-context-surface-framework",
-    title: "The Nucleus/Context/Surface Framework",
-    date: "2025-01-08",
-    category: "Engineering",
-    authors: ["Kayode Adegbite"],
-    readTime: "6 min read",
-    excerpt: "How Sift's three-layer reliability architecture ensures trustworthy AI outputs—from zero-tolerance data integrity to transparent synthesis.",
-    content: `At Sift, reliability isn't a feature—it's the foundation. As we build AI systems that inform critical business decisions, we've developed a principled approach to ensuring trust at every layer. We call it the Nucleus/Context/Surface framework.
-
-## The Problem with Black-Box AI
-
-Most AI systems operate as black boxes. They ingest data, perform opaque transformations, and output answers. Users are left wondering: Is this accurate? Is it current? Can I trust it?
-
-For enterprise teams making high-stakes decisions, this uncertainty is unacceptable. Leaders need to know not just what the AI says, but why it says it, when the underlying data was last updated, and how confident the system is in its conclusions.
-
-## Layer 1: Nucleus (Zero Tolerance)
-
-The Nucleus is our data integrity layer. Here, we enforce zero tolerance for ambiguity:
-
-Connectors: Every data source has explicit, versioned connectors that define exactly what data we access and how.
-
-Permissions: Data access respects the source system's permissions. If you couldn't see it in Slack, you won't see it in Sift.
-
-Citations: Every piece of information maintains a traceable link to its source document, message, or record.
-
-Freshness: We track when data was last synced and surface staleness explicitly. A six-month-old document is treated differently than a message from this morning.
-
-The guiding principle: Loud failure is better than quiet lies. If we can't verify something, we say so.
-
-## Layer 2: Context (Glass Box)
-
-The Context layer is where synthesis happens—but as a glass box, not a black box:
-
-Probabilistic Insights: When we infer relationships or summarize trends, we attach confidence levels. "High confidence" means strong signal; "moderate" means we're connecting dots that might need verification.
-
-Show Evidence: Every insight links back to the specific sources that informed it. Users can click through to see the original messages, documents, or data points.
-
-Temporal Awareness: Context isn't static. We track how information evolves over time, surfacing what changed and when.
-
-## Layer 3: Surface (Radical Transparency)
-
-The Surface layer is what users see—and here we commit to radical transparency:
-
-Hard Facts vs. Soft Signals: We visually distinguish between verified facts (this meeting happened at 2pm) and inferred signals (the project seems blocked based on recent messages).
-
-Uncertainty UX: Rather than hiding uncertainty, we design interfaces that make confidence levels intuitive. Green for high confidence, yellow for moderate, gray for low.
-
-Actionable Outputs: Every surface is designed for action. Temperature dashboards highlight what needs attention. Context cards in Gmail show what you need before you reply.
-
-## Why This Matters
-
-In a world where AI hallucinations erode trust, the Nucleus/Context/Surface framework provides a different path. By being explicit about data provenance, transparent about inference, and honest about uncertainty, we build systems that teams can actually rely on.
-
-The goal isn't perfect AI. It's AI that knows its limits and communicates them clearly—so humans remain in control of the decisions that matter.`,
-  },
-  {
     id: 2,
     slug: "temporal-context-beats-search",
     title: "Why Temporal Context Beats Search",

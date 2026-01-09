@@ -5,16 +5,6 @@ import { ArrowRight } from "lucide-react";
 
 const blogPosts = [
   {
-    id: 1,
-    slug: "nucleus-context-surface-framework",
-    title: "The Nucleus/Context/Surface Framework",
-    date: "2025-01-08",
-    category: "Engineering",
-    authors: ["Kayode Adegbite"],
-    readTime: "6 min read",
-    excerpt: "How Sift's three-layer reliability architecture ensures trustworthy AI outputs—from zero-tolerance data integrity to transparent synthesis.",
-  },
-  {
     id: 2,
     slug: "temporal-context-beats-search",
     title: "Why Temporal Context Beats Search",
