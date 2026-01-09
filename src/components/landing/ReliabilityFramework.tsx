@@ -87,7 +87,7 @@ export const ReliabilityFramework = () => {
           <div className="lg:col-span-2">
             {/* IMAGE SLOT: NUCLEUS_IMAGE */}
             <ImageSlot
-              src="/images/sift-nucleus-archive.jpg"
+              src="/images/sift-nucleus-archive.jpg.png"
               alt="Sift reliability framework visualization"
               aspectRatio="4/3"
               slotName="NUCLEUS_IMAGE"

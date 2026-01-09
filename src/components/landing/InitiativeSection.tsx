@@ -16,7 +16,7 @@ export const InitiativeSection = () => {
           <div className="order-2 lg:order-1">
             {/* IMAGE SLOT: INITIATIVE_IMAGE */}
             <ImageSlot
-              src="/images/sift-initiative-room.jpg"
+              src="/images/sift-initiative-room.jpg.png"
               alt="Team reviewing initiative temperature dashboard"
               aspectRatio="16/9"
               slotName="INITIATIVE_IMAGE"

@@ -47,7 +47,7 @@ export const SiftHero = () => {
           <div className="lg:pl-8">
             {/* IMAGE SLOT: HERO_IMAGE */}
             <ImageSlot
-              src="/images/sift-hero-coast.jpg"
+              src="/images/sift-hero-coast.jpg.png"
               alt="Sift platform visualization showing unified context across tools"
               aspectRatio="16/9"
               slotName="HERO_IMAGE"
