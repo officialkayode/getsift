@@ -1,9 +1,9 @@
-import { SiftNavbar, CompactFooter } from "@/components/landing";
+import { SinglePageNavbar, SinglePageFooter } from "@/components/landing";
 
 const Privacy = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <SiftNavbar />
+      <SinglePageNavbar />
 
       <main className="flex-1 pt-20">
         <div className="container px-6 py-12 max-w-3xl mx-auto">
@@ -97,7 +97,7 @@ const Privacy = () => {
         </div>
       </main>
 
-      <CompactFooter />
+      <SinglePageFooter />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { SiftNavbar, CompactFooter } from "@/components/landing";
+import { SinglePageNavbar, SinglePageFooter } from "@/components/landing";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -220,7 +220,7 @@ const BlogPost = () => {
   if (!post) {
     return (
       <div className="min-h-screen flex flex-col bg-white">
-        <SiftNavbar />
+        <SinglePageNavbar />
         <main className="flex-1 flex items-center justify-center pt-20">
           <div className="text-center">
             <h1 className="text-3xl font-semibold text-gray-900 mb-4">Post Not Found</h1>
@@ -232,14 +232,14 @@ const BlogPost = () => {
             </Link>
           </div>
         </main>
-        <CompactFooter />
+        <SinglePageFooter />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <SiftNavbar />
+      <SinglePageNavbar />
 
       <main className="flex-1 pt-20">
         <div className="container px-6 py-12 max-w-3xl mx-auto">
@@ -308,7 +308,7 @@ const BlogPost = () => {
         </div>
       </main>
 
-      <CompactFooter />
+      <SinglePageFooter />
     </div>
   );
 };

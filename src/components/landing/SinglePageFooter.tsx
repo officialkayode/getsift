@@ -1,15 +1,9 @@
-export const SinglePageFooter = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+import { Link } from "react-router-dom";
 
+export const SinglePageFooter = () => {
   const links = [
-    { label: "Demo", id: "demo" },
-    { label: "Blog", id: "blog" },
-    { label: "Privacy", id: "privacy" },
+    { label: "Blog", href: "/blog" },
+    { label: "Privacy", href: "/privacy" },
   ];
 
   return (
@@ -17,18 +11,20 @@ export const SinglePageFooter = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Wordmark */}
-          <span className="text-lg font-medium font-mono">Sift</span>
+          <Link to="/" className="text-lg font-medium font-mono">
+            Sift
+          </Link>
 
           {/* Links */}
           <nav className="flex flex-wrap items-center justify-center gap-6">
             {links.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
+              <Link
+                key={link.href}
+                to={link.href}
                 className="text-sm text-gray-400 hover:text-white transition-colors"
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
             <a
               href="mailto:hello@getsift.co"

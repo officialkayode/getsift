@@ -2,10 +2,7 @@ import {
   SinglePageNavbar,
   HeroWithBackground,
   ProductSection,
-  DemoSection,
   WaitlistSection,
-  BlogSection,
-  PrivacySection,
   SinglePageFooter,
 } from "@/components/landing";
 
@@ -15,10 +12,7 @@ const Index = () => {
       <SinglePageNavbar />
       <HeroWithBackground />
       <ProductSection />
-      <DemoSection />
       <WaitlistSection />
-      <BlogSection />
-      <PrivacySection />
       <SinglePageFooter />
     </main>
   );

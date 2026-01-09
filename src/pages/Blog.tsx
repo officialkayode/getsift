@@ -1,4 +1,4 @@
-import { SiftNavbar, CompactFooter } from "@/components/landing";
+import { SinglePageNavbar, SinglePageFooter } from "@/components/landing";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
@@ -49,7 +49,7 @@ const blogPosts = [
 const Blog = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <SiftNavbar />
+      <SinglePageNavbar />
 
       <main className="flex-1 pt-20">
         <div className="container px-6 py-12 max-w-5xl mx-auto">
@@ -101,7 +101,7 @@ const Blog = () => {
         </div>
       </main>
 
-      <CompactFooter />
+      <SinglePageFooter />
     </div>
   );
 };
