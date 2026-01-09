@@ -1,4 +1,12 @@
 export { ImageSlot } from "./ImageSlot";
+export { SiftNavbar } from "./SiftNavbar";
+export { CompactHero } from "./CompactHero";
+export { CompactProduct } from "./CompactProduct";
+export { CompactTrust } from "./CompactTrust";
+export { CompactCTA } from "./CompactCTA";
+export { CompactFooter } from "./CompactFooter";
+
+// Legacy exports (kept for compatibility, can be removed later)
 export { SiftHero } from "./SiftHero";
 export { TrustStrip } from "./TrustStrip";
 export { ProblemSection } from "./ProblemSection";
