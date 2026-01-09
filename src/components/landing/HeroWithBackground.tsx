@@ -1,15 +1,12 @@
 import { Button } from "@/components/ui/button";
 
 export const HeroWithBackground = () => {
-  const handleDemo = () => {
-    window.open("https://tally.so/r/waxNop", "_blank");
+  const handleBookDemo = () => {
+    window.open("https://calendar.app.google/J22JUbRhovodHYdk8", "_blank");
   };
 
-  const scrollToWaitlist = () => {
-    const element = document.getElementById("waitlist");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleWaitlist = () => {
+    window.open("https://tally.so/r/3EvdLB", "_blank");
   };
 
   return (
@@ -39,13 +36,13 @@ export const HeroWithBackground = () => {
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Button
-              onClick={handleDemo}
+              onClick={handleBookDemo}
               className="bg-white text-gray-900 hover:bg-gray-100 text-sm px-6 py-3 rounded-full font-medium"
             >
-              Request a demo
+              Book a demo
             </Button>
             <Button
-              onClick={scrollToWaitlist}
+              onClick={handleWaitlist}
               variant="outline"
               className="border-white/30 bg-transparent text-white hover:bg-white/10 text-sm px-6 py-3 rounded-full font-medium"
             >
