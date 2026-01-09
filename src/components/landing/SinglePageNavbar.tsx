@@ -18,9 +18,7 @@ export const SinglePageNavbar = () => {
   };
 
   const navLinks = [
-    { label: "Product", id: "product" },
     { label: "Demo", id: "demo" },
-    { label: "Waitlist", id: "waitlist" },
     { label: "Blog", id: "blog" },
     { label: "Privacy", id: "privacy" },
   ];
