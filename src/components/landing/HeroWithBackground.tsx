@@ -47,7 +47,7 @@ export const HeroWithBackground = () => {
             <Button
               onClick={scrollToWaitlist}
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 text-sm px-6 py-3 rounded-full font-medium"
+              className="border-white/30 bg-transparent text-white hover:bg-white/10 text-sm px-6 py-3 rounded-full font-medium"
             >
               Join waitlist
             </Button>
