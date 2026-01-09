@@ -1,5 +1,4 @@
 import { LayoutDashboard } from "lucide-react";
-import { ImageSlot } from "./ImageSlot";
 
 const GmailLogo = () => (
   <svg viewBox="0 0 24 24" className="w-6 h-6">
@@ -43,12 +42,6 @@ const surfaces = [
   },
 ];
 
-const steps = [
-  { num: "1", label: "Ingest across tools" },
-  { num: "2", label: "Ground truth with citations" },
-  { num: "3", label: "Synthesis as a glass box" },
-];
-
 export const ProductSection = () => {
   return (
     <section id="product" className="py-20 md:py-28 bg-white">
@@ -85,32 +78,6 @@ export const ProductSection = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* How it works micro-flow */}
-        <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-xl font-medium text-gray-900 font-mono mb-6">
-              How it works
-            </h3>
-            <div className="space-y-4">
-              {steps.map((step) => (
-                <div key={step.num} className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-gray-900 text-white text-sm font-medium flex items-center justify-center">
-                    {step.num}
-                  </div>
-                  <span className="text-gray-700">{step.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <ImageSlot
-            src="/images/sift-graph-flatlay.jpg.png"
-            alt="How Sift works"
-            aspectRatio="16/9"
-            slotName="GRAPH_IMAGE"
-          />
         </div>
       </div>
     </section>
