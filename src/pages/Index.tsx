@@ -1,12 +1,27 @@
-import { SiftNavbar, CompactHero, CompactProduct, CompactTrust, CompactCTA, CompactFooter } from "@/components/landing";
+import {
+  SinglePageNavbar,
+  HeroWithBackground,
+  ProductSection,
+  DemoSection,
+  WaitlistSection,
+  BlogSection,
+  PrivacySection,
+  SinglePageFooter,
+} from "@/components/landing";
+
 const Index = () => {
-  return <main className="min-h-screen bg-white">
-      <SiftNavbar />
-      <CompactHero />
-      <CompactProduct />
-      <CompactTrust />
-      <CompactCTA />
-      
-    </main>;
+  return (
+    <main className="min-h-screen bg-white">
+      <SinglePageNavbar />
+      <HeroWithBackground />
+      <ProductSection />
+      <DemoSection />
+      <WaitlistSection />
+      <BlogSection />
+      <PrivacySection />
+      <SinglePageFooter />
+    </main>
+  );
 };
+
 export default Index;
