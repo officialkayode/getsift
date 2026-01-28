@@ -23,8 +23,11 @@ const trustPoints = [
 
 export const TrustSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-gray-800">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="relative py-20 md:py-28">
+      {/* Dark semi-transparent overlay with blur */}
+      <div className="absolute inset-0 bg-gray-900/85 backdrop-blur-sm" />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-medium text-white font-mono tracking-tight">
             Security at the Speed of Business
