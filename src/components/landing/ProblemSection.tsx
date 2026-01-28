@@ -1,12 +1,21 @@
-import { Layers, Clock, HelpCircle } from "lucide-react";
+import { Clock, HelpCircle, LucideIcon } from "lucide-react";
+import siloedImage from "@/assets/siloed.png";
 
-const problems = [
+type Problem = {
+  icon?: LucideIcon;
+  title: string;
+  subtitle: string;
+  description: string;
+  image?: string;
+};
+
+const problems: Problem[] = [
   {
-    icon: Layers,
     title: "The Silo Effect",
     subtitle: "Natural Disconnects",
     description:
       "When teams grow fast, silos happen naturally. Engineering, Product, and Facilities often end up running in parallel lanes without visibility into each other's work.",
+    image: siloedImage,
   },
   {
     icon: Clock,
@@ -46,18 +55,39 @@ export const ProblemSection = () => {
               key={index}
               className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/50 hover:border-gray-300 transition-colors duration-300 shadow-lg"
             >
-              <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center mb-6">
-                <problem.icon className="w-6 h-6 text-gray-700" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {problem.title}
-              </h3>
-              <p className="text-sm text-gray-500 mb-4 font-medium">
-                {problem.subtitle}
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                {problem.description}
-              </p>
+              {problem.image ? (
+                <>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {problem.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4 font-medium">
+                    {problem.subtitle}
+                  </p>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    {problem.description}
+                  </p>
+                  <img 
+                    src={problem.image} 
+                    alt={problem.title}
+                    className="w-full rounded-xl"
+                  />
+                </>
+              ) : (
+                <>
+                  <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center mb-6">
+                    {problem.icon && <problem.icon className="w-6 h-6 text-gray-700" />}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {problem.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4 font-medium">
+                    {problem.subtitle}
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    {problem.description}
+                  </p>
+                </>
+              )}
             </div>
           ))}
         </div>
