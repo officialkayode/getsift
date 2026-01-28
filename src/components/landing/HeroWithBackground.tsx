@@ -27,11 +27,11 @@ export const HeroWithBackground = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight tracking-tight font-mono">
-            Live context for decisions.
+            Scale Your Team Without Losing Your Context.
           </h1>
           
           <p className="mt-6 text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl">
-            Sift unifies what's happening across your tools into a time-aware context graph—so leaders and teams act with confidence.
+            Growth shouldn't mean disconnected teams. We bridge the gaps between your business units so everyone—from Engineering to Ops—can build on each other's work, not rebuild it.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -49,10 +49,6 @@ export const HeroWithBackground = () => {
               Join waitlist
             </Button>
           </div>
-
-          <p className="mt-8 text-sm text-gray-400">
-            Built for fast-moving teams (50–500 employees)
-          </p>
         </div>
       </div>
     </section>
