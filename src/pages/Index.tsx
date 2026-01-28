@@ -1,7 +1,10 @@
 import {
   SinglePageNavbar,
   HeroWithBackground,
-  ProductSection,
+  LogoStrip,
+  ProblemSection,
+  SolutionSection,
+  TrustSection,
   SinglePageFooter,
 } from "@/components/landing";
 
@@ -10,7 +13,10 @@ const Index = () => {
     <main className="min-h-screen bg-white">
       <SinglePageNavbar />
       <HeroWithBackground />
-      <ProductSection />
+      <LogoStrip />
+      <ProblemSection />
+      <SolutionSection />
+      <TrustSection />
       <SinglePageFooter />
     </main>
   );
