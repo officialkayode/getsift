@@ -1,5 +1,6 @@
-import { Clock, HelpCircle, LucideIcon } from "lucide-react";
+import { HelpCircle, LucideIcon } from "lucide-react";
 import siloedImage from "@/assets/siloed.png";
+import brokenKnowledgeImage from "@/assets/brokenKnowledge.png";
 
 type Problem = {
   icon?: LucideIcon;
@@ -18,11 +19,11 @@ const problems: Problem[] = [
     image: siloedImage,
   },
   {
-    icon: Clock,
     title: "Fading Context",
     subtitle: "Fading Context",
     description:
       "As new hires flood in and experts move on, the 'why' behind decisions often gets lost, leaving teams without the history they need to move forward.",
+    image: brokenKnowledgeImage,
   },
   {
     icon: HelpCircle,
