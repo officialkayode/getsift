@@ -1,6 +1,7 @@
-import { HelpCircle, LucideIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import siloedImage from "@/assets/siloed.png";
 import brokenKnowledgeImage from "@/assets/brokenKnowledge.png";
+import hiddenDependenciesImage from "@/assets/hiddenDependencies.png";
 
 type Problem = {
   icon?: LucideIcon;
@@ -26,11 +27,11 @@ const problems: Problem[] = [
     image: brokenKnowledgeImage,
   },
   {
-    icon: HelpCircle,
     title: "Hidden Dependencies",
     subtitle: "Hidden Dependencies",
     description:
       "It's hard to ask the right questions when you don't know what you don't know. Critical risks often hide in plain sight simply because they live in a different tool.",
+    image: hiddenDependenciesImage,
   },
 ];
 
