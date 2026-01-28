@@ -1,8 +1,8 @@
 
 
-## Update Effortless Traceability Card with Image
+## Update "The Silo Effect" Card with Image
 
-This plan updates the first feature card in the Solution Section to replace the icon with a custom image placed after the text content.
+This plan updates the first problem card in the Problem Section to replace the icon with the uploaded network visualization image, placed after the text content—matching the pattern used for "Effortless Traceability" in the Solution section.
 
 ---
 
@@ -11,9 +11,10 @@ This plan updates the first feature card in the Solution Section to replace the 
 **Current Layout:**
 ```text
 ┌─────────────────────────────┐
-│  [Icon in dark square]      │
+│  [Icon in gray square]      │
 │                             │
-│  Effortless Traceability    │
+│  The Silo Effect            │
+│  Natural Disconnects        │
 │                             │
 │  Description text...        │
 └─────────────────────────────┘
@@ -22,11 +23,12 @@ This plan updates the first feature card in the Solution Section to replace the 
 **New Layout:**
 ```text
 ┌─────────────────────────────┐
-│  Effortless Traceability    │
+│  The Silo Effect            │
+│  Natural Disconnects        │
 │                             │
 │  Description text...        │
 │                             │
-│  [Traceability Image]       │
+│  [Siloed Networks Image]    │
 └─────────────────────────────┘
 ```
 
@@ -36,13 +38,13 @@ This plan updates the first feature card in the Solution Section to replace the 
 
 | File | Action |
 |------|--------|
-| `src/components/landing/SolutionSection.tsx` | Update first card to show image instead of icon |
+| `src/components/landing/ProblemSection.tsx` | Update first card to show image instead of icon |
 
 ### Assets to Copy
 
 | Source | Destination |
 |--------|-------------|
-| `user-uploads://traceability.png` | `src/assets/traceability.png` |
+| `user-uploads://siloed.png` | `src/assets/siloed.png` |
 
 ---
 
@@ -50,44 +52,76 @@ This plan updates the first feature card in the Solution Section to replace the 
 
 **Step 1: Copy Image Asset**
 
-Copy the uploaded traceability image to the src/assets folder for proper bundling and import.
+Copy the uploaded siloed.png image to the src/assets folder for proper bundling and import.
 
-**Step 2: Update SolutionSection.tsx**
+**Step 2: Update ProblemSection.tsx**
 
-1. Import the traceability image at the top of the file
-2. Modify the features array to include an optional `image` property for the first feature
-3. Update the card rendering logic:
-   - For the first feature (Effortless Traceability): Hide the icon, show title and description first, then display the image below
-   - For other features: Keep the existing icon-first layout
+1. Import the siloed image at the top of the file
+2. Add a TypeScript type for the Problem items with optional `image` property
+3. Add the `image` property to the first problem ("The Silo Effect")
+4. Update the card rendering logic with conditional rendering:
+   - For "The Silo Effect": Show title, subtitle, and description first, then display the image below
+   - For other problems: Keep the existing icon-first layout
 
-**Updated Card Structure for Effortless Traceability:**
+**Updated Data Structure:**
 
 ```tsx
-// Feature with image (Effortless Traceability)
-<div className="group p-8 rounded-2xl bg-white/95 backdrop-blur-sm border...">
-  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-    Effortless Traceability
-  </h3>
-  <p className="text-gray-600 leading-relaxed mb-6">
-    Description text...
-  </p>
-  <img 
-    src={traceabilityImage} 
-    alt="Traceability visualization" 
-    className="w-full rounded-xl"
-  />
-</div>
+type Problem = {
+  icon?: LucideIcon;
+  title: string;
+  subtitle: string;
+  description: string;
+  image?: string;
+};
+
+const problems: Problem[] = [
+  {
+    title: "The Silo Effect",
+    subtitle: "Natural Disconnects",
+    description: "...",
+    image: siloedImage,  // No icon for this one
+  },
+  {
+    icon: Clock,
+    title: "Fading Context",
+    // ...
+  },
+  // ...
+];
+```
+
+**Updated Card Rendering:**
+
+```tsx
+{problem.image ? (
+  <>
+    <h3>The Silo Effect</h3>
+    <p>Natural Disconnects</p>
+    <p>Description text...</p>
+    <img src={problem.image} alt={problem.title} className="w-full rounded-xl" />
+  </>
+) : (
+  <>
+    <div className="icon-container">
+      <problem.icon />
+    </div>
+    <h3>{problem.title}</h3>
+    <p>{problem.subtitle}</p>
+    <p>{problem.description}</p>
+  </>
+)}
 ```
 
 ---
 
 ### Visual Result
 
-The Effortless Traceability card will stand out with:
+The Silo Effect card will stand out with:
 - Title at the top (no icon)
-- Description text below the title
-- Beautiful 3D visualization image at the bottom showing the data traceability concept
+- Subtitle below the title
+- Description text
+- Beautiful 3D network visualization at the bottom showing interconnected but separate clusters (representing silos)
 - Rounded corners on the image to match the card aesthetic
 
-The other two cards (Unified Intelligence and Self-Updating Knowledge) remain unchanged with their current icon-first layout.
+The other two cards (Fading Context and Hidden Dependencies) remain unchanged with their current icon-first layout.
 
