@@ -1,11 +1,13 @@
-import { Network, RefreshCw, LucideIcon } from "lucide-react";
+import { Network, LucideIcon } from "lucide-react";
 import traceabilityImage from "@/assets/traceability.png";
+import selfUpdatingVideo from "@/assets/selfupdating.mp4";
 
 type Feature = {
   icon?: LucideIcon;
   title: string;
   description: string;
   image?: string;
+  video?: string;
 };
 
 const features: Feature[] = [
@@ -22,10 +24,10 @@ const features: Feature[] = [
       "Bring your tools together. Whether your team lives in Slack, JIRA, or SharePoint, we create a unified layer of intelligence that respects your existing workflows and makes collaboration seamless across departments.",
   },
   {
-    icon: RefreshCw,
     title: "Self-Updating Knowledge",
     description:
       "Free your team from manual documentation. Our dynamic context engine evolves alongside your work, ensuring your 'Source of Truth' is always as current as your latest decision.",
+    video: selfUpdatingVideo,
   },
 ];
 
@@ -48,7 +50,7 @@ export const SolutionSection = () => {
               key={index}
               className="group p-8 rounded-2xl bg-white/95 backdrop-blur-sm border border-white/50 hover:border-gray-200 hover:shadow-lg transition-all duration-300"
             >
-              {feature.image ? (
+            {feature.image || feature.video ? (
                 <>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -56,11 +58,23 @@ export const SolutionSection = () => {
                   <p className="text-gray-600 leading-relaxed mb-6">
                     {feature.description}
                   </p>
-                  <img 
-                    src={feature.image} 
-                    alt={feature.title}
-                    className="w-full rounded-xl"
-                  />
+                  {feature.image && (
+                    <img 
+                      src={feature.image} 
+                      alt={feature.title}
+                      className="w-full rounded-xl"
+                    />
+                  )}
+                  {feature.video && (
+                    <video 
+                      src={feature.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full rounded-xl"
+                    />
+                  )}
                 </>
               ) : (
                 <>
