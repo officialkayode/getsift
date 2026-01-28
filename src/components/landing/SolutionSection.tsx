@@ -40,7 +40,7 @@ export const SolutionSection = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 font-mono tracking-tight">
-            A Shared Brain for Your Entire Organization
+            Make Your Institutional Knowledge Traceable
           </h2>
         </div>
 
