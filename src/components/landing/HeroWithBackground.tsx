@@ -12,14 +12,8 @@ export const HeroWithBackground = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[80vh] md:min-h-[85vh] flex items-center bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url('/images/sift-hero-coast.jpg.png')`,
-      }}
+      className="relative min-h-[80vh] md:min-h-[85vh] flex items-center"
     >
-      {/* Fallback gradient if image fails */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 -z-10" />
-      
       {/* Dark overlay for text legibility */}
       <div className="absolute inset-0 bg-black/50" />
 
