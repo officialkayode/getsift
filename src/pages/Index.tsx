@@ -13,10 +13,10 @@ const Index = () => {
     <main className="min-h-screen bg-white">
       <SinglePageNavbar />
       <HeroWithBackground />
-      <LogoStrip />
       <ProblemSection />
       <SolutionSection />
       <TrustSection />
+      <LogoStrip />
       <SinglePageFooter />
     </main>
   );
