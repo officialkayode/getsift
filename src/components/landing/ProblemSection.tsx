@@ -59,20 +59,42 @@ export const ProblemSection = () => {
             >
               {problem.image ? (
                 <>
-                  <img 
-                    src={problem.image} 
-                    alt={problem.title}
-                    className="w-full rounded-xl mb-6"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {problem.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 mb-4 font-medium">
-                    {problem.subtitle}
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    {problem.description}
-                  </p>
+                  {/* Fading Context: image first; others: text first */}
+                  {problem.title === "Fading Context" ? (
+                    <>
+                      <img 
+                        src={problem.image} 
+                        alt={problem.title}
+                        className="w-full rounded-xl mb-6"
+                      />
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {problem.title}
+                      </h3>
+                      <p className="text-sm text-gray-500 mb-4 font-medium">
+                        {problem.subtitle}
+                      </p>
+                      <p className="text-gray-600 leading-relaxed">
+                        {problem.description}
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {problem.title}
+                      </h3>
+                      <p className="text-sm text-gray-500 mb-4 font-medium">
+                        {problem.subtitle}
+                      </p>
+                      <p className="text-gray-600 leading-relaxed mb-6">
+                        {problem.description}
+                      </p>
+                      <img 
+                        src={problem.image} 
+                        alt={problem.title}
+                        className="w-full rounded-xl"
+                      />
+                    </>
+                  )}
                 </>
               ) : (
                 <>
