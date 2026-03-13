@@ -1,6 +1,6 @@
-import { SinglePageNavbar, SinglePageFooter } from "@/components/landing";
+import { SiteNav } from "@/components/SiteNav";
+import { SiteFooter } from "@/components/SiteFooter";
 import { Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
 const blogPosts = [
@@ -38,60 +38,42 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      <SinglePageNavbar />
+    <div className="min-h-screen flex flex-col bg-background">
+      <SiteNav />
 
-      <main className="flex-1 pt-20">
-        <div className="container px-6 py-12 max-w-5xl mx-auto">
-          <div className="mb-10 text-center">
-            <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">Blog</h1>
-            <p className="text-base text-gray-500">
-              Insights, updates, and technical deep-dives from the Sift team
-            </p>
-          </div>
+      <main className="flex-1 pt-14">
+        <div className="max-w-3xl mx-auto px-6 py-16">
+          <h1 className="font-serif text-3xl text-foreground mb-2">Blog</h1>
+          <p className="text-sm text-muted-foreground mb-12">
+            Insights and updates from the Sift team
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="divide-y divide-border">
             {blogPosts.map((post) => (
-              <Link key={post.id} to={`/blog/${post.slug}`} className="group">
-                <div className="h-full rounded-xl border border-gray-100 bg-white p-5 transition-all duration-200 hover:border-gray-200 hover:shadow-md">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 text-xs">
-                      {post.category}
-                    </Badge>
-                    <span className="text-xs text-gray-400">
-                      {new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </span>
-                  </div>
-
-                  <h2 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors line-clamp-2">
-                    {post.title}
-                  </h2>
-
-                  <p className="text-sm text-gray-500 mb-4 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-400">
-                      {post.authors.join(" & ")} · {post.readTime}
-                    </span>
-                    <span className="text-sm text-gray-600 flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Read
-                      <ArrowRight className="h-3 w-3" />
-                    </span>
-                  </div>
+              <Link key={post.id} to={`/blog/${post.slug}`} className="group block py-8 first:pt-0 last:pb-0">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-xs text-muted-foreground uppercase tracking-wider">{post.category}</span>
+                  <span className="text-xs text-muted-foreground/50">
+                    {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+                  </span>
                 </div>
+                <h2 className="font-serif text-xl text-foreground group-hover:opacity-70 transition-opacity mb-2 leading-snug">
+                  {post.title}
+                </h2>
+                <p className="text-sm text-muted-foreground mb-3 line-clamp-2 max-w-xl">
+                  {post.excerpt}
+                </p>
+                <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                  {post.authors.join(" & ")} · {post.readTime}
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </main>
 
-      <SinglePageFooter />
+      <SiteFooter />
     </div>
   );
 };

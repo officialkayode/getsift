@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -23,45 +22,40 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#ffffff",
-        foreground: "#1a1a1a",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0FA0CE",
-          foreground: "#FFFFFF",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#33C3F0",
-          foreground: "#FFFFFF",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         accent: {
-          DEFAULT: "#1EAEDB",
-          foreground: "#FFFFFF",
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#F8F9FA",
-          foreground: "#1a1a1a",
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         popover: {
-          DEFAULT: "#FFFFFF",
-          foreground: "#1a1a1a",
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "#F8F9FA",
-          foreground: "#1a1a1a",
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
-        orbitron: ["Orbitron", "sans-serif"],
-        chakra: ["Chakra Petch", "sans-serif"],
-        cormorant: ["Cormorant", "serif"],
-        garamond: ["EB Garamond", "serif"],
-        mono: ["IBM Plex Mono", "monospace"]
+        serif: ["EB Garamond", "Georgia", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -77,39 +71,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-up": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(20px)"
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)"
-          },
-        },
-        "bounce-slow": {
-          "0%, 100%": { 
-            transform: "translateY(0)" 
-          },
-          "50%": { 
-            transform: "translateY(-10px)" 
-          }
-        },
-        "bounce-slower": {
-          "0%, 100%": { 
-            transform: "translateY(0)" 
-          },
-          "50%": { 
-            transform: "translateY(-8px)" 
-          }
-        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.7s ease-out forwards",
-        "bounce-slow": "bounce-slow 4s ease-in-out infinite",
-        "bounce-slower": "bounce-slower 5s ease-in-out infinite",
       },
     },
   },
