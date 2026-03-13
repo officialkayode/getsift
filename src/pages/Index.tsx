@@ -44,9 +44,9 @@ const Index = () => {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white leading-tight tracking-tight">
                   Decision Lineage for Highly Regulated Industries
                 </h1>
-                <p className="mt-4 text-lg sm:text-xl text-white/70 font-sans font-light">
-                  Starting with Pharma Clinical Trials
-                </p>
+                
+
+                
                 <p className="mt-6 text-sm sm:text-base text-white/50 font-sans max-w-lg leading-relaxed">
                   Sift preserves the <em>why</em> behind critical decisions.
                 </p>
