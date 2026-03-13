@@ -34,8 +34,8 @@ const Index = () => {
                 loop
                 muted
                 playsInline
-                className={`w-full h-full object-cover transition-opacity duration-700 ${videoReady ? "opacity-60" : "opacity-0"}`}
-              />
+                className={`w-full h-full object-cover transition-opacity duration-700 ${videoReady ? "opacity-60" : "opacity-0"}`} />
+              
             </div>
 
             {/* Content */}
@@ -53,13 +53,13 @@ const Index = () => {
                 <p className="mt-4 text-xs sm:text-sm text-white/30 font-sans tracking-widest uppercase">
                   Trigger → Evidence → Debate → Approval → Outcome
                 </p>
-                <Link
-                  to="/industry/pharma"
-                  className="mt-8 inline-flex items-center gap-2 text-sm font-sans text-white border border-white/20 rounded-md px-6 py-3 hover:bg-white/10 transition-colors"
-                >
-                  Explore Pharma Clinical Trials
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                
+
+
+
+
+
+                
               </div>
             </div>
           </div>
@@ -67,8 +67,8 @@ const Index = () => {
       </section>
 
       <SiteFooter />
-    </main>
-  );
+    </main>);
+
 };
 
 export default Index;
