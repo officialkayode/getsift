@@ -13,7 +13,7 @@ export const SiteFooter = () => {
           <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link>
           <Link to="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy</Link>
         </nav>
-        <p className="text-xs text-muted-foreground">© 2025 Sift</p>
+        <p className="text-xs text-muted-foreground"><p className="text-xs text-muted-foreground">© 2026 Sift</p></p>
       </div>
     </footer>
   );
