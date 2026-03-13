@@ -68,7 +68,7 @@ export const SiteNav = () => {
               </div>
             }
           </div>
-          <Link to="/blog" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Blog</Link>
+          
           <Link to="/about" className="text-sm text-foreground/70 hover:text-foreground transition-colors">About</Link>
           
         </div>
