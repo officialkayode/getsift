@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { SinglePageNavbar, SinglePageFooter } from "@/components/landing";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { SiteNav } from "@/components/SiteNav";
+import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowLeft } from "lucide-react";
 
 const blogPosts = [
@@ -162,66 +161,55 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex flex-col bg-white">
-        <SinglePageNavbar />
-        <main className="flex-1 flex items-center justify-center pt-20">
+      <div className="min-h-screen flex flex-col bg-background">
+        <SiteNav />
+        <main className="flex-1 flex items-center justify-center pt-14">
           <div className="text-center">
-            <h1 className="text-3xl font-semibold text-gray-900 mb-4">Post Not Found</h1>
-            <Link to="/blog">
-              <Button variant="outline" className="hover:bg-gray-50">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Blog
-              </Button>
+            <h1 className="font-serif text-2xl text-foreground mb-4">Post Not Found</h1>
+            <Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground underline underline-offset-4 transition-colors">
+              ← Back to Blog
             </Link>
           </div>
         </main>
-        <SinglePageFooter />
+        <SiteFooter />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      <SinglePageNavbar />
+    <div className="min-h-screen flex flex-col bg-background">
+      <SiteNav />
 
-      <main className="flex-1 pt-20">
-        <div className="container px-6 py-12 max-w-3xl mx-auto">
-          <Link to="/blog" className="inline-block mb-6">
-            <Button variant="ghost" className="hover:bg-gray-50 text-gray-600 -ml-3">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Blog
-            </Button>
+      <main className="flex-1 pt-14">
+        <div className="max-w-3xl mx-auto px-6 py-16">
+          <Link to="/blog" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
+            <ArrowLeft className="w-3.5 h-3.5" />
+            Back to Blog
           </Link>
 
           <article>
-            <header className="mb-8">
+            <header className="mb-10">
               <div className="flex items-center gap-3 mb-3">
-                <Badge variant="secondary" className="bg-gray-100 text-gray-700 text-xs">
-                  {post.category}
-                </Badge>
-                <span className="text-sm text-gray-400">
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">{post.category}</span>
+                <span className="text-xs text-muted-foreground/50">
+                  {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
                 </span>
-                <span className="text-sm text-gray-400">· {post.readTime}</span>
+                <span className="text-xs text-muted-foreground/50">· {post.readTime}</span>
               </div>
-              <h1 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3">
+              <h1 className="font-serif text-2xl md:text-3xl text-foreground mb-3 leading-snug">
                 {post.title}
               </h1>
-              <p className="text-sm text-gray-500 mb-1">
+              <p className="text-sm text-muted-foreground mb-1">
                 By {post.authors.join(" and ")}
               </p>
-              <p className="text-base text-gray-600">{post.excerpt}</p>
+              <p className="text-base text-foreground/70">{post.excerpt}</p>
             </header>
 
-            <div className="prose prose-gray max-w-none">
+            <div className="font-sans text-foreground/80 leading-relaxed">
               {post.content.split("\n\n").map((paragraph, idx) => {
                 if (paragraph.startsWith("## ")) {
                   return (
-                    <h2 key={idx} className="text-xl font-semibold text-gray-900 mt-8 mb-4">
+                    <h2 key={idx} className="text-xl font-serif text-foreground mt-10 mb-4">
                       {paragraph.replace("## ", "")}
                     </h2>
                   );
@@ -230,18 +218,17 @@ const BlogPost = () => {
                   const colonIndex = paragraph.indexOf(":");
                   const title = paragraph.substring(0, colonIndex);
                   const description = paragraph.substring(colonIndex + 1);
-
                   if (title.length < 80 && description.trim().length > 0) {
                     return (
-                      <p key={idx} className="mb-4 text-gray-700 leading-relaxed">
-                        <strong className="font-semibold text-gray-900">{title}:</strong>
+                      <p key={idx} className="mb-4">
+                        <strong className="font-semibold text-foreground">{title}:</strong>
                         {description}
                       </p>
                     );
                   }
                 }
                 return (
-                  <p key={idx} className="mb-4 text-gray-700 leading-relaxed">
+                  <p key={idx} className="mb-4">
                     {paragraph}
                   </p>
                 );
@@ -251,7 +238,7 @@ const BlogPost = () => {
         </div>
       </main>
 
-      <SinglePageFooter />
+      <SiteFooter />
     </div>
   );
 };
