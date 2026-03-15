@@ -72,6 +72,17 @@ const Index = () => {
                     pharma clinical trials
                   </Link>.
                 </p>
+
+                <div className="mt-8">
+                  <a
+                    href="https://calendar.app.google/J22JUbRhovodHYdk8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-white text-foreground hover:bg-white/90 text-sm px-6 py-3 rounded-full font-medium transition-colors"
+                  >
+                    Book a demo
+                  </a>
+                </div>
               </div>
             </div>
           </div>
