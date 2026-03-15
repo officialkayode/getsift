@@ -108,7 +108,7 @@ Sift continues to expand its enterprise partnerships and integrations, building 
     id: 4,
     slug: "how-sift-powers-proactive-knowledge-delivery",
     title: "How Sift Powers Proactive Knowledge Delivery with Qdrant",
-    date: "2025-01-15",
+    date: "2025-11-15",
     category: "Engineering",
     authors: ["Kayode Adegbite", "Samuel Umoren"],
     readTime: "8 min read",
