@@ -54,7 +54,7 @@ const PharmaClinicalTrials = () => {
       <section className="max-w-3xl mx-auto px-6 py-20">
         <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">The Solution</p>
         <h2 className="font-serif text-2xl sm:text-3xl text-foreground mb-10 leading-snug">
-          The Living Memory of Your Clinical Trial
+          The Decision Lineage of Your Clinical Trial
         </h2>
 
         <div className="space-y-6 text-base text-foreground/80 font-sans leading-[1.8]">
@@ -68,14 +68,14 @@ const PharmaClinicalTrials = () => {
 
         {/* Decision chain visual */}
         <div className="my-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-3 text-sm font-sans tracking-wide text-foreground/70">
-          {["Trigger", "Evidence", "Debate", "Approval", "Outcome"].map((step, i) => (
-            <span key={step} className="flex items-center gap-2">
+          {["Trigger", "Evidence", "Debate", "Approval", "Outcome"].map((step, i) =>
+          <span key={step} className="flex items-center gap-2">
               <span className="px-4 py-2 border border-border rounded-md bg-card text-foreground">
                 {step}
               </span>
               {i < 4 && <span className="text-muted-foreground">→</span>}
             </span>
-          ))}
+          )}
         </div>
 
         <p className="text-base text-foreground/80 font-sans leading-[1.8]">
@@ -87,8 +87,8 @@ const PharmaClinicalTrials = () => {
             href="https://calendar.app.google/J22JUbRhovodHYdk8"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-sans text-primary-foreground bg-primary rounded-md px-6 py-3 hover:opacity-90 transition-opacity"
-          >
+            className="inline-flex items-center gap-2 text-sm font-sans text-primary-foreground bg-primary rounded-md px-6 py-3 hover:opacity-90 transition-opacity">
+            
             Book a demo
             <ArrowRight className="w-4 h-4" />
           </a>
@@ -96,8 +96,8 @@ const PharmaClinicalTrials = () => {
       </section>
 
       <SiteFooter />
-    </div>
-  );
+    </div>);
+
 };
 
 export default PharmaClinicalTrials;
