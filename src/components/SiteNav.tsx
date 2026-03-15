@@ -41,7 +41,7 @@ export const SiteNav = () => {
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className="flex items-center gap-1 text-sm text-foreground/70 hover:text-foreground transition-colors">
               
-              Industry <ChevronDown className="w-3.5 h-3.5" />
+              Use-cases <ChevronDown className="w-3.5 h-3.5" />
             </button>
             {dropdownOpen &&
             <div className="absolute top-full left-0 mt-2 w-72 bg-background border border-border rounded-lg shadow-lg py-2">
@@ -82,7 +82,7 @@ export const SiteNav = () => {
       {/* Mobile menu */}
       {mobileOpen &&
       <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border px-6 py-4 space-y-1">
-          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Industry</p>
+          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Use-cases</p>
           {industries.map((item) =>
         item.active ?
         <Link
