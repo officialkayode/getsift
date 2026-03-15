@@ -1,9 +1,21 @@
+import { Helmet } from "react-helmet-async";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const Privacy = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <Helmet>
+        <title>Privacy Policy | Sift</title>
+        <meta name="description" content="Privacy policy for Sift — how we handle personal information, data security, and your rights." />
+        <link rel="canonical" href="https://getsift.co/privacy" />
+        <meta property="og:title" content="Privacy Policy | Sift" />
+        <meta property="og:description" content="Privacy policy for Sift — how we handle personal information, data security, and your rights." />
+        <meta property="og:url" content="https://getsift.co/privacy" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+      </Helmet>
+
       <SiteNav />
 
       <main className="flex-1 pt-14">

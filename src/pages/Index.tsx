@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
-import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -19,6 +19,21 @@ const Index = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <Helmet>
+        <title>Sift — Decision Lineage for Regulated Industries</title>
+        <meta name="description" content="Sift preserves the why behind critical enterprise decisions. Decision lineage for highly regulated industries, starting with Pharma Clinical Trials." />
+        <link rel="canonical" href="https://getsift.co/" />
+        <meta property="og:title" content="Sift — Decision Lineage for Regulated Industries" />
+        <meta property="og:description" content="Sift preserves the why behind critical enterprise decisions. Decision lineage for highly regulated industries." />
+        <meta property="og:url" content="https://getsift.co/" />
+        <meta property="og:image" content="https://getsift.co/previewImage.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sift — Decision Lineage for Regulated Industries" />
+        <meta name="twitter:description" content="Sift preserves the why behind critical enterprise decisions." />
+        <meta name="twitter:image" content="https://getsift.co/previewImage.png" />
+      </Helmet>
+
       <SiteNav />
 
       {/* Hero */}
@@ -35,7 +50,6 @@ const Index = () => {
                 muted
                 playsInline
                 className={`w-full h-full object-cover transition-opacity duration-700 ${videoReady ? "opacity-60" : "opacity-0"}`} />
-              
             </div>
 
             {/* Content */}
@@ -44,22 +58,20 @@ const Index = () => {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white leading-tight tracking-tight">
                   Decision Lineage for Highly Regulated Industries
                 </h1>
-                
 
-                
                 <p className="mt-6 text-sm sm:text-base text-white/50 font-sans max-w-lg leading-relaxed">
                   Sift preserves the why behind your decisions.
                 </p>
                 <p className="mt-4 text-xs sm:text-sm text-white/30 font-sans tracking-widest uppercase">
                   Trigger → Evidence → Debate → Approval → Outcome
                 </p>
-                
 
-
-
-
-
-                
+                <p className="mt-8 text-sm text-white/60 font-sans">
+                  Starting with{" "}
+                  <Link to="/industry/pharma" className="text-white underline underline-offset-4 hover:opacity-80 transition-opacity">
+                    pharma clinical trials
+                  </Link>.
+                </p>
               </div>
             </div>
           </div>
@@ -67,8 +79,8 @@ const Index = () => {
       </section>
 
       <SiteFooter />
-    </main>);
-
+    </main>
+  );
 };
 
 export default Index;

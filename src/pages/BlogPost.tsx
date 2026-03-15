@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowLeft } from "lucide-react";
@@ -71,7 +72,7 @@ Vector Search: Semantic similarity enables connections that keyword search misse
 
 The result: AI that doesn't just retrieve—it understands, contextualizes, and delivers intelligence when and where you need it.
 
-That's what Sift builds. Not another search bar. A live context engine.`,
+That's what Sift builds. Not another search bar. A live context engine. In regulated industries like pharma, this same principle powers [decision lineage for clinical trials](/industry/pharma) — preserving the why behind every strategic choice.`,
   },
   {
     id: 3,
@@ -176,8 +177,96 @@ const BlogPost = () => {
     );
   }
 
+  const blogPostingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "datePublished": post.date,
+    "author": post.authors.map(name => ({ "@type": "Person", "name": name })),
+    "description": post.excerpt,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sift",
+      "url": "https://getsift.co"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://getsift.co/blog/${post.slug}`
+    }
+  };
+
+  const renderContent = () => {
+    return post.content.split("\n\n").map((paragraph, idx) => {
+      if (paragraph.startsWith("## ")) {
+        return (
+          <h2 key={idx} className="text-xl font-serif text-foreground mt-10 mb-4">
+            {paragraph.replace("## ", "")}
+          </h2>
+        );
+      }
+
+      // Handle paragraphs with internal links (markdown-style)
+      if (paragraph.includes("](/")) {
+        const parts = paragraph.split(/\[([^\]]+)\]\(([^)]+)\)/);
+        return (
+          <p key={idx} className="mb-4">
+            {parts.map((part, i) => {
+              if (i % 3 === 1) {
+                // link text
+                const href = parts[i + 1];
+                return (
+                  <Link key={i} to={href} className="text-foreground underline underline-offset-4 hover:opacity-70 transition-opacity">
+                    {part}
+                  </Link>
+                );
+              }
+              if (i % 3 === 2) return null; // skip href parts
+              return <span key={i}>{part}</span>;
+            })}
+          </p>
+        );
+      }
+
+      if (paragraph.includes(":") && !paragraph.startsWith("## ")) {
+        const colonIndex = paragraph.indexOf(":");
+        const title = paragraph.substring(0, colonIndex);
+        const description = paragraph.substring(colonIndex + 1);
+        if (title.length < 80 && description.trim().length > 0) {
+          return (
+            <p key={idx} className="mb-4">
+              <strong className="font-semibold text-foreground">{title}:</strong>
+              {description}
+            </p>
+          );
+        }
+      }
+      return (
+        <p key={idx} className="mb-4">
+          {paragraph}
+        </p>
+      );
+    });
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <Helmet>
+        <title>{post.title} | Sift</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`https://getsift.co/blog/${post.slug}`} />
+        <meta property="og:title" content={`${post.title} | Sift`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={`https://getsift.co/blog/${post.slug}`} />
+        <meta property="og:image" content="https://getsift.co/previewImage.png" />
+        <meta property="og:type" content="article" />
+        <meta property="article:published_time" content={post.date} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${post.title} | Sift`} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content="https://getsift.co/previewImage.png" />
+        <script type="application/ld+json">{JSON.stringify(blogPostingJsonLd)}</script>
+      </Helmet>
+
       <SiteNav />
 
       <main className="flex-1 pt-14">
@@ -206,33 +295,7 @@ const BlogPost = () => {
             </header>
 
             <div className="font-sans text-foreground/80 leading-relaxed">
-              {post.content.split("\n\n").map((paragraph, idx) => {
-                if (paragraph.startsWith("## ")) {
-                  return (
-                    <h2 key={idx} className="text-xl font-serif text-foreground mt-10 mb-4">
-                      {paragraph.replace("## ", "")}
-                    </h2>
-                  );
-                }
-                if (paragraph.includes(":") && !paragraph.startsWith("## ")) {
-                  const colonIndex = paragraph.indexOf(":");
-                  const title = paragraph.substring(0, colonIndex);
-                  const description = paragraph.substring(colonIndex + 1);
-                  if (title.length < 80 && description.trim().length > 0) {
-                    return (
-                      <p key={idx} className="mb-4">
-                        <strong className="font-semibold text-foreground">{title}:</strong>
-                        {description}
-                      </p>
-                    );
-                  }
-                }
-                return (
-                  <p key={idx} className="mb-4">
-                    {paragraph}
-                  </p>
-                );
-              })}
+              {renderContent()}
             </div>
           </article>
         </div>

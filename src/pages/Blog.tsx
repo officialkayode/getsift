@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Link } from "react-router-dom";
@@ -39,6 +40,20 @@ const blogPosts = [
 const Blog = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <Helmet>
+        <title>Blog | Sift</title>
+        <meta name="description" content="Insights and updates from the Sift team on decision lineage, temporal context, and building intelligence for regulated industries." />
+        <link rel="canonical" href="https://getsift.co/blog" />
+        <meta property="og:title" content="Blog | Sift" />
+        <meta property="og:description" content="Insights and updates from the Sift team on decision lineage, temporal context, and building intelligence for regulated industries." />
+        <meta property="og:url" content="https://getsift.co/blog" />
+        <meta property="og:image" content="https://getsift.co/previewImage.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blog | Sift" />
+        <meta name="twitter:description" content="Insights and updates from the Sift team on decision lineage and intelligence for regulated industries." />
+      </Helmet>
+
       <SiteNav />
 
       <main className="flex-1 pt-14">
