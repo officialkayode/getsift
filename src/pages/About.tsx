@@ -1,9 +1,38 @@
+import { Helmet } from "react-helmet-async";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sift",
+  "url": "https://getsift.co",
+  "description": "Sift is a decision lineage platform that preserves the why behind critical enterprise decisions for highly regulated industries.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@getsift.co",
+    "contactType": "General Inquiry"
+  }
+};
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>About | Sift</title>
+        <meta name="description" content="Sift exists to make institutional decisions traceable and reusable across people, systems, and intelligent agents. The system of record for why." />
+        <link rel="canonical" href="https://getsift.co/about" />
+        <meta property="og:title" content="About | Sift" />
+        <meta property="og:description" content="Sift exists to make institutional decisions traceable and reusable across people, systems, and intelligent agents." />
+        <meta property="og:url" content="https://getsift.co/about" />
+        <meta property="og:image" content="https://getsift.co/previewImage.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About | Sift" />
+        <meta name="twitter:description" content="Sift exists to make institutional decisions traceable and reusable across people, systems, and intelligent agents." />
+        <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
+      </Helmet>
+
       <SiteNav />
 
       <main className="pt-14">
@@ -38,8 +67,8 @@ const About = () => {
       </main>
 
       <SiteFooter />
-    </div>);
-
+    </div>
+  );
 };
 
 export default About;

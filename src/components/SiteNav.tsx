@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const industries = [
-{ label: "Pharma Clinical Trials", href: "/industry/pharma", active: true },
-{ label: "Financial Services Compliance", active: false },
-{ label: "Insurance Underwriting", active: false },
-{ label: "Medical Device Quality & Regulatory", active: false },
-{ label: "Energy & Utilities Compliance", active: false },
-{ label: "Aerospace & Defense Programs", active: false },
-{ label: "Public Sector Procurement & Oversight", active: false }];
-
+  { label: "Pharma Clinical Trials", href: "/industry/pharma", active: true },
+  { label: "Financial Services Compliance", active: false },
+  { label: "Insurance Underwriting", active: false },
+  { label: "Medical Device Quality & Regulatory", active: false },
+  { label: "Energy & Utilities Compliance", active: false },
+  { label: "Aerospace & Defense Programs", active: false },
+  { label: "Public Sector Procurement & Oversight", active: false },
+];
 
 export const SiteNav = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -40,7 +40,6 @@ export const SiteNav = () => {
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className="flex items-center gap-1 text-sm text-foreground/70 hover:text-foreground transition-colors">
-              
               Use-cases <ChevronDown className="w-3.5 h-3.5" />
             </button>
             {dropdownOpen &&
@@ -52,25 +51,21 @@ export const SiteNav = () => {
                 to={item.href!}
                 onClick={() => setDropdownOpen(false)}
                 className="block px-4 py-2.5 text-sm text-foreground hover:bg-muted transition-colors">
-                
                       {item.label}
                     </Link> :
-
               <div
                 key={item.label}
                 className="flex items-center justify-between px-4 py-2.5 text-sm text-muted-foreground/50 cursor-default">
-                
                       <span>{item.label}</span>
                       <span className="text-xs text-muted-foreground/40">Coming soon</span>
                     </div>
-
               )}
               </div>
             }
           </div>
-          
+
+          <Link to="/blog" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Blog</Link>
           <Link to="/about" className="text-sm text-foreground/70 hover:text-foreground transition-colors">About</Link>
-          
         </div>
 
         {/* Mobile toggle */}
@@ -90,15 +85,12 @@ export const SiteNav = () => {
           to={item.href!}
           onClick={() => setMobileOpen(false)}
           className="block py-2 text-sm text-foreground">
-          
                 {item.label}
               </Link> :
-
         <div key={item.label} className="flex justify-between py-2 text-sm text-muted-foreground/50">
                 <span>{item.label}</span>
                 <span className="text-xs">Coming soon</span>
               </div>
-
         )}
           <div className="border-t border-border my-3" />
           <Link to="/blog" onClick={() => setMobileOpen(false)} className="block py-2 text-sm text-foreground">Blog</Link>
@@ -106,6 +98,6 @@ export const SiteNav = () => {
           <Link to="/privacy" onClick={() => setMobileOpen(false)} className="block py-2 text-sm text-foreground">Privacy</Link>
         </div>
       }
-    </nav>);
-
+    </nav>
+  );
 };

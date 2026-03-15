@@ -8,12 +8,12 @@ export const SiteFooter = () => {
           Sift
         </Link>
         <nav className="flex items-center gap-8">
-          <Link to="/industry/pharma" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Use-cases</Link>
+          <Link to="/industry/pharma" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pharma Clinical Trials</Link>
           <Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
           <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link>
           <Link to="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy</Link>
         </nav>
-        <p className="text-xs text-muted-foreground"><p className="text-xs text-muted-foreground">© 2026 Sift</p></p>
+        <p className="text-xs text-muted-foreground">© 2026 Sift</p>
       </div>
     </footer>
   );
