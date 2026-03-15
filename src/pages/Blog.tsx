@@ -8,7 +8,7 @@ const blogPosts = [
     id: 2,
     slug: "temporal-context-beats-search",
     title: "Why Temporal Context Beats Search",
-    date: "2025-01-05",
+    date: "2026-01-05",
     category: "Product",
     authors: ["Samuel Umoren"],
     readTime: "5 min read",
