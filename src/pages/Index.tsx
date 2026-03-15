@@ -47,8 +47,8 @@ const Index = () => {
                 
 
                 
-                <p className="mt-6 text-sm sm:text-base text-white/50 font-sans max-w-lg leading-relaxed">Sift preserves the why behind your decisions.
-                  <em>why</em> behind critical decisions.
+                <p className="mt-6 text-sm sm:text-base text-white/50 font-sans max-w-lg leading-relaxed">
+                  Sift preserves the why behind your decisions.
                 </p>
                 <p className="mt-4 text-xs sm:text-sm text-white/30 font-sans tracking-widest uppercase">
                   Trigger → Evidence → Debate → Approval → Outcome
