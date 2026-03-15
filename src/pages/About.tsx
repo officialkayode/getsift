@@ -16,7 +16,7 @@ const About = () => {
               In enterprise environments, traceability is not optional—it is essential. Decisions outlive meetings, teams, and tools. The reasoning behind a critical choice often matters more than the choice itself, yet that reasoning is the first thing to disappear.
             </p>
             <p>
-              The future of work belongs to lean teams, increasingly supported by AI agents. Those teams need more than documents and dashboards—they need access to the decision lineage behind every action they take. Without it, institutions repeat mistakes, lose speed, and erode trust.
+              The future of work belongs to lean teams, increasingly supported by AI agents. Those teams need more than documents and dashboards; they need access to the decision lineage behind every action they take. Without it, institutions repeat mistakes, lose speed, and erode trust.
             </p>
             <p>
               Sift exists to make institutional decision memory durable, traceable, and usable—across people, systems, and intelligent agents. We are building the system of record for <em>why</em>.
@@ -38,8 +38,8 @@ const About = () => {
       </main>
 
       <SiteFooter />
-    </div>
-  );
+    </div>);
+
 };
 
 export default About;
