@@ -10,7 +10,7 @@ const PharmaClinicalTrials = () => {
       {/* Hero */}
       <section className="pt-14">
         <div className="max-w-3xl mx-auto px-6 pt-24 pb-16 text-center">
-          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Industry</p>
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Use-cases</p>
           <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground leading-tight">
             Pharma Clinical Trials
           </h1>

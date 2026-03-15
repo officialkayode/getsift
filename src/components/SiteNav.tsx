@@ -82,7 +82,7 @@ export const SiteNav = () => {
       {/* Mobile menu */}
       {mobileOpen &&
       <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border px-6 py-4 space-y-1">
-          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Industry</p>
+          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Use-cases</p>
           {industries.map((item) =>
         item.active ?
         <Link
