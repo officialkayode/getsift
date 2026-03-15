@@ -66,13 +66,6 @@ const Index = () => {
                   Trigger → Evidence → Debate → Approval → Outcome
                 </p>
 
-                <p className="mt-8 text-sm text-white/60 font-sans">
-                  Starting with{" "}
-                  <Link to="/industry/pharma" className="text-white underline underline-offset-4 hover:opacity-80 transition-opacity">
-                    pharma clinical trials
-                  </Link>.
-                </p>
-
                 <div className="mt-8">
                   <a
                     href="https://calendar.app.google/J22JUbRhovodHYdk8"
