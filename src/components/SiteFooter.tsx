@@ -9,6 +9,7 @@ export const SiteFooter = () => {
         </Link>
         <nav className="flex items-center gap-8">
           <Link to="/industry/pharma" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pharma Clinical Trials</Link>
+          <Link to="/industry/financial-services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Financial Services</Link>
           <Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
           <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link>
           <Link to="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy</Link>

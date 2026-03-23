@@ -9,6 +9,7 @@ import BlogPost from "./pages/BlogPost";
 import Privacy from "./pages/Privacy";
 import About from "./pages/About";
 import PharmaClinicalTrials from "./pages/PharmaClinicalTrials";
+import FinancialServices from "./pages/FinancialServices";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/about" element={<About />} />
             <Route path="/industry/pharma" element={<PharmaClinicalTrials />} />
+            <Route path="/industry/financial-services" element={<FinancialServices />} />
           </Routes>
         </div>
       </BrowserRouter>
