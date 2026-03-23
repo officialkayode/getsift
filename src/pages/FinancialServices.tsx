@@ -83,15 +83,12 @@ const FinancialServices = () => {
       <section className="max-w-3xl mx-auto px-6 py-20">
         <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">The Solution</p>
         <h2 className="font-serif text-2xl sm:text-3xl text-foreground mb-10 leading-snug">
-          Decision Lineage for Audit Trail & Compliance
+          A Defensible Audit Trail
         </h2>
 
         <div className="space-y-6 text-base text-foreground/80 font-sans leading-[1.8]">
           <p>
-            Sift captures the complete lifecycle of every compliance and risk decision — not just the outcome, but the trigger, evidence, deliberation, approval, and downstream impact. It creates a living, searchable record of institutional reasoning that stands up to regulatory scrutiny.
-          </p>
-          <p>
-            Sift tracks the entire lifecycle of a decision in a clear, connected chain:
+            Sift turns compliance history into a searchable record that stands up to regulatory scrutiny. Instead of logging only the policy outcome, Sift captures the decision chain:
           </p>
         </div>
 
@@ -109,10 +106,7 @@ const FinancialServices = () => {
 
         <div className="space-y-6 text-base text-foreground/80 font-sans leading-[1.8]">
           <p>
-            Whether your team needs to explain a policy change to examiners, demonstrate the rationale behind a risk assessment, or trace the decision history behind a control update, Sift gives you the complete, defensible answer — instantly. No more scrambling before exams, no more reconstructing context from fragments.
-          </p>
-          <p>
-            Sift transforms compliance documentation from a retroactive burden into a natural byproduct of how your team already works — strengthening your audit trail, reducing examination friction, and building a culture of decision accountability.
+            Whether you need to justify a risk assessment or trace the history of a control update, Sift gives you a defensible answer on demand. It transforms compliance documentation from a retroactive burden into a natural byproduct of how your team works.
           </p>
         </div>
 
