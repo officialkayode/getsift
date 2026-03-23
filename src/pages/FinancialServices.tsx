@@ -51,14 +51,10 @@ const FinancialServices = () => {
 
           <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Use-cases</p>
           <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground leading-tight">
-            Financial Services
+            Financial Services: Audit &amp; Compliance
           </h1>
           <p className="mt-6 text-lg text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-            Decision lineage for audit trail and compliance in regulated financial institutions.
-          </p>
-
-          <p className="mt-6 text-sm text-muted-foreground/80 font-sans max-w-lg mx-auto leading-relaxed">
-            Sift is a decision lineage platform for financial services compliance. It preserves why regulatory and risk decisions were made — from policy interpretations and control changes to exam responses and enforcement actions — helping teams maintain a defensible audit trail, reduce regulatory risk, and accelerate exam readiness.
+            Preserve the "why" behind your regulatory decisions to maintain an audit trail, reduce risk, and accelerate exam readiness.
           </p>
         </div>
       </section>
@@ -70,24 +66,14 @@ const FinancialServices = () => {
       <section className="max-w-3xl mx-auto px-6 py-20">
         <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">The Problem</p>
         <h2 className="font-serif text-2xl sm:text-3xl text-foreground mb-10 leading-snug">
-          The Hidden Cost of Compliance Gaps
+          The Cost of Compliance Amnesia
         </h2>
 
         <div className="space-y-6 text-base text-foreground/80 font-sans leading-[1.8]">
           <p>
-            Financial institutions operate under intense regulatory scrutiny — from the SEC, OCC, FINRA, FCA, and dozens of other bodies. Every day, compliance teams make critical decisions: How do we interpret this new regulation? Should we update our AML controls? How do we respond to this examination finding?
-          </p>
-          <p>
-            The problem isn't making these decisions — it's that the reasoning behind them disappears. The rationale lives in scattered emails, meeting notes, committee minutes, and the institutional memory of individuals who eventually move on. When a regulator asks why a particular compliance decision was made two years ago, teams are left reconstructing context from fragments.
-          </p>
-          <p>
-            This "decision amnesia" creates real risk. Examiners question decisions that can't be explained. Consent orders cite insufficient documentation. Internal audits flag the same gaps repeatedly. And when enforcement actions come, the cost of poor decision traceability is measured in millions — in fines, remediation, and reputational damage.
+            Financial institutions operate under scrutiny from regulators like the SEC, OCC, and FINRA. Every day, your team makes decisions: How do we interpret this rule? Why did we update these AML controls? The problem isn't making these decisions; it's that the reasoning behind them vanishes into emails, meeting minutes, and the minds of former employees. When examiners ask to explain a past policy change, teams scramble to reconstruct context from fragments. This "decision amnesia" is a liability — translating directly into failed audits, regulatory friction, and enforcement actions.
           </p>
         </div>
-
-        <p className="mt-10 text-lg font-serif text-foreground italic border-l-2 border-primary/30 pl-5">
-          Every compliance decision without a clear audit trail is a liability waiting to surface during the next examination.
-        </p>
       </section>
 
       {/* Divider */}
