@@ -27,6 +27,7 @@ const App = () => (
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/about" element={<About />} />
             <Route path="/industry/pharma" element={<PharmaClinicalTrials />} />
+            <Route path="/industry/financial-services" element={<FinancialServices />} />
           </Routes>
         </div>
       </BrowserRouter>
