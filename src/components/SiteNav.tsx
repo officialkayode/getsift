@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 const industries = [
   { label: "Pharma Clinical Trials", href: "/industry/pharma", active: true },
-  { label: "Financial Services Compliance", active: false },
+  { label: "Financial Services Compliance", href: "/industry/financial-services", active: true },
   { label: "Insurance Underwriting", active: false },
   { label: "Medical Device Quality & Regulatory", active: false },
   { label: "Energy & Utilities Compliance", active: false },
